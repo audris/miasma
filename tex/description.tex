@@ -1,0 +1,233 @@
+\documentstyle[12pt,times]{article} \title{Spread of 19 notifiable
+diseases in The United States in 1962-1992} \author{Audris Mockus}
+\date{\today} \maketitle
+\begin{document}
+
+\section{Introduction}
+
+\section{Description of the data}
+
+The data was obtained from NNDSS (National Notifiable Disease
+Surveillance System). The dataset contains numbers of cases per
+state per month for the period from January, 1962 until December,
+1992.  There are 19 diseases in this dataset (for comparison, there
+are approximately 60?  notifiable diseases).
+
+
+\subsection{Description of the more common diseases}
+
+SALMONELLOSIS with 975427 cases is the most popular among the
+diseases is followed by SHIGELLOSIS (565468 cases), PERTUSSIS
+(139162 cases), AMEBIASIS (120789 cases), MENING.INF. (76275 cases).
+At the bottom of the list are Rabies with 30 cases, TYPHUS MURINE
+with 1401 cases, POLIO, PARALYTIC with 1823 cases, LEPTOSPIROSIS
+with 2166 cases.
+
+SALMONELLOSIS is caused by SALMONELLA organisms. It is human
+gastrointestinal tract disease. It ranges from fairly mild attack of
+fever, diarrhea, vomiting, and abdominal cramps, to life threatening
+illness if bacteria cause excessive dehydration or spread to other
+organs. Outbreaks may occur from eating meat from animals with
+strains of SALMONELLA made resistant by excessive use of antibiotics
+in the feed. The bacteria have been found often in chicken and eggs
+since the late 1980s.
+
+SHIGELLOSIS is a form dysentery caused by SHIGELLa bacteria (it is a
+genus of rod-shaped bacteria named after K. Shiga (1870-1957) a
+Japanese bactiorologist. Bacillary dysentery occurs mainly in
+children; the symptoms are a fever, abdominal cramps, and diarrhea
+that lasts about a week.
+
+PERTUSSIS or whooping cough is an acute infectious disease that is a
+leading cause of death in infants unprotected by immunization. The
+infective agent, the bacterium Bordetella pertussis, is transmitted
+by inhalation of material expelled by the coughing of infected
+patients.
+
+AMEBIASIS is a general name for human infections caused by the
+amoeba Entamoeba hystolytica.
+
+
+
+\subsection{Inspection of the data}
+
+\begin{table}
+\begin{tabular}{|c|c|r|c|}\hline
+  Disease Name & Code & Total Counts & Reporting Proportion \\ 
+  \hline BRUCELLOSIS & 10020 & 6518 & 0.18047649167193 \\ DIPHTHERIA
+  & 10040 & 4250 & 0.06936538056082 \\ MALARIA & 10130 & 34125 &
+  0.40538688593717 \\ MENING. INF.  & 10150 & 76275 &
+  0.72190596668775 \\ PERTUSSIS & 10190 & 139162 & 0.60489141893316
+  \\ TETANUS & 10210 & 4822 & 0.14779675310984 \\ TULAREMIA & 10230
+  & 6416 & 0.16540164452877 \\ TYPHOID FEVER & 10240 & 14549 &
+  0.30033733923677 \\ ROCKY MT. SPOT. FEV. & 10250 & 20586 &
+  0.24525616698292 \\ TYPHUS MURINE & 10260 & 1401 &
+  0.03478810879190 \\ TRICHINOSIS & 10270 & 3497 & 0.08053974277883
+  \\ HANSEN DISEASE & 10380 & 5933 & 0.09514020662028 \\ 
+  LEPTOSPIROSIS & 10390 & 2166 & 0.07179000632511 \\ POLIO PARALYTIC
+  & 10410 & 1823 & 0.04464473961627 \\ PSITTACOSIS & 10450 & 2966 &
+  0.09261016234450 \\ RABIES HUMAN & 10460 & 30 & 0.00158127767235
+  \\ SALMONELLOSIS & 11000 & 975427 & 0.96131140628294 \\ 
+  SHIGELLOSIS & 11010 & 565468 & 0.89574109213577 \\ AMEBIASIS &
+  11040 & 120789 & 0.47137887413029 \\ \hline
+\end{tabular}
+\protect\caption{The 19 diseases with their code names, total
+  reported counts over the period 1962-1992, and reporting
+  proportion which is the number of state-month-year combinations
+  when the counts were reported out of total $51 \times (1992-1962 +
+  1) \times 12$ cells, i.e., 51 states, 31 years, and 12 months}
+\end{table}
+
+
+The worst incidence rates (higher than $10^{-4}$ or more than 1 per
+10,000 people per month) for the above mentioned diseases and time
+period are given in the Table~\ref{worst}. Notice the how many times
+Washington DC occurs in the table.
+
+{\footnotesize
+\begin{table}
+  \begin{tabular}{|c|c|c|r|l|c|r|r|}
+    \multicolumn{2}{c}{}& \multicolumn{3}{c}{Highest Incidence} &
+    \multicolumn{3}{c}{Lowest Incidence} \\ \hline State & Disease &
+    Year & Month & Incidence & Year & Month & Incidence \\ \hline
+    Vermont & PERTUSSIS & 63 & 1 & 0.0001006347 & 92 & 11 &
+    1.723769e-06\\ Idaho & PERTUSSIS & 88 & 3 & 0.0001080529 & 92 &
+    11 & 9.69681e-07 \\ Montana & PERTUSSIS & 63 & 3 & 0.0001083051
+    & 92 & 9 & 1.23735e-06 \\ Colorado & PERTUSSIS & 63 & 5 &
+    0.0001145665 & 92 & 5 & 2.936257e-07\\ North Dakota & PERTUSSIS
+    & 63 & 9 & 0.000135046 & 80 & 3 & 1.532553e-06\\ West Virginia &
+    PERTUSSIS & 62 & 6 & 0.0001763787 & 79 & 12 & 5.13323e-07 \\ 
+    Alaska & PERTUSSIS & 62 & 3 & 0.0002016088 & 92 & 6 &
+    1.699088e-06\\ Delaware & PERTUSSIS & 86 & 4 & 0.0002854273 & 92
+    & 12 & 1.449013e-06\\ Kansas & PERTUSSIS & 86 & 10 &
+    0.0004117225 & 92 & 12 & 3.966213e-07\\\hline Virginia &
+    SALMONELLOSIS & 73 & 12 & 0.0001036889 & 62 & 3 & 1.454979e-06\\ 
+    Montana & SALMONELLOSIS & 80 & 7 & 0.0001053917 & 73 & 12 & 0 \\ 
+    Vermont & SALMONELLOSIS & 69 & 8 & 0.0001076496 & 89 & 2 &
+    1.785526e-06\\ Indiana & SALMONELLOSIS & 85 & 4 & 0.0001112306 &
+    64 & 1 & 2.045508e-07\\ Delaware & SALMONELLOSIS & 91 & 9 &
+    0.000118953 & 82 & 1 & 1.639562e-06\\ Maine & SALMONELLOSIS & 82
+    & 11 & 0.0001194372 & 81 & 1 & 8.806569e-07\\ Kansas &
+    SALMONELLOSIS & 62 & 9 & 0.0001221687 & 91 & 3 & 4.000194e-07\\ 
+    Colorado & SALMONELLOSIS & 76 & 8 & 0.0001250644 & 71 & 8 &
+    8.577812e-07\\ South Carolina & SALMONELLOSIS & 70 & 6 &
+    0.0001284951 & 88 & 5 & 2.905887e-07\\ Connecticut &
+    SALMONELLOSIS & 87 & 2 & 0.0001334236 & 62 & 2 & 1.135237e-06\\ 
+    Hawaii & SALMONELLOSIS & 67 & 1 & 0.0001406808 & 90 & 3 &
+    8.94632e-07 \\ Alaska & SALMONELLOSIS & 83 & 12 & 0.0001652875 &
+    86 & 8 & 1.999216e-06\\ Illinois & SALMONELLOSIS & 85 & 3 &
+    0.000234284 & 64 & 1 & 1.425527e-06\\ Oregon & SALMONELLOSIS &
+    84 & 10 & 0.0002750513 & 78 & 5 & 1.178464e-06\\ Kentucky &
+    SALMONELLOSIS & 67 & 2 & 0.0002837664 & 75 & 5 & 2.883683e-07\\ 
+    North Dakota & SALMONELLOSIS & 70 & 8 & 0.000324362 & 83 & 12 &
+    1.542598e-06\\ Nebraska & SALMONELLOSIS & 67 & 9 & 0.0006804923
+    & 76 & 4 & 6.482726e-07\\\hline Montana & SHIGELLOSIS & 74 & 3 &
+    0.000105829 & 92 & 10 & 1.237134e-06\\ Arizona & SHIGELLOSIS &
+    68 & 4 & 0.0001127645 & 68 & 6 & 5.845372e-07\\ Connecticut &
+    SHIGELLOSIS & 82 & 8 & 0.0001255497 & 77 & 7 & 3.232736e-07\\ 
+    Oregon & SHIGELLOSIS & 65 & 8 & 0.0001433889 & 71 & 2 &
+    4.613942e-07\\ New Mexico & SHIGELLOSIS & 90 & 12 & 0.0002327978
+    & 62 & 5 & 2.064682e-06\\ Alaska & SHIGELLOSIS & 80 & 9 &
+    0.0002654794 & 92 & 12 & 1.677503e-06\\ Vermont & SHIGELLOSIS &
+    68 & 12 & 0.0003823573 & 92 & 12 & 1.722445e-06\\ Hawaii &
+    SHIGELLOSIS & 70 & 8 & 0.001044749 & 91 & 11 &
+    8.750254e-07\\\hline
+\end{tabular}
+\protect\caption{The worst monthly incidence rates (above one case
+  per 10,000 population)}\label{worst}
+\end{table}                                                                               
+}
+
+
+The database contains 112845 records of the form
+
+{\scriptsize \vspace{5 pt}
+\begin{tabular}{|c|c|c|c|c|c|}
+  \hline $({\rm Year} - 1900)$ & Month & State Fips Code & Disease
+  Code & Disease Name and Code & Number of Cases \\ \hline 62 & 1 &
+  6 & 10020& BRUCELLOSIS 10020 & 9 \\\hline
+\end{tabular}
+\vspace{5 pt} } The month number 13 was used to identify that the
+month was unknown.
+
+
+Time plots of the diseases for California ant the United States are
+in Figures~\ref{timePlotsCal} and~\ref{timePlotsUS}.  The six most
+common diseases were then plotted for six differnt (in terms of
+climat and/or population size) states.  Notice the gross reporting
+problems for salmonellosis in Florida.
+
+\begin{figure}
+  \centering \setlength{\unitlength}{1 in}
+  \begin{picture}(6,6)
+    \put(-1,-2){\special{psfile=Calif.19.ps hscale=90 vscale=90}}
+  \end{picture}
+  \setlength{\unitlength}{1 pt} \protect \caption{The time behavior
+    of the 19 diseases in California}\label{timePlotsCal}
+\end{figure}
+
+\begin{figure}
+  \centering \setlength{\unitlength}{1 in}
+  \begin{picture}(6,6)
+    \put(-1,-2){\special{psfile=US.19.ps hscale=90 vscale=90}}
+  \end{picture}
+  \setlength{\unitlength}{1 pt} \protect \caption{The time behavior
+    of the 19 diseases in the US}\label{timePlotsUS}
+\end{figure}
+
+
+\begin{figure}
+  \centering \setlength{\unitlength}{1 in}
+  \begin{picture}(6,6)
+    \put(-1,-2){\special{psfile=Malaria.6.ps hscale=90 vscale=90}}
+  \end{picture}
+  \setlength{\unitlength}{1 pt} \protect \caption{The time behavior
+    of malaria in six states}
+\end{figure}
+
+\begin{figure}
+  \centering \setlength{\unitlength}{1 in}
+  \begin{picture}(6,6)
+    \put(-1,-2){\special{psfile=Mening.6.ps hscale=90 vscale=90}}
+  \end{picture}
+  \setlength{\unitlength}{1 pt} \protect \caption{The time behavior
+    of meningitus in six states}
+\end{figure}
+
+\begin{figure}
+  \centering \setlength{\unitlength}{1 in}
+  \begin{picture}(6,6)
+    \put(-1,-2){\special{psfile=Pert.6.ps hscale=90 vscale=90}}
+  \end{picture}
+  \setlength{\unitlength}{1 pt} \protect \caption{The time behavior
+    of pertussis in six states}
+\end{figure}
+
+\begin{figure}
+  \centering \setlength{\unitlength}{1 in}
+  \begin{picture}(6,6)
+    \put(-1,-2){\special{psfile=Salmon.6.ps hscale=90 vscale=90}}
+  \end{picture}
+  \setlength{\unitlength}{1 pt} \protect \caption{The time behavior
+    of salmonellosis in six states}
+\end{figure}
+
+\begin{figure}
+  \centering \setlength{\unitlength}{1 in}
+  \begin{picture}(6,6)
+    \put(-1,-2){\special{psfile=Shig.6.ps hscale=90 vscale=90}}
+  \end{picture}
+  \setlength{\unitlength}{1 pt} \protect \caption{The time behavior
+    of shigellosis in six states}
+\end{figure}
+
+\begin{figure}
+  \centering \setlength{\unitlength}{1 in}
+  \begin{picture}(6,6)
+    \put(-1,-2){\special{psfile=Ameb.6.ps hscale=90 vscale=90}}
+  \end{picture}
+  \setlength{\unitlength}{1 pt} \protect \caption{The time behavior
+    of amebiasis in six states}
+\end{figure}
+\end{document}
+

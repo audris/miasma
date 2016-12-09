@@ -1,0 +1,16 @@
+#!/bin/csh -f
+
+if ($#argv != 5) then
+  echo 'usage:'
+  echo '$1 the bin width'
+  echo '$2 the aggregation method: s for sum, x for max, n for min'
+  echo '$3 the file name prefix'
+  echo '$4 the aggregation direction (0-diseases, 1-months, 2-states)'
+  echo '$5 is aggregation periodic (average observations bin width apart)'
+  exit
+endif
+
+
+tool/agg $1 $2 $3 $4 $5
+am $3.$1.$2.$4.$5
+rm -f $3.$1.$2.$4.$5.desc $3.$1.$2.$4.$5.bin

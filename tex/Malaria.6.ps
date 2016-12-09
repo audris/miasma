@@ -1,0 +1,2148 @@
+%!PS-Adobe-3.0 EPSF-3.0
+%%Title: (S-PLUS Graphics)
+%%Creator: S-PLUS
+%%For: (Audris Mockus)
+%%CreationDate: Mon Jun 27 15:59:24 1994
+%%BoundingBox: 20 170 592 622
+%%Pages: (atend)
+%%DocumentData: Clean7Bit
+%%DocumentNeededResources: (atend)
+%%EndComments
+%%BeginProlog
+150 dict begin gsave
+/bd {bind def} def
+/PVer 3100 def % version
+% drawing commands
+/I {Coord SetPage 1 setlinecap 1 setlinejoin
+    LineTypes {RastersPerPoint ScaleArray} forall
+    /Helvetica findfont
+    PointSize RastersPerPoint mul Cex mul scalefont setfont
+    /Colors GColors def
+} bd
+/IBu {} def
+/B {newpath} bd
+/C {currentpoint Penup {newpath} {stroke} ifelse moveto} bd
+/E {stroke} bd
+/F {closepath fill} bd
+/M {moveto} bd
+/L {lineto} bd
+/Pu {load /XEQ exch def /Penup true def} bd
+/Pd {/XEQ {} def /Penup false def} bd
+/Px {currentdict /XEQ known {XEQ} if} bd
+/h {Penup {rmoveto Px} {rlineto} ifelse} bd
+/j {neg Penup {rmoveto Px} {rlineto} ifelse} bd
+/k {exch neg exch Penup {rmoveto Px} {rlineto} ifelse} bd
+/l {neg exch neg exch Penup {rmoveto Px} {rlineto} ifelse} bd
+/m {moveto Penup {Px} if} bd
+/x {0 Penup {rmoveto Px} {rlineto} ifelse} bd
+/y {0 exch Penup {rmoveto Px} {rlineto} ifelse} bd
+/w {neg x} bd
+/z {neg y} bd
+/a {B M dup y exch x neg y closepath} bd
+/b {a fill} bd
+/c {a stroke} bd
+/A {PageBegin BackCol dup 0 gt {
+    gsave Sc Page aload pop
+    exch 4 -1 roll dup 5 1 roll sub 3 1 roll exch dup 4 1 roll sub 4 2 roll b
+    grestore} {pop} ifelse
+} bd
+/Ph {gsave Pch-x Pch-y rmoveto Show grestore} bd
+/Pc {Pch Ph} bd
+/T {/Adjust exch def gsave translate StringRot rotate 0 0 moveto
+    dup stringwidth pop neg Adjust mul 0 rmoveto
+    currentpoint translate TextShow grestore} bd
+/X {erasepage InPage {PageEnd} if} bd
+/Z {gsave showpage grestore PageEnd} bd
+/W {grestore end} bd
+% parameter setting commands
+/saveAt {Attr begin
+    /Atlinewidth currentlinewidth def
+    /Atfont currentfont def
+    /Atdash currentdash 2 array astore def
+    /AtSc CurSc def
+end} bd
+/restAt {Attr begin
+    Atlinewidth Atfont Atdash AtSc
+    end
+    Sc
+    aload pop setdash
+    setfont
+    setlinewidth
+} bd
+/St {1 sub LineTypes dup 3 1 roll length Rem floor get 0 setdash} bd
+/Sw {abs 2 div RastersPerPoint mul setlinewidth SetClip} bd
+/Sp {dup 42 eq {pop IBu} {Pch exch 0 exch put SetPchSize} ifelse}bd
+/Sx {dup Cex div /Ratio exch def
+     /Cex exch def
+     currentfont Ratio scalefont setfont
+     /Pch-x Pch-x Ratio mul def
+     /Pch-y Pch-y Ratio mul def
+     /Text-y Text-y Ratio mul def} bd
+/So {4 1 roll exch 4 -1 roll Plot astore pop SetClip} bd
+/Sg {4 1 roll exch 4 -1 roll Figure astore pop SetClip} bd
+/Sr {/StringRot exch def} bd
+/Sh {/CharRot exch def} bd
+/Sd {0 eq /ClipToPlot exch def SetClip} bd
+% other variable definitions
+/Iv {
+    /InPage false def
+    /Clip 4 array def
+    /Page 4 array def
+    /Figure [0 0 1 1] def
+    /Plot [0 0 1 1] def
+    /ClipToPlot true def
+    /Cex 1 def
+    /Outline false def
+    /Pch 1 string def
+    /Pch-x 0 def
+    /Pch-y 0 def
+    /Text-y 0 def
+    /LineTypes [ % in default units
+	[] [1 2] [4 4] [8 4] [13 3] [16 2 2 2] [8 2 2 2] [1 13] [6 5] [12 4]
+    ] def
+    /Attr 5 dict def
+    /CurSc 1 def
+    /Penup false def
+    /XEQ {} def
+} bd
+% other procedure definitions
+/Rem {2 copy div floor mul sub floor cvi} bd
+/RastersPerPoint {RastersPerInch 72 div} bd
+/ScaleArray {/Factor exch def /Array exch def
+    0 1 Array length 1 sub
+    {dup Array exch get Factor mul Array 3 1 roll put} for} bd
+/Coord {Region aload pop /uy exch def /ux exch def /ly exch def /lx exch def
+    uy ly sub ux lx sub Landscape {exch} if /Width exch def /Height exch def
+    lx ly translate Landscape {90 rotate 0 Height neg translate} if
+    1 RastersPerPoint div dup scale} bd
+/SetPchSize {gsave
+    newpath 0 0 moveto Pch false charpath flattenpath pathbbox
+    exch 3 1 roll
+    add 2 div neg /Pch-y exch def
+    add 2 div neg /Pch-x exch def
+    grestore} bd
+/TextShow {
+    CharRot StringRot sub dup 0 eq {pop SimpleShow} {FancyShow} ifelse
+} bd
+/SimpleShow {0 Text-y 2 div neg rmoveto Show} bd
+/FancyShow {
+    /RotDiff exch def
+    /Cos RotDiff cos abs def
+    /Sin RotDiff sin abs def
+    {
+	( ) dup 0 4 -1 roll put
+	dup stringwidth pop /CharWidth exch def
+	Cos 0 eq {
+	    Text-y Sin div
+	} {
+	    Sin 0 eq {
+		CharWidth Cos div
+	    } {
+		Text-y Sin div dup
+		CharWidth Cos div dup
+		4 1 roll lt {exch pop} {pop} ifelse
+	    } ifelse
+	} ifelse 2 div /CharDist exch def
+	CharDist 0 translate 0 0 moveto
+	gsave
+	    RotDiff rotate
+	    CharWidth 2 div neg Text-y 2 div neg rmoveto
+	    Outline {false charpath stroke} {show} ifelse
+	grestore
+	CharDist 0 translate 0 0 moveto
+    } forall
+} bd
+/Show {Outline {false charpath stroke} {show} ifelse} bd
+/BoxClip {/CLW currentlinewidth def
+    2 {CLW add 4 1 roll} repeat
+    2 {CLW sub 4 1 roll} repeat
+    % initclip
+    saveAt grestore gsave restAt
+    newpath 2 index exch 2 index exch dup 6 index exch
+    moveto 3 {lineto} repeat closepath clip newpath} bd
+/Subregion {7 dict begin /A exch def /Uy exch def /Ux exch def /Ly exch def /Lx exch def
+    Ux Lx sub A 0 get mul Lx add
+    Uy Ly sub A 1 get mul Ly add
+    Ux Lx sub A 2 get mul Lx add
+    Uy Ly sub A 3 get mul Ly add end} bd
+/SetFigure {Page aload pop Figure Subregion} bd
+/SetPlot {SetFigure Plot Subregion} bd
+/SetClip {ClipToPlot {SetPlot} {SetFigure} ifelse BoxClip} bd
+/SetPage {0 0 Width Height Page astore RastersPerPoint ScaleArray} bd
+/PageBegin {save /PageContext exch def /InPage true def gsave} bd
+/PageEnd {grestore PageContext restore /InPage false def} bd
+/SImage {
+    dup /Bits exch def 8 exch idiv /PerByte exch def
+    /Ht exch def /Wid exch def
+    1 Wid div 1 Ht div scale
+    /saveSc CurSc def /Colors IColors def
+    /curstr Wid PerByte add 1 sub PerByte idiv string def
+    /MaskByte 16#ff Bits 8 sub bitshift def
+    1 1 Ht {
+	currentfile curstr readhexstring pop pop
+	/CurPos 0 def
+	/Left PerByte def
+	1 1 Wid {
+	    Left PerByte eq {
+		/CurByte curstr CurPos get def
+		/MaskMove -8 Bits add def
+		/CurPos CurPos 1 add def
+	    } if
+	    CurByte MaskMove bitshift MaskByte and
+	    dup 0 gt {
+		Sc
+		exch dup 3 1 roll B M 1 z 1 w 1 y F
+	    } {pop pop} ifelse
+	    Left 1 sub dup /Left exch def 0 le
+	    {/Left PerByte def}
+	    {/MaskMove MaskMove Bits add def} ifelse
+	} for
+	pop
+    } for
+    /Colors GColors def saveSc Sc
+} bd
+/Ic {} bd
+/Sc {
+    dup /CurSc exch def
+    dup dup 1 lt exch 0 ge and
+    {1 exch sub setgray}  % explicit gray level [0,1)
+    {1 sub Colors dup 3 1 roll length Rem floor get
+     dup type /arraytype eq {aload pop setrgbcolor} {setgray} ifelse
+    } ifelse
+} bd
+/If {} bd
+/Sf {dup 0 lt /Outline exch def abs
+     1 sub Fonts dup 3 1 roll length Rem floor get
+     findfont PointSize Cex mul RastersPerPoint mul scalefont dup setfont
+     dup /FontMatrix get /Matrix exch def /FontBBox get aload pop
+     Matrix transform 4 2 roll Matrix transform
+     exch pop add /Text-y exch def pop SetPchSize} bd
+%%EndProlog
+%%BeginSetup
+% fixed controlling parameters
+/Landscape false def
+/Region [20.88 170.755 591.12 621.245] def
+/RastersPerInch 300 def
+/PointSize 14 def
+/Fonts [
+	/Helvetica
+	/Courier
+	/Times-Roman
+	/Helvetica-Oblique
+	/Helvetica-Bold
+	/Helvetica-BoldOblique
+	/Courier-Oblique
+	/Courier-Bold
+	/Courier-BoldOblique
+	/Times-Italic
+	/Times-Bold
+	/Times-BoldItalic
+	/Symbol
+	/AvantGarde-Book
+	/AvantGarde-BookOblique
+	/AvantGarde-Demi
+	/AvantGarde-DemiOblique
+	/Bookman-Demi
+	/Bookman-DemiItalic
+	/Bookman-Light
+	/Bookman-LightItalic
+	/Helvetica-Narrow
+	/Helvetica-Narrow-Bold
+	/Helvetica-Narrow-BoldOblique
+	/Helvetica-Narrow-Oblique
+	/NewCenturySchlbk-Roman
+	/NewCenturySchlbk-Bold
+	/NewCenturySchlbk-Italic
+	/NewCenturySchlbk-BoldItalic
+	/Palatino-Roman
+	/Palatino-Bold
+	/Palatino-Italic
+	/Palatino-BoldItalic
+	/ZapfChancery-MediumItalic
+	/ZapfDingbats
+] def
+/GColors [
+	0
+	0.6
+	0.3
+	0.9
+	0.4
+	0.7
+	0.1
+	0.5
+	0.8
+	0.2
+] def
+/BackCol -1 def
+/IColors [
+	0.933333
+	0.866667
+	0.8
+	0.733333
+	0.666667
+	0.6
+	0.533333
+	0.466667
+	0.4
+	0.333333
+	0.266667
+	0.2
+	0.133333
+	0.0666667
+	0
+] def
+/Colors GColors def
+/IBu {Pch 0 8#267 put SetPchSize} def
+/Bu {Pc} def
+
+% all initialization action here
+Iv I
+currentdict /Ic known {Ic} if
+currentdict /If known {If} if
+
+%%EndSetup
+
+
+%%Page: 1 1
+%%PageOrientation: Portrait
+A
+1 St
+1 Sw
+1 Sc
+0 Sr
+42 Sp
+0.5 Sx
+0.0615 0.9685 0.145253 0.883228 So
+0 0.5 0.666667 1 Sg
+0 Sh
+1 Sd
+%%IncludeResource: font Helvetica
+1 Sf
+B
+129 1360 m
+3 6 h
+2 12 h
+3 18 j
+E
+B
+145 1384 m
+3 24 j
+3 x
+2 18 h
+3 18 j
+3 6 h
+2 12 h
+3 18 j
+3 6 h
+2 6 j
+E
+B
+175 1360 m
+3 x
+2 x
+E
+B
+186 1360 m
+2 x
+E
+B
+194 1371 m
+2 6 j
+3 6 h
+3 11 j
+2 5 h
+3 5 j
+E
+B
+223 1371 m
+3 12 j
+3 x
+2 6 h
+3 x
+3 x
+2 11 h
+E
+B
+247 1382 m
+3 6 j
+3 17 j
+2 x
+3 17 h
+3 22 h
+3 17 j
+2 74 h
+3 26 j
+3 31 h
+2 79 j
+3 68 h
+3 30 h
+2 20 j
+3 25 j
+3 10 h
+2 16 j
+3 55 h
+3 30 j
+3 10 j
+2 77 h
+3 82 j
+3 141 h
+2 122 j
+3 29 h
+3 29 j
+2 40 j
+3 49 h
+3 10 j
+2 71 h
+3 28 j
+3 288 h
+2 341 j
+3 48 h
+3 155 h
+3 189 j
+2 74 h
+3 52 h
+3 26 j
+2 45 j
+3 40 h
+3 50 h
+2 68 h
+3 3 h
+3 171 j
+2 65 h
+3 21 h
+3 133 j
+3 77 h
+2 32 j
+3 18 h
+3 9 j
+2 4 h
+3 22 j
+3 5 j
+2 18 j
+3 53 h
+3 119 h
+2 102 j
+3 21 h
+3 130 h
+2 122 j
+3 36 h
+3 47 h
+3 101 j
+2 70 j
+3 27 h
+3 68 j
+2 32 h
+3 18 j
+3 4 h
+2 66 j
+3 47 h
+3 66 j
+2 9 h
+3 5 h
+3 5 j
+3 10 j
+2 10 h
+3 5 j
+3 10 j
+2 15 h
+3 19 j
+3 4 h
+2 15 h
+3 19 j
+3 9 h
+2 24 h
+3 34 j
+3 24 h
+2 14 j
+3 19 h
+3 24 j
+3 x
+2 24 h
+3 14 j
+3 10 j
+E
+B
+511 1378 m
+3 x
+2 32 h
+3 x
+3 14 j
+2 32 h
+3 51 j
+3 28 h
+2 37 j
+3 9 h
+3 14 h
+3 x
+2 9 h
+3 18 h
+3 18 h
+2 40 j
+3 26 h
+3 x
+2 22 j
+3 4 h
+3 x
+2 13 j
+3 27 h
+3 23 j
+3 14 j
+2 84 h
+3 61 j
+3 22 h
+2 5 j
+3 4 j
+3 31 j
+2 18 h
+3 41 j
+3 9 h
+2 14 h
+3 13 h
+3 9 h
+2 26 h
+3 9 j
+3 17 h
+3 48 j
+2 4 j
+3 14 j
+3 4 j
+2 9 h
+3 4 h
+3 31 h
+2 9 j
+3 38 h
+3 16 h
+2 44 h
+3 4 j
+3 73 j
+3 4 h
+2 8 h
+3 25 j
+3 4 h
+2 17 j
+3 26 j
+3 13 h
+2 134 h
+3 43 j
+3 42 h
+2 15 j
+3 16 j
+3 31 h
+2 75 j
+3 48 h
+3 49 h
+3 50 j
+2 45 h
+3 8 j
+3 65 h
+2 127 h
+3 61 j
+3 28 h
+2 149 j
+3 80 h
+3 59 j
+2 37 h
+3 14 j
+3 79 j
+2 54 h
+3 11 j
+3 24 h
+3 39 j
+2 118 h
+3 73 j
+3 32 j
+2 51 j
+3 49 j
+3 30 h
+2 54 j
+3 23 h
+3 30 h
+2 15 j
+3 4 j
+3 90 h
+3 25 j
+2 25 j
+3 11 h
+3 37 j
+2 61 j
+3 23 h
+3 23 j
+2 49 h
+3 4 j
+3 26 j
+2 27 j
+3 56 h
+3 15 h
+2 12 j
+3 29 h
+3 81 j
+3 19 h
+2 19 j
+3 11 h
+3 3 h
+2 x
+3 4 j
+3 33 h
+2 18 j
+3 78 h
+3 46 j
+2 65 h
+3 71 h
+3 158 j
+3 14 h
+2 29 j
+3 3 j
+3 8 j
+2 22 h
+3 15 j
+3 x
+2 197 h
+3 151 j
+3 7 j
+2 30 h
+3 63 j
+3 x
+2 28 h
+3 75 j
+3 68 h
+3 67 h
+2 78 j
+3 24 h
+3 82 h
+2 29 j
+3 23 j
+3 70 h
+2 118 j
+3 10 j
+3 10 h
+2 14 j
+3 7 h
+3 40 h
+2 79 j
+3 4 j
+3 127 h
+3 55 j
+2 3 h
+3 82 j
+E
+B
+949 1569 m
+3 172 j
+3 14 h
+2 20 h
+3 17 h
+3 73 j
+2 56 h
+3 55 h
+3 22 j
+3 93 h
+2 84 j
+3 30 j
+3 20 h
+2 40 j
+3 59 h
+3 3 h
+2 36 j
+3 23 h
+3 23 j
+2 22 h
+3 9 h
+3 16 h
+2 29 j
+3 29 j
+3 26 j
+3 33 h
+2 27 j
+3 23 h
+3 43 j
+2 40 h
+3 27 j
+3 104 h
+2 53 j
+3 x
+3 32 j
+2 26 h
+3 x
+3 26 j
+3 19 j
+2 72 h
+3 60 j
+3 7 h
+2 25 h
+3 16 j
+3 52 h
+2 59 j
+3 13 h
+3 1 j
+2 34 j
+3 20 j
+3 7 h
+2 17 j
+3 29 h
+3 7 h
+3 4 j
+2 13 h
+3 42 h
+3 58 j
+2 34 h
+3 66 j
+3 50 h
+E
+0.75 Sx
+(California MALARIA) 612 1853 0.5 T
+0.5 Sx
+(months from 01/62) 612 1280 0.5 T
+90 Sr
+90 Sh
+(log\(incidence\)) 11 1573 0.5 T
+0 Sr
+0 Sh
+110 1342 m
+4 z
+379 1342 m
+4 z
+648 1342 m
+4 z
+917 1342 m
+4 z
+E
+110 1342 m
+807 x
+E
+(0) 110 1316 0.5 T
+(100) 379 1316 0.5 T
+(200) 648 1316 0.5 T
+(300) 917 1316 0.5 T
+90 Sr
+90 Sh
+73 1367 m
+5 w
+73 1472 m
+5 w
+73 1577 m
+5 w
+73 1682 m
+5 w
+73 1787 m
+5 w
+E
+73 1367 m
+420 y
+E
+(-11.5) 46 1367 0.5 T
+(-11.4) 46 1472 0.5 T
+(-11.3) 46 1577 0.5 T
+(-11.2) 46 1682 0.5 T
+(-11.1) 46 1787 0.5 T
+0 Sr
+0 Sh
+1078 462 73 1342 c
+0.5 1 0.666667 1 Sg
+B
+1320 1369 m
+3 x
+E
+B
+1470 1418 m
+4 51 j
+E
+B
+1481 1392 m
+4 x
+E
+B
+1545 1391 m
+4 x
+3 25 j
+E
+B
+1560 1366 m
+4 24 h
+3 49 h
+4 73 j
+E
+B
+1579 1414 m
+3 48 j
+4 48 h
+E
+B
+1594 1414 m
+3 49 j
+4 x
+4 48 h
+4 x
+3 47 h
+4 71 j
+4 x
+4 24 h
+3 48 j
+E
+B
+1635 1389 m
+4 x
+3 24 j
+4 116 h
+4 69 j
+4 x
+3 23 h
+4 24 j
+4 23 h
+4 x
+3 69 j
+4 46 h
+4 x
+4 23 j
+E
+B
+1691 1456 m
+4 46 j
+4 x
+3 x
+4 68 h
+4 21 h
+4 44 h
+E
+B
+1721 1410 m
+4 44 h
+4 66 h
+3 190 h
+4 234 j
+4 150 h
+4 107 j
+3 168 h
+4 323 j
+4 423 h
+4 81 j
+E
+B
+1766 1430 m
+4 65 h
+4 85 h
+3 107 j
+4 21 j
+4 148 h
+4 171 j
+3 252 h
+4 124 j
+4 194 j
+4 214 h
+3 192 j
+4 x
+E
+B
+1819 1363 m
+3 274 h
+4 209 j
+4 85 h
+4 85 j
+3 42 h
+4 42 j
+4 1 j
+4 43 h
+3 107 j
+4 21 h
+4 21 j
+4 188 h
+3 41 j
+4 105 j
+4 63 h
+4 84 j
+3 x
+4 125 h
+4 104 j
+4 103 h
+3 82 j
+4 43 j
+4 84 h
+4 100 h
+3 60 j
+4 61 j
+4 218 h
+4 178 j
+3 41 j
+4 61 h
+4 102 j
+4 21 j
+3 61 h
+4 61 j
+4 122 h
+4 41 j
+3 99 h
+4 96 h
+4 x
+4 156 j
+3 20 j
+4 40 h
+4 100 j
+4 61 j
+3 179 h
+4 159 j
+4 20 h
+4 40 h
+3 193 h
+4 114 j
+4 20 j
+4 96 h
+3 97 j
+4 39 j
+4 80 j
+4 20 h
+3 40 h
+4 60 j
+4 60 h
+4 1 j
+3 x
+4 x
+4 39 j
+4 191 h
+E
+B
+2066 1420 m
+4 x
+4 19 h
+3 39 h
+4 58 j
+4 20 j
+4 x
+3 77 h
+4 93 h
+4 132 j
+4 76 h
+3 38 j
+4 76 j
+4 20 j
+4 170 h
+3 x
+4 132 j
+E
+B
+2134 1456 m
+3 74 h
+4 37 j
+4 x
+4 91 h
+3 73 j
+4 56 j
+4 76 j
+4 x
+3 186 h
+4 186 j
+4 38 h
+4 19 j
+3 56 h
+4 37 h
+4 125 h
+4 71 j
+3 55 j
+4 130 j
+4 75 h
+4 x
+3 161 h
+4 217 j
+4 92 h
+4 19 j
+3 18 j
+4 56 j
+4 110 h
+4 89 h
+3 71 j
+4 73 j
+4 55 j
+4 x
+E
+B
+2261 1415 m
+4 19 j
+4 37 h
+3 18 h
+4 37 j
+4 36 h
+4 36 h
+3 90 j
+4 18 j
+4 18 h
+4 37 j
+E
+0.75 Sx
+(Texas MALARIA) 1800 1853 0.5 T
+0.5 Sx
+(months from 01/62) 1800 1280 0.5 T
+90 Sr
+90 Sh
+(log\(incidence\)) 1199 1573 0.5 T
+0 Sr
+0 Sh
+1278 1342 m
+4 z
+1466 1342 m
+4 z
+1654 1342 m
+4 z
+1841 1342 m
+4 z
+2029 1342 m
+4 z
+2216 1342 m
+4 z
+E
+1278 1342 m
+938 x
+E
+(100) 1278 1316 0.5 T
+(150) 1466 1316 0.5 T
+(200) 1654 1316 0.5 T
+(250) 1841 1316 0.5 T
+(300) 2029 1316 0.5 T
+(350) 2216 1316 0.5 T
+90 Sr
+90 Sh
+1261 1384 m
+5 w
+1261 1449 m
+5 w
+1261 1515 m
+5 w
+1261 1581 m
+5 w
+1261 1647 m
+5 w
+1261 1712 m
+5 w
+1261 1778 m
+5 w
+E
+1261 1384 m
+394 y
+E
+(-11.50) 1234 1384 0.5 T
+(-11.46) 1234 1515 0.5 T
+(-11.42) 1234 1647 0.5 T
+(-11.38) 1234 1778 0.5 T
+0 Sr
+0 Sh
+1078 462 1261 1342 c
+0.0615 0.9685 0.145253 0.883228 So
+0 0.5 0.333333 0.666667 Sg
+B
+113 818 m
+3 x
+E
+B
+192 751 m
+3 x
+E
+B
+216 751 m
+3 1 j
+E
+B
+249 778 m
+3 28 j
+E
+B
+257 805 m
+3 28 j
+E
+B
+265 777 m
+3 x
+3 27 h
+E
+B
+282 857 m
+2 54 j
+3 x
+3 54 j
+2 54 h
+3 103 h
+3 130 j
+3 1 j
+E
+B
+306 828 m
+3 x
+2 27 j
+3 26 j
+3 27 j
+3 x
+2 26 h
+3 26 h
+3 52 j
+2 103 h
+3 49 h
+3 100 j
+3 26 j
+2 25 h
+3 26 j
+3 x
+2 26 h
+3 74 h
+3 100 j
+3 327 h
+2 302 j
+3 363 h
+3 314 j
+3 75 j
+2 x
+3 121 h
+3 114 h
+2 162 j
+3 23 h
+3 122 j
+3 98 h
+2 73 j
+3 72 h
+3 69 h
+E
+B
+407 794 m
+2 49 j
+3 72 h
+3 24 j
+2 23 h
+3 23 j
+3 23 h
+E
+B
+428 769 m
+3 1 j
+3 23 j
+E
+B
+439 745 m
+3 46 h
+3 47 j
+2 x
+E
+B
+453 767 m
+3 x
+2 23 j
+E
+B
+466 744 m
+3 x
+3 22 h
+E
+B
+483 788 m
+2 45 j
+E
+B
+499 765 m
+3 22 j
+E
+B
+507 743 m
+3 x
+E
+B
+515 764 m
+3 21 j
+E
+B
+526 742 m
+3 x
+E
+B
+537 742 m
+3 x
+E
+B
+553 762 m
+3 61 h
+3 61 j
+E
+B
+564 741 m
+3 21 h
+E
+B
+572 762 m
+3 20 h
+3 39 h
+E
+B
+583 801 m
+3 60 j
+3 20 h
+E
+B
+597 761 m
+3 x
+2 20 j
+3 19 h
+3 77 h
+2 96 j
+3 19 h
+3 38 h
+3 19 j
+E
+B
+627 760 m
+2 37 h
+3 19 j
+3 19 j
+3 56 h
+2 18 h
+3 18 j
+3 19 j
+3 37 j
+2 18 h
+3 19 h
+3 19 j
+2 x
+3 19 j
+3 18 j
+E
+B
+670 758 m
+3 18 h
+3 18 j
+2 x
+3 19 j
+3 72 h
+3 35 h
+2 35 j
+3 54 j
+3 18 h
+2 18 j
+3 53 h
+3 35 j
+3 119 h
+2 85 j
+3 52 j
+3 86 h
+2 69 j
+3 x
+3 51 h
+3 34 j
+2 50 h
+3 34 j
+3 17 j
+3 x
+2 x
+3 x
+3 17 j
+E
+B
+755 772 m
+2 x
+3 x
+3 17 j
+2 16 h
+3 x
+3 17 h
+3 34 j
+E
+B
+779 738 m
+3 65 h
+2 16 j
+3 x
+3 50 j
+3 49 h
+2 16 j
+3 33 j
+3 33 h
+2 x
+3 17 j
+3 32 h
+3 48 j
+2 x
+E
+B
+820 785 m
+3 x
+2 16 j
+3 x
+3 32 j
+2 78 h
+3 62 j
+E
+B
+847 768 m
+3 x
+2 15 h
+3 47 j
+3 47 h
+3 x
+2 31 j
+3 60 h
+3 45 j
+2 30 h
+3 30 j
+3 16 j
+3 16 h
+2 31 j
+3 75 h
+E
+B
+890 751 m
+3 74 h
+3 89 j
+3 30 h
+2 29 h
+3 14 h
+3 29 j
+2 15 j
+3 15 h
+3 29 j
+E
+B
+920 750 m
+3 x
+3 44 h
+3 44 j
+2 14 j
+3 43 h
+3 56 h
+2 56 j
+3 15 j
+3 14 j
+3 56 h
+2 71 j
+E
+B
+956 735 m
+2 43 h
+3 29 j
+3 42 h
+3 42 j
+2 42 h
+3 41 h
+3 97 j
+2 x
+3 110 h
+3 110 j
+3 14 h
+2 81 h
+3 x
+3 27 j
+2 27 j
+3 40 h
+3 13 h
+3 40 j
+2 27 j
+3 40 h
+3 39 h
+3 106 j
+2 54 h
+3 13 h
+3 40 j
+2 13 h
+3 26 h
+3 x
+3 26 j
+2 1 j
+3 27 h
+3 1 j
+2 26 j
+3 40 j
+3 53 h
+3 x
+2 26 j
+3 14 j
+3 39 h
+2 26 j
+3 39 h
+3 62 h
+3 127 j
+2 13 h
+3 101 h
+3 114 j
+2 39 h
+E
+B
+1089 760 m
+3 62 h
+2 63 j
+3 13 h
+3 74 h
+3 37 j
+2 75 j
+3 50 h
+3 73 h
+E
+0.75 Sx
+(Florida MALARIA) 612 1227 0.5 T
+0.5 Sx
+(months from 01/62) 612 654 0.5 T
+90 Sr
+90 Sh
+(log\(incidence\)) 11 947 0.5 T
+0 Sr
+0 Sh
+99 717 m
+5 z
+371 717 m
+5 z
+643 717 m
+5 z
+915 717 m
+5 z
+E
+99 717 m
+816 x
+E
+(0) 99 690 0.5 T
+(100) 371 690 0.5 T
+(200) 643 690 0.5 T
+(300) 915 690 0.5 T
+90 Sr
+90 Sh
+73 744 m
+5 w
+73 834 m
+5 w
+73 924 m
+5 w
+73 1014 m
+5 w
+73 1104 m
+5 w
+E
+73 744 m
+360 y
+E
+(-11.50) 46 744 0.5 T
+(-11.45) 46 834 0.5 T
+(-11.40) 46 924 0.5 T
+(-11.35) 46 1014 0.5 T
+(-11.30) 46 1104 0.5 T
+0 Sr
+0 Sh
+1078 461 73 717 c
+0.5 1 0.333333 0.666667 Sg
+B
+1327 762 m
+3 x
+3 128 h
+E
+B
+1356 762 m
+3 x
+E
+B
+1378 761 m
+4 x
+E
+B
+1404 889 m
+4 x
+E
+B
+1437 887 m
+3 117 h
+E
+B
+1446 760 m
+3 x
+4 126 h
+3 126 j
+3 1 j
+3 x
+E
+B
+1482 758 m
+3 x
+E
+B
+1785 748 m
+4 1 j
+E
+B
+1821 1068 m
+3 93 h
+E
+B
+1834 746 m
+3 115 h
+E
+B
+2015 741 m
+3 x
+3 110 h
+E
+B
+2124 738 m
+4 x
+E
+B
+2231 735 m
+3 106 h
+E
+0.75 Sx
+(Maine MALARIA) 1800 1227 0.5 T
+0.5 Sx
+(months from 01/62) 1800 654 0.5 T
+90 Sr
+90 Sh
+(log\(incidence\)) 1199 947 0.5 T
+0 Sr
+0 Sh
+1272 717 m
+5 z
+1433 717 m
+5 z
+1595 717 m
+5 z
+1756 717 m
+5 z
+1918 717 m
+5 z
+2079 717 m
+5 z
+2241 717 m
+5 z
+E
+1272 717 m
+969 x
+E
+(50) 1272 690 0.5 T
+(100) 1433 690 0.5 T
+(150) 1595 690 0.5 T
+(200) 1756 690 0.5 T
+(250) 1918 690 0.5 T
+(300) 2079 690 0.5 T
+(350) 2241 690 0.5 T
+90 Sr
+90 Sh
+1261 788 m
+5 w
+1261 861 m
+5 w
+1261 935 m
+5 w
+1261 1008 m
+5 w
+1261 1082 m
+5 w
+1261 1155 m
+5 w
+E
+1261 788 m
+367 y
+E
+(-11.40) 1234 788 0.5 T
+(-11.30) 1234 935 0.5 T
+(-11.20) 1234 1082 0.5 T
+0 Sr
+0 Sh
+1078 461 1261 717 c
+0 0.5 0 0.333333 Sg
+B
+113 159 m
+3 42 j
+E
+B
+186 116 m
+3 x
+E
+B
+234 115 m
+3 158 h
+3 158 j
+3 81 h
+2 81 j
+E
+B
+251 308 m
+3 106 h
+3 259 j
+3 116 h
+2 157 j
+3 41 h
+3 39 h
+3 80 j
+3 80 h
+2 80 j
+3 80 h
+3 80 j
+3 40 h
+3 40 j
+3 x
+2 40 h
+3 151 h
+3 151 j
+3 x
+3 x
+2 186 h
+3 147 j
+3 215 h
+3 177 j
+3 77 j
+3 185 h
+2 36 j
+3 150 j
+3 77 h
+3 117 j
+E
+B
+338 153 m
+3 184 h
+3 71 j
+3 35 h
+3 188 j
+3 40 h
+2 1 j
+3 183 h
+3 71 j
+3 138 h
+3 68 j
+2 70 j
+3 70 h
+3 130 h
+3 165 j
+3 109 j
+E
+B
+415 151 m
+2 39 j
+E
+B
+603 109 m
+3 36 h
+E
+B
+646 109 m
+2 35 h
+E
+B
+663 109 m
+2 34 h
+E
+B
+685 536 m
+3 199 j
+3 194 j
+3 34 h
+E
+B
+702 243 m
+3 210 h
+3 345 j
+E
+B
+713 108 m
+3 x
+E
+B
+730 143 m
+3 34 h
+3 34 j
+3 34 h
+E
+B
+747 108 m
+3 x
+3 x
+E
+B
+784 108 m
+3 x
+2 35 h
+E
+B
+795 108 m
+3 69 h
+E
+B
+820 177 m
+3 69 j
+E
+B
+829 143 m
+3 x
+E
+B
+880 108 m
+2 69 h
+E
+B
+894 210 m
+2 64 h
+3 166 j
+3 35 h
+3 35 j
+3 35 h
+E
+B
+953 108 m
+3 x
+2 35 h
+3 34 h
+3 69 j
+3 x
+E
+B
+973 143 m
+2 35 j
+E
+B
+1032 108 m
+3 35 h
+2 x
+3 35 j
+3 35 h
+E
+B
+1051 108 m
+3 x
+3 x
+3 68 h
+3 68 j
+3 134 h
+2 99 j
+3 x
+E
+0.75 Sx
+(Louisiana MALARIA) 612 602 0.5 T
+0.5 Sx
+(months from 01/62) 612 29 0.5 T
+90 Sr
+90 Sh
+(log\(incidence\)) 11 322 0.5 T
+0 Sr
+0 Sh
+344 91 m
+5 z
+626 91 m
+5 z
+908 91 m
+5 z
+E
+344 91 m
+564 x
+E
+(100) 344 64 0.5 T
+(200) 626 64 0.5 T
+(300) 908 64 0.5 T
+90 Sr
+90 Sh
+73 92 m
+5 w
+73 168 m
+5 w
+73 244 m
+5 w
+73 320 m
+5 w
+73 396 m
+5 w
+73 472 m
+5 w
+73 547 m
+5 w
+E
+73 92 m
+455 y
+E
+(-11.50) 46 92 0.5 T
+(-11.40) 46 244 0.5 T
+(-11.30) 46 396 0.5 T
+(-11.20) 46 547 0.5 T
+0 Sr
+0 Sh
+1078 462 73 91 c
+0.5 1 0 0.333333 Sg
+B
+1334 122 m
+3 x
+E
+B
+1350 122 m
+3 x
+3 13 h
+E
+B
+1367 135 m
+2 13 j
+3 13 h
+E
+B
+1394 135 m
+3 13 j
+2 x
+3 x
+3 x
+3 13 h
+2 130 h
+3 51 j
+3 79 j
+3 13 j
+2 27 h
+3 65 h
+3 51 h
+2 187 h
+3 126 j
+3 61 j
+3 12 h
+2 13 j
+3 37 h
+3 x
+3 37 j
+2 76 j
+3 76 h
+3 12 h
+3 119 h
+2 82 j
+3 25 j
+3 12 j
+2 37 j
+3 26 j
+3 181 h
+3 193 j
+2 335 h
+3 348 j
+3 x
+3 12 h
+2 100 h
+3 12 j
+3 172 h
+3 11 j
+2 45 j
+3 117 j
+3 100 j
+2 13 j
+3 39 h
+3 52 j
+3 13 j
+2 13 h
+3 39 h
+3 x
+3 13 h
+2 39 j
+3 51 h
+3 38 j
+3 38 h
+E
+B
+1547 403 m
+3 229 j
+2 26 h
+3 x
+3 12 h
+3 38 j
+2 x
+3 26 j
+3 13 h
+3 13 h
+2 13 j
+E
+B
+1580 174 m
+3 x
+2 26 j
+3 13 h
+3 51 h
+2 25 j
+3 66 j
+3 53 h
+3 13 h
+2 52 j
+E
+B
+1610 148 m
+3 39 h
+2 66 j
+3 14 h
+3 14 j
+3 14 h
+2 13 h
+E
+B
+1632 135 m
+2 14 j
+3 x
+3 14 h
+E
+B
+1654 121 m
+2 x
+E
+B
+1667 135 m
+3 x
+E
+B
+1695 135 m
+2 14 j
+3 x
+3 x
+3 27 h
+2 13 j
+E
+B
+1722 121 m
+3 14 h
+2 x
+3 26 h
+3 26 j
+3 14 j
+2 x
+3 14 h
+3 13 h
+3 27 j
+2 x
+3 14 h
+3 14 j
+2 27 h
+3 40 j
+3 66 h
+3 39 j
+2 27 j
+3 40 h
+3 27 j
+3 x
+E
+B
+1782 135 m
+3 14 j
+3 14 h
+2 39 h
+3 39 j
+3 x
+2 39 h
+3 53 j
+3 14 h
+3 26 h
+2 40 j
+3 53 h
+3 53 j
+E
+B
+1820 135 m
+3 x
+3 52 h
+3 52 j
+2 26 h
+3 40 j
+E
+B
+1842 121 m
+3 14 h
+3 13 h
+2 13 j
+E
+B
+1856 135 m
+3 26 h
+2 13 j
+3 26 h
+3 39 j
+3 13 h
+2 13 h
+3 77 h
+3 64 j
+2 51 h
+3 25 h
+3 25 j
+3 13 h
+2 26 j
+3 13 h
+3 51 j
+3 13 h
+2 52 j
+3 26 h
+3 13 j
+3 27 j
+2 40 h
+3 26 j
+3 13 h
+2 27 j
+3 14 h
+3 x
+3 13 h
+2 13 j
+3 14 j
+3 53 h
+3 26 j
+2 27 j
+E
+B
+1949 121 m
+3 91 h
+2 12 j
+3 65 j
+3 39 h
+2 13 h
+3 52 j
+3 14 j
+E
+B
+1984 121 m
+3 x
+3 40 h
+3 26 h
+2 39 j
+3 13 j
+3 13 h
+2 27 j
+3 14 h
+3 14 j
+3 27 h
+2 13 h
+3 13 h
+3 26 j
+3 27 j
+2 53 h
+3 39 j
+3 13 h
+3 x
+2 x
+3 27 j
+3 27 h
+2 27 j
+3 27 h
+3 26 h
+3 53 j
+2 27 h
+3 13 j
+3 x
+3 14 j
+2 14 h
+3 13 h
+3 13 h
+3 26 j
+2 14 j
+3 x
+3 x
+2 14 h
+3 x
+3 14 j
+3 40 h
+2 26 j
+3 x
+3 14 j
+3 27 h
+E
+B
+2110 121 m
+3 x
+3 x
+2 14 h
+3 90 h
+3 104 j
+2 x
+3 27 h
+3 27 j
+3 x
+2 x
+E
+B
+2148 174 m
+3 39 j
+3 64 h
+3 12 j
+2 12 h
+3 38 j
+3 40 j
+2 x
+E
+B
+2176 121 m
+2 104 h
+3 90 j
+3 39 h
+3 26 j
+2 26 h
+3 x
+3 53 j
+E
+B
+2200 135 m
+3 13 h
+3 13 h
+2 26 h
+3 52 j
+E
+B
+2217 121 m
+2 x
+3 53 h
+3 53 j
+3 x
+2 14 h
+3 114 h
+3 128 j
+3 x
+E
+B
+2249 121 m
+3 x
+3 x
+3 x
+2 40 h
+3 26 j
+3 x
+3 x
+2 14 j
+3 14 h
+3 52 h
+3 39 j
+2 27 j
+3 53 h
+3 39 j
+2 13 h
+3 x
+3 x
+3 x
+E
+0.75 Sx
+(Pennsylvania MALARIA) 1800 602 0.5 T
+0.5 Sx
+(months from 01/62) 1800 29 0.5 T
+90 Sr
+90 Sh
+(log\(incidence\)) 1199 322 0.5 T
+0 Sr
+0 Sh
+1282 91 m
+5 z
+1555 91 m
+5 z
+1829 91 m
+5 z
+2102 91 m
+5 z
+E
+1282 91 m
+820 x
+E
+(0) 1282 64 0.5 T
+(100) 1555 64 0.5 T
+(200) 1829 64 0.5 T
+(300) 2102 64 0.5 T
+90 Sr
+90 Sh
+1261 129 m
+5 w
+1261 209 m
+5 w
+1261 289 m
+5 w
+1261 369 m
+5 w
+1261 449 m
+5 w
+1261 529 m
+5 w
+E
+1261 129 m
+400 y
+E
+(-11.50) 1234 129 0.5 T
+(-11.40) 1234 289 0.5 T
+(-11.30) 1234 449 0.5 T
+0 Sr
+0 Sh
+1078 462 1261 91 c
+Z
+%%Trailer
+%%Pages: 1
+%%DocumentNeededResources: font Helvetica
+W
+%%EOF

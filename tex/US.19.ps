@@ -1,0 +1,7817 @@
+%!PS-Adobe-3.0 EPSF-3.0
+%%Title: (S-PLUS Graphics)
+%%Creator: S-PLUS
+%%For: (Audris Mockus)
+%%CreationDate: Mon Jun 27 16:51:22 1994
+%%BoundingBox: 20 170 592 622
+%%Pages: (atend)
+%%DocumentData: Clean7Bit
+%%DocumentNeededResources: (atend)
+%%EndComments
+%%BeginProlog
+150 dict begin gsave
+/bd {bind def} def
+/PVer 3100 def % version
+% drawing commands
+/I {Coord SetPage 1 setlinecap 1 setlinejoin
+    LineTypes {RastersPerPoint ScaleArray} forall
+    /Helvetica findfont
+    PointSize RastersPerPoint mul Cex mul scalefont setfont
+    /Colors GColors def
+} bd
+/IBu {} def
+/B {newpath} bd
+/C {currentpoint Penup {newpath} {stroke} ifelse moveto} bd
+/E {stroke} bd
+/F {closepath fill} bd
+/M {moveto} bd
+/L {lineto} bd
+/Pu {load /XEQ exch def /Penup true def} bd
+/Pd {/XEQ {} def /Penup false def} bd
+/Px {currentdict /XEQ known {XEQ} if} bd
+/h {Penup {rmoveto Px} {rlineto} ifelse} bd
+/j {neg Penup {rmoveto Px} {rlineto} ifelse} bd
+/k {exch neg exch Penup {rmoveto Px} {rlineto} ifelse} bd
+/l {neg exch neg exch Penup {rmoveto Px} {rlineto} ifelse} bd
+/m {moveto Penup {Px} if} bd
+/x {0 Penup {rmoveto Px} {rlineto} ifelse} bd
+/y {0 exch Penup {rmoveto Px} {rlineto} ifelse} bd
+/w {neg x} bd
+/z {neg y} bd
+/a {B M dup y exch x neg y closepath} bd
+/b {a fill} bd
+/c {a stroke} bd
+/A {PageBegin BackCol dup 0 gt {
+    gsave Sc Page aload pop
+    exch 4 -1 roll dup 5 1 roll sub 3 1 roll exch dup 4 1 roll sub 4 2 roll b
+    grestore} {pop} ifelse
+} bd
+/Ph {gsave Pch-x Pch-y rmoveto Show grestore} bd
+/Pc {Pch Ph} bd
+/T {/Adjust exch def gsave translate StringRot rotate 0 0 moveto
+    dup stringwidth pop neg Adjust mul 0 rmoveto
+    currentpoint translate TextShow grestore} bd
+/X {erasepage InPage {PageEnd} if} bd
+/Z {gsave showpage grestore PageEnd} bd
+/W {grestore end} bd
+% parameter setting commands
+/saveAt {Attr begin
+    /Atlinewidth currentlinewidth def
+    /Atfont currentfont def
+    /Atdash currentdash 2 array astore def
+    /AtSc CurSc def
+end} bd
+/restAt {Attr begin
+    Atlinewidth Atfont Atdash AtSc
+    end
+    Sc
+    aload pop setdash
+    setfont
+    setlinewidth
+} bd
+/St {1 sub LineTypes dup 3 1 roll length Rem floor get 0 setdash} bd
+/Sw {abs 2 div RastersPerPoint mul setlinewidth SetClip} bd
+/Sp {dup 42 eq {pop IBu} {Pch exch 0 exch put SetPchSize} ifelse}bd
+/Sx {dup Cex div /Ratio exch def
+     /Cex exch def
+     currentfont Ratio scalefont setfont
+     /Pch-x Pch-x Ratio mul def
+     /Pch-y Pch-y Ratio mul def
+     /Text-y Text-y Ratio mul def} bd
+/So {4 1 roll exch 4 -1 roll Plot astore pop SetClip} bd
+/Sg {4 1 roll exch 4 -1 roll Figure astore pop SetClip} bd
+/Sr {/StringRot exch def} bd
+/Sh {/CharRot exch def} bd
+/Sd {0 eq /ClipToPlot exch def SetClip} bd
+% other variable definitions
+/Iv {
+    /InPage false def
+    /Clip 4 array def
+    /Page 4 array def
+    /Figure [0 0 1 1] def
+    /Plot [0 0 1 1] def
+    /ClipToPlot true def
+    /Cex 1 def
+    /Outline false def
+    /Pch 1 string def
+    /Pch-x 0 def
+    /Pch-y 0 def
+    /Text-y 0 def
+    /LineTypes [ % in default units
+	[] [1 2] [4 4] [8 4] [13 3] [16 2 2 2] [8 2 2 2] [1 13] [6 5] [12 4]
+    ] def
+    /Attr 5 dict def
+    /CurSc 1 def
+    /Penup false def
+    /XEQ {} def
+} bd
+% other procedure definitions
+/Rem {2 copy div floor mul sub floor cvi} bd
+/RastersPerPoint {RastersPerInch 72 div} bd
+/ScaleArray {/Factor exch def /Array exch def
+    0 1 Array length 1 sub
+    {dup Array exch get Factor mul Array 3 1 roll put} for} bd
+/Coord {Region aload pop /uy exch def /ux exch def /ly exch def /lx exch def
+    uy ly sub ux lx sub Landscape {exch} if /Width exch def /Height exch def
+    lx ly translate Landscape {90 rotate 0 Height neg translate} if
+    1 RastersPerPoint div dup scale} bd
+/SetPchSize {gsave
+    newpath 0 0 moveto Pch false charpath flattenpath pathbbox
+    exch 3 1 roll
+    add 2 div neg /Pch-y exch def
+    add 2 div neg /Pch-x exch def
+    grestore} bd
+/TextShow {
+    CharRot StringRot sub dup 0 eq {pop SimpleShow} {FancyShow} ifelse
+} bd
+/SimpleShow {0 Text-y 2 div neg rmoveto Show} bd
+/FancyShow {
+    /RotDiff exch def
+    /Cos RotDiff cos abs def
+    /Sin RotDiff sin abs def
+    {
+	( ) dup 0 4 -1 roll put
+	dup stringwidth pop /CharWidth exch def
+	Cos 0 eq {
+	    Text-y Sin div
+	} {
+	    Sin 0 eq {
+		CharWidth Cos div
+	    } {
+		Text-y Sin div dup
+		CharWidth Cos div dup
+		4 1 roll lt {exch pop} {pop} ifelse
+	    } ifelse
+	} ifelse 2 div /CharDist exch def
+	CharDist 0 translate 0 0 moveto
+	gsave
+	    RotDiff rotate
+	    CharWidth 2 div neg Text-y 2 div neg rmoveto
+	    Outline {false charpath stroke} {show} ifelse
+	grestore
+	CharDist 0 translate 0 0 moveto
+    } forall
+} bd
+/Show {Outline {false charpath stroke} {show} ifelse} bd
+/BoxClip {/CLW currentlinewidth def
+    2 {CLW add 4 1 roll} repeat
+    2 {CLW sub 4 1 roll} repeat
+    % initclip
+    saveAt grestore gsave restAt
+    newpath 2 index exch 2 index exch dup 6 index exch
+    moveto 3 {lineto} repeat closepath clip newpath} bd
+/Subregion {7 dict begin /A exch def /Uy exch def /Ux exch def /Ly exch def /Lx exch def
+    Ux Lx sub A 0 get mul Lx add
+    Uy Ly sub A 1 get mul Ly add
+    Ux Lx sub A 2 get mul Lx add
+    Uy Ly sub A 3 get mul Ly add end} bd
+/SetFigure {Page aload pop Figure Subregion} bd
+/SetPlot {SetFigure Plot Subregion} bd
+/SetClip {ClipToPlot {SetPlot} {SetFigure} ifelse BoxClip} bd
+/SetPage {0 0 Width Height Page astore RastersPerPoint ScaleArray} bd
+/PageBegin {save /PageContext exch def /InPage true def gsave} bd
+/PageEnd {grestore PageContext restore /InPage false def} bd
+/SImage {
+    dup /Bits exch def 8 exch idiv /PerByte exch def
+    /Ht exch def /Wid exch def
+    1 Wid div 1 Ht div scale
+    /saveSc CurSc def /Colors IColors def
+    /curstr Wid PerByte add 1 sub PerByte idiv string def
+    /MaskByte 16#ff Bits 8 sub bitshift def
+    1 1 Ht {
+	currentfile curstr readhexstring pop pop
+	/CurPos 0 def
+	/Left PerByte def
+	1 1 Wid {
+	    Left PerByte eq {
+		/CurByte curstr CurPos get def
+		/MaskMove -8 Bits add def
+		/CurPos CurPos 1 add def
+	    } if
+	    CurByte MaskMove bitshift MaskByte and
+	    dup 0 gt {
+		Sc
+		exch dup 3 1 roll B M 1 z 1 w 1 y F
+	    } {pop pop} ifelse
+	    Left 1 sub dup /Left exch def 0 le
+	    {/Left PerByte def}
+	    {/MaskMove MaskMove Bits add def} ifelse
+	} for
+	pop
+    } for
+    /Colors GColors def saveSc Sc
+} bd
+/Ic {} bd
+/Sc {
+    dup /CurSc exch def
+    dup dup 1 lt exch 0 ge and
+    {1 exch sub setgray}  % explicit gray level [0,1)
+    {1 sub Colors dup 3 1 roll length Rem floor get
+     dup type /arraytype eq {aload pop setrgbcolor} {setgray} ifelse
+    } ifelse
+} bd
+/If {} bd
+/Sf {dup 0 lt /Outline exch def abs
+     1 sub Fonts dup 3 1 roll length Rem floor get
+     findfont PointSize Cex mul RastersPerPoint mul scalefont dup setfont
+     dup /FontMatrix get /Matrix exch def /FontBBox get aload pop
+     Matrix transform 4 2 roll Matrix transform
+     exch pop add /Text-y exch def pop SetPchSize} bd
+%%EndProlog
+%%BeginSetup
+% fixed controlling parameters
+/Landscape false def
+/Region [20.88 170.755 591.12 621.245] def
+/RastersPerInch 300 def
+/PointSize 14 def
+/Fonts [
+	/Helvetica
+	/Courier
+	/Times-Roman
+	/Helvetica-Oblique
+	/Helvetica-Bold
+	/Helvetica-BoldOblique
+	/Courier-Oblique
+	/Courier-Bold
+	/Courier-BoldOblique
+	/Times-Italic
+	/Times-Bold
+	/Times-BoldItalic
+	/Symbol
+	/AvantGarde-Book
+	/AvantGarde-BookOblique
+	/AvantGarde-Demi
+	/AvantGarde-DemiOblique
+	/Bookman-Demi
+	/Bookman-DemiItalic
+	/Bookman-Light
+	/Bookman-LightItalic
+	/Helvetica-Narrow
+	/Helvetica-Narrow-Bold
+	/Helvetica-Narrow-BoldOblique
+	/Helvetica-Narrow-Oblique
+	/NewCenturySchlbk-Roman
+	/NewCenturySchlbk-Bold
+	/NewCenturySchlbk-Italic
+	/NewCenturySchlbk-BoldItalic
+	/Palatino-Roman
+	/Palatino-Bold
+	/Palatino-Italic
+	/Palatino-BoldItalic
+	/ZapfChancery-MediumItalic
+	/ZapfDingbats
+] def
+/GColors [
+	0
+	0.6
+	0.3
+	0.9
+	0.4
+	0.7
+	0.1
+	0.5
+	0.8
+	0.2
+] def
+/BackCol -1 def
+/IColors [
+	0.933333
+	0.866667
+	0.8
+	0.733333
+	0.666667
+	0.6
+	0.533333
+	0.466667
+	0.4
+	0.333333
+	0.266667
+	0.2
+	0.133333
+	0.0666667
+	0
+] def
+/Colors GColors def
+/IBu {Pch 0 8#267 put SetPchSize} def
+/Bu {Pc} def
+
+% all initialization action here
+Iv I
+currentdict /Ic known {Ic} if
+currentdict /If known {If} if
+
+%%EndSetup
+
+
+%%Page: 1 1
+%%PageOrientation: Portrait
+A
+1 St
+1 Sw
+1 Sc
+0 Sr
+42 Sp
+0.5 Sx
+0.123 0.937 0.242089 0.80538 So
+0 0.25 0.8 1 Sg
+0 Sh
+0 Sd
+%%IncludeResource: font Helvetica
+1 Sf
+B
+91 1767 m
+1 5 j
+1 8 h
+2 11 h
+1 6 j
+1 17 h
+1 17 j
+1 13 h
+2 26 j
+1 4 h
+1 58 j
+1 61 h
+1 7 j
+2 11 h
+1 4 j
+1 4 h
+1 x
+1 12 h
+2 5 j
+1 6 h
+1 28 j
+1 6 h
+2 8 j
+1 24 h
+1 18 j
+1 19 h
+1 25 j
+2 37 h
+1 29 j
+1 3 h
+1 13 h
+1 16 h
+2 21 j
+1 36 j
+1 25 h
+1 12 h
+1 24 j
+2 39 j
+1 32 h
+1 2 h
+1 11 h
+1 11 h
+2 24 j
+1 13 h
+1 8 h
+1 36 j
+1 20 h
+2 12 h
+1 29 j
+1 x
+1 6 h
+2 9 j
+1 20 h
+1 14 j
+1 22 h
+1 17 h
+2 19 j
+1 11 h
+1 28 j
+1 28 h
+1 25 j
+2 6 j
+1 9 h
+1 9 h
+1 10 h
+1 9 h
+2 21 j
+1 5 j
+1 5 h
+1 5 j
+1 5 j
+2 12 h
+1 66 j
+1 20 j
+1 71 h
+1 3 h
+2 6 j
+1 20 h
+1 14 h
+1 20 j
+2 14 j
+1 9 h
+1 21 h
+1 48 j
+1 22 j
+2 28 j
+1 54 h
+1 23 h
+1 19 h
+1 6 h
+2 9 h
+1 49 j
+1 32 h
+1 10 j
+1 30 j
+2 23 h
+1 27 j
+1 16 j
+1 37 h
+1 11 h
+2 6 h
+1 10 h
+1 27 j
+1 9 j
+1 20 h
+2 8 j
+1 6 j
+1 3 h
+1 37 j
+2 6 h
+1 10 h
+1 21 h
+1 6 j
+1 12 h
+2 x
+1 19 j
+1 7 h
+1 6 h
+1 x
+2 x
+1 9 j
+1 76 j
+1 76 h
+1 3 h
+2 7 j
+1 24 h
+1 3 j
+1 x
+1 17 h
+2 51 j
+1 20 h
+1 17 h
+1 28 j
+1 14 j
+2 5 h
+1 29 h
+1 20 j
+1 51 h
+1 31 j
+2 10 h
+1 10 j
+1 9 j
+1 37 j
+2 66 h
+1 36 j
+1 38 j
+1 38 h
+1 26 h
+2 7 j
+1 13 h
+1 4 j
+1 9 j
+1 2 h
+2 13 h
+1 8 j
+1 17 h
+1 43 j
+1 7 h
+2 6 h
+1 3 j
+1 26 h
+1 7 h
+1 5 j
+2 19 j
+1 30 h
+1 15 j
+1 2 h
+1 12 j
+2 x
+1 2 h
+1 34 j
+1 x
+2 52 h
+1 34 j
+1 51 h
+1 14 j
+1 26 j
+2 37 h
+1 45 j
+1 11 h
+1 28 j
+1 8 h
+2 8 j
+1 30 h
+1 2 j
+1 11 j
+1 23 h
+2 5 h
+1 37 j
+1 15 h
+1 7 h
+1 22 j
+2 34 j
+1 46 h
+1 3 h
+1 49 j
+1 51 h
+2 14 j
+1 9 h
+1 6 j
+1 6 j
+2 3 h
+1 20 j
+1 32 h
+1 49 j
+1 x
+2 x
+1 28 j
+1 88 h
+1 17 j
+1 17 h
+2 6 j
+1 8 h
+1 19 j
+1 3 j
+1 49 h
+2 59 j
+1 19 h
+1 19 j
+1 8 j
+1 36 h
+2 18 j
+1 14 h
+1 5 j
+1 15 j
+1 42 j
+2 30 h
+1 12 h
+1 28 j
+1 x
+2 6 j
+1 54 h
+1 17 j
+1 21 h
+1 41 j
+2 9 h
+1 30 h
+1 7 j
+1 6 j
+1 11 h
+2 42 j
+1 12 j
+1 30 h
+1 7 h
+1 6 h
+2 13 h
+1 22 j
+1 9 h
+1 13 j
+1 24 h
+2 42 j
+1 22 h
+1 42 j
+1 x
+1 25 h
+2 37 h
+1 8 j
+1 8 h
+1 25 h
+2 21 j
+1 21 j
+1 3 j
+1 8 j
+1 20 h
+2 29 j
+1 20 h
+1 31 j
+1 11 h
+1 17 j
+2 22 h
+1 4 h
+1 11 h
+1 3 j
+1 17 j
+2 11 j
+1 11 h
+1 11 j
+1 6 j
+1 54 h
+2 14 j
+1 10 j
+1 7 h
+1 20 j
+1 41 h
+2 32 j
+1 4 j
+1 30 j
+1 20 h
+2 6 j
+1 48 j
+1 34 h
+1 8 h
+1 6 h
+2 x
+1 x
+1 28 h
+1 17 j
+1 13 h
+2 92 j
+1 96 h
+1 22 j
+1 12 j
+1 26 h
+2 4 h
+1 7 h
+1 3 j
+1 6 h
+1 10 j
+2 24 j
+1 6 h
+1 29 j
+1 23 h
+1 34 j
+2 20 h
+1 25 h
+1 11 j
+1 x
+2 6 j
+1 6 h
+1 23 j
+1 23 h
+1 6 h
+2 74 j
+1 105 h
+1 71 j
+1 11 h
+1 17 h
+2 6 h
+1 31 h
+1 31 j
+1 31 h
+1 45 j
+2 x
+1 x
+1 9 j
+1 23 h
+1 68 j
+2 68 h
+1 68 j
+1 45 h
+1 34 h
+1 13 h
+2 47 j
+1 29 h
+1 28 h
+1 82 j
+2 x
+1 48 h
+1 6 j
+1 6 h
+1 14 j
+2 8 h
+1 34 h
+1 34 j
+1 30 h
+1 x
+2 47 j
+1 47 h
+1 47 j
+1 9 h
+1 20 j
+2 68 j
+1 68 h
+1 20 h
+1 45 h
+1 15 j
+2 8 h
+1 4 j
+1 4 j
+1 4 h
+1 26 j
+2 12 h
+E
+0.75 Sx
+1 Sd
+(US BRUCELLOSIS) 315 1853 0.5 T
+0.5 Sx
+(months from 01/62) 315 1530 0.5 T
+90 Sr
+90 Sh
+(log\(cases\)) 11 1698 0.5 T
+0 Sr
+0 Sh
+90 1593 m
+3 z
+210 1593 m
+3 z
+331 1593 m
+3 z
+452 1593 m
+3 z
+E
+90 1593 m
+362 x
+E
+(0) 90 1566 0.5 T
+(100) 210 1566 0.5 T
+(200) 331 1566 0.5 T
+(300) 452 1566 0.5 T
+90 Sr
+90 Sh
+73 1600 m
+2 w
+73 1649 m
+2 w
+73 1699 m
+2 w
+73 1748 m
+2 w
+73 1797 m
+2 w
+E
+73 1600 m
+197 y
+E
+(0) 46 1600 0.5 T
+(1) 46 1649 0.5 T
+(2) 46 1699 0.5 T
+(3) 46 1748 0.5 T
+(4) 46 1797 0.5 T
+0 Sr
+0 Sh
+0 Sd
+484 211 73 1593 c
+0.25 0.5 0.8 1 Sg
+B
+685 1788 m
+1 24 j
+1 5 j
+2 5 h
+1 6 j
+1 2 j
+1 31 j
+2 31 h
+1 39 h
+1 9 j
+1 18 j
+1 4 h
+2 6 j
+1 27 j
+1 19 h
+1 30 j
+1 14 j
+2 28 h
+1 5 j
+1 38 j
+1 73 h
+2 8 j
+1 5 j
+1 31 h
+1 56 j
+1 3 h
+2 23 j
+1 28 h
+1 28 h
+1 18 j
+2 24 j
+1 19 j
+1 25 h
+1 38 h
+1 4 j
+2 14 h
+1 64 j
+1 16 h
+1 3 h
+2 6 j
+1 65 j
+1 19 h
+1 33 j
+1 47 h
+2 29 h
+1 6 j
+1 20 h
+1 16 h
+2 40 j
+1 14 j
+1 14 h
+1 13 h
+1 3 h
+2 25 j
+1 33 h
+1 20 j
+1 36 h
+2 12 j
+1 12 j
+1 29 h
+1 64 j
+1 29 h
+2 10 j
+E
+B
+763 1692 m
+1 26 h
+1 26 j
+2 7 j
+1 74 h
+1 8 j
+1 28 h
+2 10 h
+1 97 j
+1 17 h
+1 30 h
+1 17 h
+2 90 j
+1 71 h
+1 15 j
+1 8 j
+2 57 h
+1 2 h
+1 5 j
+1 7 h
+1 99 j
+2 52 h
+1 9 h
+1 61 j
+1 42 h
+2 14 j
+1 21 h
+1 17 h
+1 4 h
+1 2 j
+2 24 h
+1 25 h
+1 35 j
+1 18 h
+2 39 j
+1 14 h
+1 45 h
+1 78 j
+1 26 j
+2 97 h
+1 3 h
+1 4 h
+1 42 j
+1 22 h
+2 39 j
+1 15 j
+1 15 h
+1 12 j
+2 16 j
+1 9 h
+1 x
+1 26 j
+1 36 h
+2 36 h
+1 8 j
+1 3 h
+1 67 j
+2 33 h
+1 26 j
+1 29 h
+1 x
+1 52 j
+2 9 h
+1 9 j
+1 46 h
+1 29 h
+2 9 j
+1 5 j
+1 15 j
+1 3 h
+1 50 h
+2 76 j
+1 29 h
+1 14 j
+1 5 j
+2 5 h
+1 40 h
+1 36 j
+1 31 h
+1 31 h
+2 104 j
+1 46 h
+1 53 h
+1 8 h
+2 20 j
+1 35 j
+1 6 j
+1 6 h
+1 3 h
+2 3 j
+1 24 h
+1 15 h
+1 5 h
+1 13 j
+2 32 h
+1 19 j
+1 30 j
+1 17 j
+2 40 j
+1 37 h
+1 30 j
+1 71 h
+1 14 j
+2 14 h
+1 14 j
+1 7 h
+1 7 j
+2 45 j
+1 38 j
+1 43 h
+1 33 j
+1 x
+E
+B
+901 1652 m
+1 52 h
+1 5 h
+2 109 j
+1 66 h
+1 43 h
+1 16 h
+1 16 j
+2 10 j
+1 66 j
+1 85 h
+1 33 j
+2 85 j
+1 85 h
+1 x
+1 9 j
+1 16 h
+2 7 h
+1 7 j
+1 x
+1 12 h
+2 38 j
+1 48 h
+1 81 j
+1 x
+1 66 h
+2 23 j
+1 9 h
+1 61 h
+1 2 j
+1 92 j
+E
+B
+941 1633 m
+1 33 j
+2 x
+1 x
+1 x
+1 x
+E
+B
+962 1600 m
+1 x
+1 x
+E
+B
+974 1600 m
+1 x
+2 x
+E
+B
+1005 1600 m
+1 x
+E
+B
+1024 1600 m
+1 x
+E
+B
+1106 1600 m
+1 x
+E
+B
+1118 1600 m
+1 x
+E
+B
+1123 1633 m
+1 33 j
+1 x
+2 x
+E
+0.75 Sx
+1 Sd
+(US DIPHTHERIA) 909 1853 0.5 T
+0.5 Sx
+(months from 01/62) 909 1530 0.5 T
+90 Sr
+90 Sh
+(log\(cases\)) 605 1698 0.5 T
+0 Sr
+0 Sh
+684 1593 m
+3 z
+806 1593 m
+3 z
+928 1593 m
+3 z
+1050 1593 m
+3 z
+E
+684 1593 m
+366 x
+E
+(0) 684 1566 0.5 T
+(100) 806 1566 0.5 T
+(200) 928 1566 0.5 T
+(300) 1050 1566 0.5 T
+90 Sr
+90 Sh
+667 1600 m
+2 w
+667 1648 m
+2 w
+667 1695 m
+2 w
+667 1742 m
+2 w
+667 1789 m
+2 w
+E
+667 1600 m
+189 y
+E
+(0) 640 1600 0.5 T
+(1) 640 1648 0.5 T
+(2) 640 1695 0.5 T
+(3) 640 1742 0.5 T
+(4) 640 1789 0.5 T
+0 Sr
+0 Sh
+0 Sd
+484 211 667 1593 c
+0.5 0.75 0.8 1 Sg
+B
+1279 1654 m
+1 17 j
+1 10 h
+2 18 h
+1 9 h
+1 3 h
+1 x
+1 9 h
+2 14 h
+1 x
+1 35 j
+1 5 h
+1 5 j
+2 5 h
+1 23 j
+1 30 h
+1 23 j
+1 16 h
+2 21 h
+1 26 j
+1 12 h
+1 3 h
+2 80 j
+1 74 h
+1 14 j
+1 6 j
+1 x
+2 x
+1 26 h
+1 20 j
+1 14 h
+1 x
+2 12 h
+1 63 j
+1 47 h
+1 16 j
+1 31 j
+2 14 h
+1 28 h
+1 18 j
+1 18 h
+1 18 h
+2 13 j
+1 7 h
+1 7 j
+1 13 h
+1 20 h
+2 x
+1 3 j
+1 17 j
+1 28 h
+2 5 j
+1 11 h
+1 9 h
+1 4 j
+1 4 h
+2 6 h
+1 15 h
+1 3 j
+1 1 h
+1 9 h
+2 17 h
+1 6 h
+1 13 j
+1 4 h
+1 1 j
+2 1 j
+1 7 h
+1 2 j
+1 8 h
+1 3 j
+2 2 j
+1 5 h
+1 2 j
+1 9 j
+1 x
+2 1 h
+1 1 j
+1 10 h
+1 x
+2 1 j
+1 10 h
+1 9 j
+1 10 j
+1 13 h
+2 3 j
+1 3 j
+1 10 h
+1 1 j
+1 7 j
+2 9 h
+1 3 j
+1 7 h
+1 4 h
+1 12 j
+2 14 h
+1 12 j
+1 2 h
+1 5 j
+1 2 j
+2 8 h
+1 2 j
+1 x
+1 4 j
+1 3 h
+2 x
+1 2 h
+1 3 h
+1 1 j
+2 3 j
+1 2 h
+1 16 j
+1 12 h
+1 2 j
+2 13 j
+1 6 j
+1 7 h
+1 13 h
+1 27 j
+2 2 j
+1 21 h
+1 32 j
+1 10 h
+1 19 j
+2 15 h
+1 24 j
+1 x
+1 2 j
+1 5 j
+2 1 j
+1 2 j
+1 9 j
+1 17 j
+1 3 h
+2 11 h
+1 11 j
+1 19 h
+1 2 j
+1 6 j
+2 11 j
+1 19 h
+1 4 h
+1 44 j
+2 16 h
+1 7 h
+1 4 h
+1 20 j
+1 x
+2 16 h
+1 10 j
+1 35 h
+1 1 j
+1 1 h
+2 10 h
+1 28 j
+1 8 h
+1 10 j
+1 5 h
+2 15 j
+1 7 h
+1 16 h
+1 3 h
+1 6 h
+2 8 h
+1 6 j
+1 7 j
+1 9 j
+1 16 h
+2 12 j
+1 12 j
+1 19 h
+1 7 j
+2 1 j
+1 25 h
+1 5 j
+1 1 j
+1 1 h
+2 7 j
+1 13 j
+1 8 h
+1 19 j
+1 7 h
+2 10 h
+1 5 h
+1 4 h
+1 9 h
+1 6 h
+2 1 h
+1 7 j
+1 11 j
+1 12 j
+1 6 h
+2 1 h
+1 4 h
+1 5 h
+1 5 j
+1 21 h
+2 x
+1 6 h
+1 x
+1 11 j
+2 7 j
+1 6 j
+1 5 h
+1 8 j
+1 x
+2 12 j
+1 15 h
+1 15 h
+1 6 h
+1 5 h
+2 4 h
+1 9 j
+1 7 h
+1 6 j
+1 11 h
+2 5 h
+1 2 j
+1 3 h
+1 4 h
+1 12 h
+2 x
+1 x
+1 1 j
+1 12 j
+1 2 h
+2 x
+1 x
+1 12 j
+1 6 j
+2 5 h
+1 4 h
+1 3 h
+1 2 j
+1 10 h
+2 10 j
+1 1 h
+1 9 j
+1 10 j
+1 6 h
+2 14 j
+1 4 h
+1 4 h
+1 2 j
+1 11 h
+2 9 h
+1 x
+1 8 j
+1 3 h
+1 9 j
+2 15 j
+1 6 h
+1 8 j
+1 7 h
+1 x
+2 2 h
+1 10 j
+1 12 h
+1 9 h
+2 2 j
+1 6 h
+1 17 j
+1 7 j
+1 4 h
+2 x
+1 2 j
+1 6 h
+1 2 h
+1 8 h
+2 4 h
+1 3 h
+1 2 j
+1 3 h
+1 2 h
+2 15 j
+1 1 h
+1 6 j
+1 4 j
+1 6 h
+2 x
+1 6 h
+1 6 h
+1 19 h
+1 17 j
+2 3 j
+1 1 h
+1 16 j
+1 9 h
+2 2 j
+1 20 j
+1 14 h
+1 12 h
+1 3 j
+2 11 h
+1 8 h
+1 x
+1 6 j
+1 1 h
+2 15 j
+1 1 j
+1 12 j
+1 2 h
+1 3 h
+2 6 h
+1 3 h
+1 8 j
+1 21 h
+1 1 j
+2 6 j
+1 10 j
+1 10 j
+1 26 h
+1 32 j
+2 11 h
+1 1 h
+1 1 j
+1 3 j
+2 16 h
+1 7 h
+1 2 h
+1 9 h
+1 13 j
+2 13 j
+1 16 h
+1 18 j
+1 14 h
+1 6 j
+2 4 h
+1 4 h
+1 2 j
+1 7 h
+1 x
+2 4 h
+1 8 j
+1 17 j
+1 11 h
+1 5 j
+2 x
+1 6 h
+1 17 j
+1 15 h
+1 10 h
+2 4 h
+1 4 j
+1 1 h
+1 12 j
+2 5 h
+1 1 h
+1 13 j
+1 6 h
+1 4 h
+2 6 j
+1 1 j
+1 10 h
+1 3 j
+1 21 h
+2 12 j
+1 8 j
+1 4 j
+1 x
+1 27 j
+2 13 h
+1 5 j
+1 13 h
+1 2 h
+1 2 j
+2 4 h
+1 16 h
+1 21 j
+1 13 h
+1 18 j
+2 26 h
+E
+0.75 Sx
+1 Sd
+(US MALARIA) 1503 1853 0.5 T
+0.5 Sx
+(months from 01/62) 1503 1530 0.5 T
+90 Sr
+90 Sh
+(log\(cases\)) 1199 1698 0.5 T
+0 Sr
+0 Sh
+1278 1593 m
+3 z
+1398 1593 m
+3 z
+1519 1593 m
+3 z
+1640 1593 m
+3 z
+E
+1278 1593 m
+362 x
+E
+(0) 1278 1566 0.5 T
+(100) 1398 1566 0.5 T
+(200) 1519 1566 0.5 T
+(300) 1640 1566 0.5 T
+90 Sr
+90 Sh
+1261 1600 m
+2 w
+1261 1634 m
+2 w
+1261 1667 m
+2 w
+1261 1700 m
+2 w
+1261 1734 m
+2 w
+1261 1767 m
+2 w
+1261 1800 m
+2 w
+E
+1261 1600 m
+200 y
+E
+(0) 1234 1600 0.5 T
+(1) 1234 1634 0.5 T
+(2) 1234 1667 0.5 T
+(3) 1234 1700 0.5 T
+(4) 1234 1734 0.5 T
+(5) 1234 1767 0.5 T
+(6) 1234 1800 0.5 T
+0 Sr
+0 Sh
+0 Sd
+484 211 1261 1593 c
+0.75 1 0.8 1 Sg
+B
+1873 1716 m
+1 3 h
+1 2 h
+2 20 j
+1 1 j
+1 11 j
+1 6 j
+1 4 j
+2 15 j
+1 34 h
+1 9 j
+1 26 h
+1 16 h
+2 x
+1 13 h
+1 16 j
+1 2 h
+1 33 j
+2 9 j
+1 19 j
+1 1 j
+1 35 h
+2 9 j
+1 24 h
+1 11 h
+1 3 h
+1 17 h
+2 8 h
+1 40 j
+1 17 j
+1 1 j
+1 33 j
+2 49 h
+1 1 h
+1 3 h
+1 24 h
+1 14 j
+2 23 h
+1 31 h
+1 23 j
+1 28 j
+1 15 j
+2 20 j
+1 36 j
+1 3 h
+1 37 h
+1 7 h
+2 41 h
+1 8 j
+1 32 h
+1 23 h
+2 23 j
+1 11 j
+1 37 j
+1 29 j
+1 8 j
+2 23 j
+1 35 h
+1 11 h
+1 10 h
+1 x
+2 4 h
+1 9 h
+1 6 j
+1 7 j
+1 41 j
+2 11 j
+1 22 j
+1 x
+1 27 h
+1 1 h
+2 35 h
+1 47 h
+1 7 h
+1 12 j
+1 28 j
+2 10 j
+1 5 j
+1 22 j
+1 15 j
+2 21 j
+1 27 h
+1 8 h
+1 23 h
+1 50 h
+2 3 j
+1 12 h
+1 1 j
+1 30 j
+1 34 j
+2 3 j
+1 39 j
+1 12 j
+1 34 h
+1 5 j
+2 57 h
+1 5 j
+1 3 h
+1 13 h
+1 10 j
+2 29 j
+1 4 j
+1 12 j
+1 22 j
+1 6 j
+2 10 h
+1 39 h
+1 15 h
+1 9 h
+2 10 j
+1 31 h
+1 11 j
+1 37 j
+1 24 j
+2 18 j
+1 26 j
+1 4 h
+1 29 h
+1 11 j
+2 25 h
+1 7 j
+1 1 h
+1 4 j
+1 5 j
+2 12 j
+1 7 j
+1 24 j
+1 9 j
+1 21 j
+2 42 h
+1 5 h
+1 31 h
+1 3 j
+1 9 h
+2 13 h
+1 10 j
+1 3 j
+1 10 j
+1 34 j
+2 23 j
+1 14 j
+1 40 h
+1 4 j
+2 14 h
+1 9 h
+1 10 h
+1 33 h
+1 8 j
+2 35 j
+1 18 j
+1 8 h
+1 33 j
+1 17 j
+2 46 h
+1 21 h
+1 18 j
+1 37 h
+1 8 h
+2 18 j
+1 3 h
+1 3 j
+1 15 j
+1 2 j
+2 19 j
+1 4 j
+1 13 h
+1 7 h
+1 2 h
+2 10 h
+1 22 h
+1 26 h
+1 30 j
+2 22 j
+1 9 h
+1 11 j
+1 29 j
+1 3 j
+2 17 h
+1 16 h
+1 31 h
+1 8 j
+1 1 h
+2 35 h
+1 23 j
+1 10 j
+1 34 j
+1 6 h
+2 26 j
+1 31 h
+1 11 j
+1 38 h
+1 10 h
+2 4 j
+1 36 h
+1 2 j
+1 3 j
+1 6 j
+2 27 j
+1 8 j
+1 11 j
+1 14 j
+2 23 h
+1 14 h
+1 27 h
+1 7 h
+1 10 h
+2 8 h
+1 29 j
+1 2 h
+1 6 j
+1 32 j
+2 5 j
+1 10 j
+1 13 h
+1 12 h
+1 19 h
+2 13 h
+1 4 h
+1 20 h
+1 20 j
+1 12 j
+2 15 j
+1 17 j
+1 14 j
+1 4 h
+1 30 h
+2 7 h
+1 19 h
+1 26 h
+1 21 h
+2 22 j
+1 7 j
+1 13 j
+1 25 j
+1 8 j
+2 14 j
+1 13 h
+1 14 h
+1 2 j
+1 27 h
+2 17 j
+1 1 h
+1 28 h
+1 4 j
+1 16 j
+2 12 j
+1 19 j
+1 19 j
+1 6 h
+1 17 h
+2 11 h
+1 5 h
+1 2 j
+1 7 h
+1 21 h
+2 7 j
+1 21 j
+1 6 j
+1 30 j
+2 16 j
+1 6 j
+1 36 h
+1 7 h
+1 8 h
+2 4 h
+1 27 h
+1 10 h
+1 21 j
+1 14 j
+2 10 j
+1 23 j
+1 20 j
+1 2 j
+1 28 h
+2 4 j
+1 29 h
+1 4 h
+1 15 h
+1 4 j
+2 18 j
+1 x
+1 29 j
+1 6 j
+1 38 j
+2 24 h
+1 28 h
+1 6 h
+1 20 h
+2 13 h
+1 7 j
+1 16 h
+1 16 j
+1 8 j
+2 34 j
+1 1 h
+1 19 j
+1 1 j
+1 23 h
+2 11 h
+1 29 h
+1 11 h
+1 3 j
+1 18 h
+2 20 j
+1 12 j
+1 16 j
+1 8 j
+1 18 j
+2 1 h
+1 20 h
+1 12 h
+1 25 h
+1 14 j
+2 12 h
+1 17 h
+1 2 j
+1 16 j
+2 29 j
+1 3 j
+1 29 j
+1 2 h
+1 19 h
+2 12 h
+1 24 h
+1 31 j
+1 38 h
+1 14 h
+2 1 j
+1 32 j
+1 22 j
+1 2 h
+1 20 j
+2 13 j
+1 11 h
+1 26 h
+1 18 h
+1 9 j
+2 10 h
+1 25 h
+1 47 j
+1 6 h
+1 4 h
+2 35 j
+1 11 j
+1 21 h
+1 19 j
+2 6 h
+1 49 h
+1 47 j
+1 33 h
+1 27 h
+2 30 j
+1 1 j
+1 13 h
+1 51 j
+1 10 h
+2 31 j
+1 1 j
+1 42 h
+1 36 h
+1 25 j
+2 30 h
+1 31 j
+1 2 h
+1 24 h
+1 43 j
+2 2 j
+1 2 h
+1 27 j
+1 26 h
+1 2 j
+2 49 h
+E
+0.75 Sx
+1 Sd
+(US MENING_INF) 2097 1853 0.5 T
+0.5 Sx
+(months from 01/62) 2097 1530 0.5 T
+90 Sr
+90 Sh
+(log\(cases\)) 1793 1698 0.5 T
+0 Sr
+0 Sh
+1872 1593 m
+3 z
+1992 1593 m
+3 z
+2113 1593 m
+3 z
+2234 1593 m
+3 z
+E
+1872 1593 m
+362 x
+E
+(0) 1872 1566 0.5 T
+(100) 1992 1566 0.5 T
+(200) 2113 1566 0.5 T
+(300) 2234 1566 0.5 T
+90 Sr
+90 Sh
+1855 1603 m
+2 w
+1855 1645 m
+2 w
+1855 1686 m
+2 w
+1855 1728 m
+2 w
+1855 1770 m
+2 w
+E
+1855 1603 m
+167 y
+E
+(4.0) 1828 1603 0.5 T
+(5.0) 1828 1686 0.5 T
+(6.0) 1828 1770 0.5 T
+0 Sr
+0 Sh
+0 Sd
+484 211 1855 1593 c
+0 0.25 0.6 0.8 Sg
+B
+91 1392 m
+1 4 h
+1 9 h
+2 11 j
+1 16 h
+1 3 h
+1 x
+1 8 h
+2 3 j
+1 15 j
+1 4 j
+1 x
+1 9 h
+2 3 j
+1 4 j
+1 4 j
+1 15 h
+1 9 j
+2 11 h
+1 4 j
+1 2 h
+1 8 j
+2 5 j
+1 18 j
+1 8 h
+1 5 j
+1 8 h
+2 9 h
+1 3 h
+1 13 j
+1 9 h
+1 8 j
+2 5 j
+1 10 j
+1 4 j
+1 3 j
+1 4 j
+2 8 j
+1 2 h
+1 19 j
+1 19 h
+1 7 j
+2 1 h
+1 9 h
+1 2 h
+1 18 j
+1 1 h
+2 12 j
+1 11 h
+1 2 j
+1 x
+2 8 h
+1 1 h
+1 1 j
+1 21 h
+1 9 h
+2 5 j
+1 13 j
+1 4 j
+1 5 h
+1 9 h
+2 10 h
+1 5 j
+1 6 h
+1 7 j
+1 14 j
+2 12 h
+1 13 h
+1 19 j
+1 16 j
+1 8 h
+2 13 j
+1 5 h
+1 12 j
+1 x
+1 1 j
+2 x
+1 13 j
+1 17 h
+1 3 j
+2 9 j
+1 4 j
+1 15 j
+1 12 j
+1 19 h
+2 29 j
+1 15 h
+1 1 j
+1 13 h
+1 24 j
+2 15 h
+1 8 h
+1 13 h
+1 3 j
+1 6 j
+2 7 j
+1 10 h
+1 14 j
+1 2 j
+1 16 h
+2 4 h
+1 7 j
+1 20 h
+1 8 h
+1 x
+2 19 j
+1 12 j
+1 8 j
+1 11 h
+2 22 j
+1 12 h
+1 2 j
+1 9 h
+1 5 j
+2 6 h
+1 10 h
+1 8 j
+1 15 j
+1 33 j
+2 25 h
+1 19 j
+1 9 h
+1 10 h
+1 10 h
+2 30 h
+1 26 j
+1 17 h
+1 8 h
+1 14 j
+2 6 j
+1 1 j
+1 13 j
+1 10 j
+1 16 j
+2 7 j
+1 3 h
+1 2 h
+1 3 j
+1 2 h
+2 11 h
+1 9 h
+1 3 j
+1 10 j
+2 3 h
+1 2 h
+1 3 j
+1 10 j
+1 6 h
+2 3 j
+1 13 h
+1 27 h
+1 4 h
+1 17 j
+2 13 j
+1 2 j
+1 1 h
+1 9 j
+1 3 j
+2 25 j
+1 12 h
+1 1 h
+1 14 h
+1 7 h
+2 27 h
+1 3 j
+1 35 j
+1 11 j
+1 16 h
+2 8 j
+1 6 j
+1 27 j
+1 15 j
+2 14 h
+1 11 h
+1 9 h
+1 17 h
+1 16 j
+2 11 j
+1 12 j
+1 2 j
+1 3 h
+1 14 j
+2 16 h
+1 6 j
+1 25 h
+1 8 h
+1 20 h
+2 21 h
+1 27 h
+1 19 j
+1 14 h
+1 3 j
+2 28 j
+1 3 h
+1 20 j
+1 8 j
+1 x
+2 5 h
+1 22 h
+1 2 j
+1 2 h
+2 23 j
+1 11 h
+1 10 j
+1 1 h
+1 19 j
+2 6 h
+1 7 j
+1 8 j
+1 20 h
+1 4 h
+2 12 h
+1 13 j
+1 3 j
+1 5 j
+1 58 h
+2 69 j
+1 17 h
+1 23 j
+1 9 h
+1 10 h
+2 3 h
+1 39 h
+1 1 h
+1 10 j
+1 14 j
+2 19 j
+1 13 h
+1 46 j
+1 33 h
+2 15 j
+1 9 h
+1 x
+1 4 j
+1 6 h
+2 25 h
+1 12 j
+1 4 j
+1 27 j
+1 22 h
+2 31 j
+1 23 h
+1 1 j
+1 10 h
+1 6 j
+2 8 h
+1 26 h
+1 2 h
+1 2 h
+1 14 h
+2 16 j
+1 6 h
+1 36 j
+1 19 h
+1 7 h
+2 15 j
+1 2 h
+1 14 h
+1 22 h
+2 8 h
+1 12 j
+1 13 j
+1 12 j
+1 22 h
+2 29 j
+1 13 h
+1 11 h
+1 5 j
+1 7 j
+2 11 j
+1 2 j
+1 25 h
+1 35 h
+1 56 j
+2 18 j
+1 6 h
+1 4 h
+1 x
+1 26 h
+2 18 j
+1 4 h
+1 21 h
+1 29 h
+1 19 h
+2 5 j
+1 19 j
+1 17 j
+1 2 h
+2 21 j
+1 9 h
+1 6 j
+1 29 h
+1 27 j
+2 4 h
+1 12 h
+1 23 h
+1 11 j
+1 64 h
+2 85 j
+1 6 j
+1 23 j
+1 3 h
+1 7 h
+2 16 j
+1 8 h
+1 13 h
+1 20 h
+1 24 h
+2 22 j
+1 3 j
+1 20 j
+1 50 h
+1 80 j
+2 34 h
+1 24 h
+1 12 j
+1 29 j
+2 11 h
+1 24 h
+1 16 h
+1 3 j
+1 4 h
+2 11 j
+1 32 h
+1 59 j
+1 15 j
+1 8 h
+2 x
+1 43 h
+1 22 j
+1 34 h
+1 12 h
+2 9 j
+1 17 j
+1 12 h
+1 11 h
+E
+B
+525 1257 m
+2 23 h
+1 15 j
+1 12 h
+1 26 h
+1 x
+2 25 h
+1 21 h
+1 2 h
+1 x
+1 9 j
+2 42 h
+E
+0.75 Sx
+1 Sd
+(US PERTUSSIS) 315 1478 0.5 T
+0.5 Sx
+(months from 01/62) 315 1155 0.5 T
+90 Sr
+90 Sh
+(log\(cases\)) 11 1323 0.5 T
+0 Sr
+0 Sh
+90 1217 m
+2 z
+210 1217 m
+2 z
+331 1217 m
+2 z
+452 1217 m
+2 z
+E
+90 1217 m
+362 x
+E
+(0) 90 1190 0.5 T
+(100) 210 1190 0.5 T
+(200) 331 1190 0.5 T
+(300) 452 1190 0.5 T
+90 Sr
+90 Sh
+73 1234 m
+2 w
+73 1286 m
+2 w
+73 1339 m
+2 w
+73 1391 m
+2 w
+E
+73 1234 m
+157 y
+E
+(4) 46 1234 0.5 T
+(5) 46 1286 0.5 T
+(6) 46 1339 0.5 T
+(7) 46 1391 0.5 T
+0 Sr
+0 Sh
+0 Sd
+484 212 73 1217 c
+0.25 0.5 0.6 0.8 Sg
+B
+685 1364 m
+1 8 j
+1 12 h
+2 x
+1 40 h
+1 4 h
+1 7 h
+1 2 h
+2 19 j
+1 9 h
+1 9 j
+1 19 j
+1 2 h
+2 34 j
+1 39 h
+1 13 j
+1 24 h
+1 16 h
+2 13 j
+1 3 j
+1 14 h
+1 20 j
+2 16 h
+1 14 j
+1 9 j
+1 14 j
+1 28 j
+2 44 h
+1 11 h
+1 5 h
+1 11 j
+1 14 h
+2 5 j
+1 7 h
+1 43 j
+1 3 h
+1 25 j
+2 37 h
+1 19 j
+1 26 h
+1 12 h
+1 2 h
+2 2 j
+1 10 h
+1 17 j
+1 7 h
+1 14 j
+2 11 h
+1 80 j
+1 41 h
+1 32 j
+2 28 h
+1 21 h
+1 6 j
+1 28 h
+1 6 j
+2 x
+1 19 h
+1 32 j
+1 19 h
+1 58 j
+2 19 h
+1 4 j
+1 18 h
+1 18 j
+1 46 h
+2 9 j
+1 4 h
+1 2 h
+1 19 j
+1 10 h
+2 29 h
+1 100 j
+1 9 h
+1 28 h
+1 10 j
+2 28 h
+1 x
+1 x
+1 3 j
+2 17 h
+1 3 j
+1 50 j
+1 29 h
+1 23 j
+2 5 h
+1 18 j
+1 23 h
+1 20 h
+1 3 j
+2 4 j
+1 13 j
+1 42 h
+1 42 j
+1 23 h
+2 11 h
+1 124 j
+1 37 h
+1 43 h
+1 x
+2 5 h
+1 18 h
+1 7 h
+1 x
+1 30 j
+2 33 h
+1 6 h
+1 34 j
+1 63 j
+2 x
+1 15 h
+1 37 h
+1 21 h
+1 5 j
+2 5 j
+1 10 h
+1 x
+1 10 j
+1 11 j
+2 29 h
+1 81 j
+1 58 h
+1 5 h
+1 5 j
+2 5 h
+1 22 h
+1 17 j
+1 5 j
+1 25 h
+2 88 j
+1 73 h
+1 8 h
+1 81 j
+1 15 h
+2 21 h
+1 16 h
+1 11 h
+1 27 j
+1 37 h
+2 15 j
+1 5 h
+1 5 j
+1 13 j
+2 32 h
+1 50 j
+1 12 j
+1 30 h
+1 67 j
+2 74 h
+1 37 j
+1 76 h
+1 18 j
+1 x
+2 x
+1 46 j
+1 46 h
+1 46 j
+1 49 j
+2 74 h
+1 16 j
+1 9 h
+1 13 h
+1 23 h
+2 13 j
+1 5 j
+1 14 h
+1 19 j
+1 43 j
+2 15 j
+1 22 j
+1 36 j
+1 58 h
+2 45 h
+1 18 j
+1 18 h
+1 13 h
+1 22 j
+2 27 h
+1 48 j
+1 62 h
+1 41 j
+1 36 j
+2 15 h
+1 12 h
+1 12 j
+1 48 h
+1 36 j
+2 36 h
+1 5 h
+1 5 j
+1 x
+1 18 j
+2 45 j
+1 x
+1 36 h
+1 22 h
+1 6 j
+2 7 j
+1 28 h
+1 10 j
+1 36 j
+2 18 h
+1 9 j
+1 27 h
+1 121 j
+1 73 h
+2 15 j
+1 15 h
+1 43 h
+1 10 h
+1 41 j
+2 x
+1 50 h
+1 50 j
+1 x
+1 41 h
+2 41 j
+E
+B
+948 1319 m
+1 x
+1 16 h
+2 7 j
+1 40 h
+1 40 j
+1 36 h
+1 36 j
+2 18 j
+1 50 h
+1 32 j
+1 67 j
+2 22 h
+1 27 h
+1 9 h
+1 37 h
+1 37 j
+2 x
+1 21 j
+1 12 h
+1 18 h
+1 18 j
+2 12 j
+1 21 h
+1 58 j
+1 58 h
+1 37 h
+2 28 j
+1 23 h
+1 x
+1 32 j
+1 21 j
+2 21 h
+1 22 h
+1 31 j
+1 49 j
+1 58 h
+2 58 j
+1 80 h
+1 10 h
+1 9 h
+2 62 j
+1 58 h
+1 37 j
+1 9 h
+1 18 h
+2 48 j
+1 12 h
+1 27 j
+1 15 h
+1 37 h
+2 7 j
+1 18 h
+1 x
+1 63 j
+1 22 j
+2 85 h
+1 18 j
+1 18 j
+1 12 j
+1 21 h
+2 32 h
+1 32 j
+1 9 h
+1 x
+1 13 h
+2 31 j
+1 31 h
+1 31 j
+1 25 h
+2 16 j
+1 58 j
+1 x
+1 x
+1 90 h
+2 32 j
+1 9 j
+1 36 h
+1 x
+1 36 j
+E
+B
+1046 1310 m
+1 49 j
+1 22 h
+1 15 h
+2 37 j
+1 37 h
+1 37 j
+1 58 h
+1 9 j
+2 18 h
+1 18 j
+1 49 j
+1 58 h
+1 21 j
+2 73 j
+1 73 h
+1 21 h
+1 9 j
+2 49 j
+1 49 h
+1 25 h
+1 37 j
+1 30 h
+2 30 j
+1 15 j
+1 36 h
+1 58 j
+1 22 h
+2 36 h
+1 21 j
+1 43 h
+1 58 j
+1 22 j
+2 x
+1 22 h
+1 36 h
+1 9 h
+1 30 j
+2 37 h
+1 37 j
+1 37 j
+1 67 h
+1 30 j
+2 x
+1 x
+1 12 h
+1 9 h
+2 16 h
+1 16 j
+E
+B
+1107 1225 m
+2 94 h
+1 x
+1 94 j
+1 103 h
+1 28 h
+2 28 j
+1 30 j
+1 21 h
+1 9 h
+1 67 j
+2 36 j
+1 x
+1 36 h
+1 36 j
+1 36 h
+2 36 j
+1 94 h
+1 21 j
+1 53 h
+1 23 j
+2 9 j
+E
+0.75 Sx
+1 Sd
+(US TETANUS) 909 1478 0.5 T
+0.5 Sx
+(months from 01/62) 909 1155 0.5 T
+90 Sr
+90 Sh
+(log\(cases\)) 605 1323 0.5 T
+0 Sr
+0 Sh
+684 1217 m
+2 z
+804 1217 m
+2 z
+925 1217 m
+2 z
+1046 1217 m
+2 z
+E
+684 1217 m
+362 x
+E
+(0) 684 1190 0.5 T
+(100) 804 1190 0.5 T
+(200) 925 1190 0.5 T
+(300) 1046 1190 0.5 T
+90 Sr
+90 Sh
+667 1225 m
+2 w
+667 1278 m
+2 w
+667 1330 m
+2 w
+667 1383 m
+2 w
+E
+667 1225 m
+158 y
+E
+(0) 640 1225 0.5 T
+(1) 640 1278 0.5 T
+(2) 640 1330 0.5 T
+(3) 640 1383 0.5 T
+0 Sr
+0 Sh
+0 Sd
+484 212 667 1217 c
+0.5 0.75 0.6 0.8 Sg
+B
+1279 1377 m
+1 22 j
+1 14 h
+2 9 j
+1 7 h
+1 17 h
+1 11 h
+1 1 j
+2 34 j
+1 11 h
+1 4 h
+1 36 h
+1 56 j
+2 12 h
+1 22 j
+1 6 h
+1 16 h
+1 35 h
+2 3 h
+1 32 j
+1 2 j
+1 16 h
+2 18 j
+1 38 h
+1 20 j
+1 16 j
+1 43 j
+2 20 h
+1 31 h
+1 16 h
+1 15 h
+1 25 j
+2 4 j
+1 4 j
+1 12 j
+1 35 h
+1 16 j
+2 47 j
+1 14 h
+1 35 j
+1 59 h
+1 13 h
+2 7 j
+1 10 j
+1 6 h
+1 4 h
+1 36 j
+2 30 h
+1 20 j
+1 12 h
+1 34 j
+2 43 j
+1 19 h
+1 36 h
+1 24 h
+1 x
+2 4 j
+1 5 j
+1 9 j
+1 47 h
+1 43 j
+2 33 j
+1 26 h
+1 15 j
+1 24 h
+1 2 j
+2 10 h
+1 6 h
+1 2 j
+1 32 j
+1 4 j
+2 24 h
+1 29 j
+1 x
+1 52 j
+1 14 h
+2 121 h
+1 42 j
+1 4 h
+1 22 j
+2 10 j
+1 13 j
+1 13 h
+1 4 h
+1 12 j
+2 11 j
+1 6 j
+1 7 j
+1 58 h
+1 10 h
+2 32 j
+1 12 j
+1 18 h
+1 10 j
+1 19 j
+2 23 h
+1 23 j
+1 11 h
+1 17 j
+1 32 h
+2 48 j
+1 16 h
+1 63 h
+1 24 j
+1 10 h
+2 14 j
+1 6 j
+1 37 h
+1 37 j
+2 36 j
+1 9 j
+1 x
+1 24 j
+1 79 h
+2 45 h
+1 35 j
+1 x
+1 16 h
+1 59 j
+2 41 h
+1 35 j
+1 x
+1 5 h
+1 11 j
+2 x
+1 19 h
+1 26 h
+1 16 j
+1 4 h
+2 33 j
+1 38 h
+1 3 j
+1 20 j
+1 21 j
+2 7 j
+1 84 j
+1 138 h
+1 38 h
+1 44 j
+2 x
+1 20 j
+1 x
+1 4 j
+2 15 h
+1 32 j
+1 12 h
+1 17 h
+1 29 j
+2 35 h
+1 20 h
+1 16 j
+1 10 h
+1 37 j
+2 13 h
+1 25 j
+1 7 j
+1 9 j
+1 9 h
+2 52 j
+1 80 h
+1 28 h
+1 2 j
+1 22 j
+2 4 h
+1 55 j
+1 10 h
+1 45 h
+1 15 h
+2 9 j
+1 35 j
+1 16 j
+1 22 h
+2 33 h
+1 14 j
+1 30 h
+1 30 j
+1 4 h
+2 36 j
+1 51 h
+1 3 h
+1 54 j
+1 19 j
+2 10 h
+1 37 h
+1 20 h
+1 x
+1 14 h
+2 4 j
+1 7 j
+1 5 j
+1 22 j
+1 24 h
+2 57 j
+1 10 j
+1 19 h
+1 7 h
+1 6 h
+2 19 h
+1 28 h
+1 24 j
+1 12 h
+2 16 j
+1 14 h
+1 x
+1 10 j
+1 36 j
+2 19 h
+1 9 h
+1 14 h
+1 33 h
+1 x
+2 5 j
+1 24 j
+1 4 j
+1 35 j
+1 39 h
+2 39 j
+1 16 j
+1 33 h
+1 4 h
+1 20 h
+2 25 h
+1 7 j
+1 15 h
+1 9 j
+1 12 j
+2 8 h
+1 14 j
+1 26 j
+1 37 j
+2 28 h
+1 37 h
+1 22 h
+1 2 j
+1 2 h
+2 5 h
+1 2 h
+1 23 j
+1 11 j
+1 30 h
+2 74 j
+1 6 h
+1 23 h
+1 12 j
+1 38 h
+2 32 h
+1 8 j
+1 18 j
+1 15 h
+1 10 j
+2 49 j
+1 51 h
+1 29 j
+1 7 j
+1 x
+2 3 j
+1 40 h
+1 6 h
+1 5 h
+2 4 h
+1 19 j
+1 12 j
+1 4 h
+1 14 h
+2 111 j
+1 40 h
+1 7 j
+1 13 h
+1 66 h
+2 21 h
+1 12 h
+1 14 j
+1 38 j
+1 4 j
+2 17 j
+1 15 j
+1 8 h
+1 19 j
+1 22 j
+2 x
+1 81 h
+1 12 j
+1 12 h
+1 24 j
+2 6 j
+1 3 j
+1 7 j
+1 25 j
+2 6 h
+1 65 j
+1 65 h
+1 22 j
+1 41 h
+2 38 h
+1 12 j
+1 7 j
+1 5 j
+1 2 h
+2 8 h
+1 10 j
+1 39 j
+1 26 j
+1 10 h
+2 55 h
+1 2 h
+1 18 h
+1 23 h
+1 25 j
+2 6 j
+1 4 h
+1 14 j
+1 9 j
+1 11 j
+2 47 j
+1 14 j
+1 57 h
+1 30 h
+2 22 h
+1 1 j
+1 9 j
+1 12 j
+1 12 j
+2 4 h
+1 x
+1 46 j
+1 52 j
+1 x
+2 43 h
+1 33 h
+1 24 h
+1 30 h
+1 5 j
+2 31 j
+1 10 j
+1 65 j
+1 81 h
+1 67 j
+2 65 j
+1 65 h
+1 x
+1 43 h
+1 32 h
+2 14 j
+1 22 h
+1 4 h
+1 26 j
+2 29 j
+1 41 h
+1 106 j
+1 x
+1 88 h
+2 55 j
+1 19 h
+1 81 h
+1 23 j
+1 18 h
+2 x
+1 10 j
+1 42 j
+1 15 h
+1 48 j
+2 x
+1 75 j
+1 32 h
+1 91 h
+1 23 h
+2 8 h
+1 3 h
+1 19 j
+1 26 j
+1 4 j
+2 12 h
+E
+0.75 Sx
+1 Sd
+(US TULAREMIA) 1503 1478 0.5 T
+0.5 Sx
+(months from 01/62) 1503 1155 0.5 T
+90 Sr
+90 Sh
+(log\(cases\)) 1199 1323 0.5 T
+0 Sr
+0 Sh
+1278 1217 m
+2 z
+1398 1217 m
+2 z
+1519 1217 m
+2 z
+1640 1217 m
+2 z
+E
+1278 1217 m
+362 x
+E
+(0) 1278 1190 0.5 T
+(100) 1398 1190 0.5 T
+(200) 1519 1190 0.5 T
+(300) 1640 1190 0.5 T
+90 Sr
+90 Sh
+1261 1225 m
+2 w
+1261 1272 m
+2 w
+1261 1318 m
+2 w
+1261 1365 m
+2 w
+1261 1412 m
+2 w
+E
+1261 1225 m
+187 y
+E
+(0) 1234 1225 0.5 T
+(1) 1234 1272 0.5 T
+(2) 1234 1318 0.5 T
+(3) 1234 1365 0.5 T
+(4) 1234 1412 0.5 T
+0 Sr
+0 Sh
+0 Sd
+484 212 1261 1217 c
+0.75 1 0.6 0.8 Sg
+B
+1873 1291 m
+1 11 h
+1 9 h
+2 22 j
+1 41 h
+1 1 h
+1 14 h
+1 3 h
+2 13 h
+1 50 j
+1 11 h
+1 26 j
+1 5 j
+2 2 h
+1 14 h
+1 37 j
+1 39 h
+1 5 j
+2 38 h
+1 12 h
+1 8 j
+1 11 j
+2 31 j
+1 13 j
+1 7 j
+1 5 j
+1 18 j
+2 43 h
+1 15 j
+1 4 h
+1 40 h
+1 29 j
+2 32 h
+1 45 j
+1 14 h
+1 45 h
+1 68 j
+2 15 j
+1 22 h
+1 36 j
+1 38 h
+1 5 h
+2 11 h
+1 7 h
+1 x
+1 17 h
+1 42 j
+2 38 h
+1 86 j
+1 12 h
+1 14 h
+2 x
+1 12 h
+1 8 h
+1 42 h
+1 13 j
+2 4 j
+1 10 j
+1 38 j
+1 6 h
+1 39 j
+2 30 h
+1 21 h
+1 11 h
+1 26 j
+1 64 h
+2 29 j
+1 10 h
+1 10 h
+1 22 j
+1 24 j
+2 23 j
+1 22 j
+1 6 j
+1 62 h
+1 5 j
+2 3 j
+1 14 h
+1 9 h
+1 2 h
+2 36 h
+1 26 j
+1 12 j
+1 26 j
+1 23 j
+2 22 j
+1 x
+1 73 h
+1 3 h
+1 66 j
+2 38 h
+1 10 h
+1 13 h
+1 9 h
+1 13 j
+2 21 h
+1 70 j
+1 8 j
+1 5 j
+1 5 h
+2 23 h
+1 3 h
+1 24 h
+1 13 h
+1 1 h
+2 7 h
+1 12 j
+1 2 j
+1 28 j
+2 29 j
+1 29 h
+1 21 j
+1 8 j
+1 46 h
+2 40 h
+1 1 j
+1 6 j
+1 6 h
+1 44 j
+2 3 j
+1 30 j
+1 12 h
+1 9 h
+1 x
+2 26 h
+1 3 j
+1 6 j
+1 35 h
+1 13 j
+2 5 j
+1 13 h
+1 53 j
+1 7 j
+1 25 h
+2 139 h
+1 96 j
+1 32 j
+1 18 h
+1 7 j
+2 30 h
+1 3 h
+1 25 j
+1 4 h
+2 x
+1 40 j
+1 3 h
+1 3 j
+1 15 j
+2 21 h
+1 14 h
+1 27 h
+1 7 j
+1 14 j
+2 31 h
+1 60 j
+1 32 h
+1 60 j
+1 25 h
+2 3 j
+1 10 j
+1 4 j
+1 45 h
+1 22 j
+2 8 h
+1 20 h
+1 22 h
+1 56 j
+1 49 h
+2 35 j
+1 5 h
+1 13 j
+1 12 j
+2 3 j
+1 50 h
+1 2 j
+1 3 h
+1 13 h
+2 49 j
+1 x
+1 6 h
+1 15 j
+1 9 h
+2 17 h
+1 7 h
+1 30 j
+1 17 h
+1 3 j
+2 5 j
+1 40 h
+1 x
+1 49 j
+1 21 h
+2 50 j
+1 86 h
+1 10 h
+1 35 j
+1 10 h
+2 21 j
+1 13 h
+1 3 h
+1 3 j
+2 6 j
+1 14 h
+1 25 j
+1 4 h
+1 11 h
+2 9 j
+1 32 j
+1 50 h
+1 16 h
+1 31 j
+2 40 h
+1 11 j
+1 6 h
+1 8 j
+1 39 j
+2 14 j
+1 12 h
+1 15 j
+1 10 j
+1 62 h
+2 19 j
+1 35 h
+1 4 j
+1 11 h
+1 16 j
+2 22 j
+1 22 j
+1 20 h
+1 2 j
+2 11 j
+1 11 h
+1 11 h
+1 22 j
+1 40 h
+2 2 j
+1 51 j
+1 107 h
+1 107 j
+1 57 h
+2 33 j
+1 13 j
+1 13 h
+1 27 j
+1 16 j
+2 36 h
+1 3 h
+1 9 h
+1 14 j
+1 12 j
+2 12 h
+1 40 h
+1 33 j
+1 31 j
+1 9 h
+2 13 h
+1 48 j
+1 57 h
+1 16 h
+2 12 h
+1 x
+1 11 h
+1 26 j
+1 16 h
+2 48 j
+1 x
+1 5 h
+1 x
+1 5 j
+2 3 j
+1 24 h
+1 4 h
+1 17 j
+1 27 h
+2 21 j
+1 9 j
+1 11 j
+1 6 h
+1 9 j
+2 x
+1 47 h
+1 50 j
+1 22 h
+1 2 j
+2 25 h
+1 3 j
+1 27 j
+1 18 h
+2 16 j
+1 59 j
+1 42 h
+1 26 h
+1 26 j
+2 3 j
+1 23 h
+1 47 h
+1 50 j
+1 16 h
+2 39 j
+1 53 h
+1 44 j
+1 9 j
+1 23 h
+2 5 h
+1 x
+1 22 j
+1 37 h
+1 10 h
+2 5 h
+1 49 j
+1 19 h
+1 18 h
+1 46 j
+2 30 h
+1 18 j
+1 3 h
+1 6 h
+2 2 h
+1 43 j
+1 52 h
+1 33 h
+1 3 h
+2 29 j
+1 9 h
+1 48 j
+1 32 h
+1 4 j
+2 2 h
+1 2 j
+1 18 h
+1 5 j
+1 45 h
+2 13 j
+1 20 j
+1 18 j
+1 9 j
+1 11 j
+2 8 h
+1 5 j
+1 3 h
+1 33 j
+1 47 h
+2 18 h
+1 8 h
+1 40 h
+1 31 j
+2 19 j
+1 16 j
+1 9 j
+1 3 j
+1 14 j
+2 6 h
+1 31 j
+1 66 h
+1 16 h
+1 2 h
+2 12 j
+1 10 h
+1 25 j
+1 35 j
+1 36 j
+2 62 h
+1 6 j
+1 11 j
+1 3 j
+1 x
+2 11 h
+1 42 h
+1 39 j
+1 46 h
+1 72 j
+2 35 h
+E
+0.75 Sx
+1 Sd
+(US TYPHOID_FEVER) 2097 1478 0.5 T
+0.5 Sx
+(months from 01/62) 2097 1155 0.5 T
+90 Sr
+90 Sh
+(log\(cases\)) 1793 1323 0.5 T
+0 Sr
+0 Sh
+1872 1217 m
+2 z
+1992 1217 m
+2 z
+2113 1217 m
+2 z
+2234 1217 m
+2 z
+E
+1872 1217 m
+362 x
+E
+(0) 1872 1190 0.5 T
+(100) 1992 1190 0.5 T
+(200) 2113 1190 0.5 T
+(300) 2234 1190 0.5 T
+90 Sr
+90 Sh
+1855 1226 m
+2 w
+1855 1261 m
+2 w
+1855 1296 m
+2 w
+1855 1331 m
+2 w
+1855 1366 m
+2 w
+1855 1401 m
+2 w
+E
+1855 1226 m
+175 y
+E
+(2.5) 1828 1226 0.5 T
+(3.5) 1828 1296 0.5 T
+(4.5) 1828 1366 0.5 T
+0 Sr
+0 Sh
+0 Sd
+484 212 1855 1217 c
+0.123 0.937 0.242089 0.80538 So
+0 0.25 0.4 0.6 Sg
+B
+93 850 m
+2 37 h
+1 81 h
+1 23 h
+1 1 h
+1 17 j
+2 20 j
+1 35 j
+E
+B
+109 920 m
+1 36 h
+1 23 h
+2 6 h
+1 1 j
+1 38 j
+1 26 j
+2 23 j
+1 14 h
+E
+B
+122 850 m
+2 70 h
+1 56 h
+1 4 h
+1 17 h
+1 12 j
+2 11 j
+1 50 j
+1 27 j
+1 24 j
+1 x
+E
+B
+137 850 m
+1 66 h
+1 63 h
+1 12 h
+2 8 h
+1 23 j
+1 24 j
+1 24 j
+1 4 j
+2 37 j
+1 37 j
+E
+B
+151 873 m
+2 24 h
+1 62 h
+1 29 h
+1 4 h
+1 6 j
+2 19 j
+1 27 j
+1 43 j
+1 7 h
+1 17 j
+2 x
+1 37 j
+1 84 h
+1 31 h
+1 19 h
+2 10 h
+1 1 j
+1 18 j
+1 33 j
+1 31 j
+2 24 j
+1 14 j
+E
+B
+180 850 m
+1 84 h
+2 38 h
+1 10 h
+1 12 h
+1 1 h
+2 24 j
+1 40 j
+1 7 j
+1 37 j
+E
+B
+195 850 m
+1 94 h
+1 66 h
+1 1 h
+2 3 j
+1 10 j
+1 31 j
+1 9 j
+1 24 j
+2 37 j
+E
+B
+209 850 m
+1 74 h
+2 64 h
+1 8 h
+1 8 h
+1 4 j
+1 26 j
+2 32 j
+1 26 j
+1 19 j
+1 24 j
+2 x
+E
+B
+225 911 m
+1 78 h
+1 9 h
+2 11 h
+1 8 j
+1 19 j
+1 20 j
+1 38 j
+2 20 j
+1 7 h
+1 38 j
+1 23 j
+1 70 h
+2 71 h
+1 16 h
+1 4 h
+1 1 h
+1 21 j
+2 24 j
+1 39 j
+1 17 j
+1 38 j
+1 x
+2 14 h
+1 50 h
+1 65 h
+1 26 h
+1 10 j
+2 7 j
+1 17 j
+1 31 j
+1 35 j
+2 31 j
+1 47 j
+1 23 h
+E
+B
+268 958 m
+2 55 h
+1 12 h
+1 x
+1 6 j
+1 37 j
+2 17 j
+1 19 j
+1 9 j
+1 13 j
+1 74 j
+2 47 h
+1 56 h
+1 68 h
+1 2 h
+1 2 h
+2 5 j
+1 17 j
+1 26 j
+1 40 j
+1 19 h
+2 83 j
+1 x
+1 14 h
+1 87 h
+2 33 h
+1 15 h
+1 12 h
+1 9 j
+1 18 j
+2 18 j
+1 22 j
+1 10 h
+1 80 j
+1 14 h
+2 20 h
+1 55 h
+1 37 h
+1 12 h
+1 5 h
+2 6 j
+1 25 j
+1 26 j
+1 33 j
+1 8 j
+E
+B
+324 887 m
+1 17 h
+1 52 h
+1 61 h
+2 18 h
+1 1 h
+1 10 j
+1 7 j
+2 32 j
+1 32 j
+1 9 j
+1 35 j
+1 x
+2 7 j
+1 58 h
+1 54 h
+1 17 h
+1 3 h
+2 3 j
+1 32 j
+1 11 j
+1 19 j
+1 1 h
+2 85 j
+1 x
+1 10 h
+1 68 h
+1 61 h
+2 11 h
+1 x
+1 5 j
+1 16 j
+1 25 j
+2 33 j
+1 4 h
+1 51 j
+1 38 j
+2 51 h
+1 59 h
+1 49 h
+1 7 h
+1 3 j
+2 6 j
+1 16 j
+1 28 j
+1 25 j
+1 19 j
+2 22 j
+E
+B
+383 897 m
+1 59 h
+1 60 h
+2 14 h
+1 8 h
+1 19 j
+1 13 j
+1 14 j
+2 40 j
+1 1 h
+1 37 j
+1 19 j
+1 24 j
+2 88 h
+1 46 h
+1 26 h
+1 12 h
+2 10 j
+1 20 j
+1 34 j
+1 35 j
+1 18 h
+2 60 j
+1 17 j
+1 41 h
+1 30 h
+1 49 h
+2 23 h
+1 8 j
+1 5 j
+1 9 j
+1 22 j
+2 24 j
+1 20 j
+1 69 j
+1 31 h
+1 20 h
+2 39 h
+1 37 h
+1 19 h
+1 4 j
+1 1 j
+2 9 j
+1 23 j
+1 34 j
+1 11 h
+2 39 j
+1 70 j
+1 61 h
+1 45 h
+1 45 h
+2 13 h
+1 9 h
+1 6 j
+1 18 j
+1 1 h
+2 52 j
+1 14 h
+1 112 j
+1 54 h
+1 17 j
+2 50 h
+1 54 h
+1 19 h
+1 7 h
+1 5 j
+2 22 j
+1 16 j
+1 24 j
+1 17 h
+1 56 j
+2 x
+1 5 h
+1 30 h
+1 38 h
+2 18 h
+1 19 h
+1 16 j
+1 7 j
+1 12 j
+2 38 j
+1 17 h
+1 78 j
+1 47 h
+1 61 j
+2 67 h
+1 35 h
+1 29 h
+1 7 h
+1 8 j
+2 11 h
+1 31 j
+1 19 j
+1 18 h
+1 85 j
+2 x
+1 27 h
+1 22 h
+1 16 h
+1 41 h
+2 11 h
+1 5 j
+1 3 h
+1 24 j
+2 1 j
+1 29 j
+1 47 j
+1 7 j
+1 54 j
+2 70 h
+1 48 h
+1 37 h
+1 4 h
+1 9 h
+2 14 j
+1 11 j
+1 25 j
+1 3 h
+1 60 j
+2 9 h
+1 4 h
+1 20 j
+1 57 h
+1 28 h
+2 4 h
+1 15 h
+1 11 j
+1 24 j
+1 12 h
+2 7 j
+E
+0.75 Sx
+1 Sd
+(US ROCKY_MT_SPOT_FEV) 315 1102 0.5 T
+0.5 Sx
+(months from 01/62) 315 779 0.5 T
+90 Sr
+90 Sh
+(log\(cases\)) 11 947 0.5 T
+0 Sr
+0 Sh
+90 842 m
+2 z
+210 842 m
+2 z
+331 842 m
+2 z
+452 842 m
+2 z
+E
+90 842 m
+362 x
+E
+(0) 90 815 0.5 T
+(100) 210 815 0.5 T
+(200) 331 815 0.5 T
+(300) 452 815 0.5 T
+90 Sr
+90 Sh
+73 850 m
+2 w
+73 884 m
+2 w
+73 918 m
+2 w
+73 952 m
+2 w
+73 986 m
+2 w
+73 1020 m
+2 w
+E
+73 850 m
+170 y
+E
+(0) 46 850 0.5 T
+(1) 46 884 0.5 T
+(2) 46 918 0.5 T
+(3) 46 952 0.5 T
+(4) 46 986 0.5 T
+(5) 46 1020 0.5 T
+0 Sr
+0 Sh
+0 Sd
+484 211 73 842 c
+0.25 0.5 0.4 0.6 Sg
+B
+685 850 m
+1 x
+1 46 h
+2 75 h
+1 47 j
+1 28 j
+1 75 h
+E
+B
+695 896 m
+1 28 h
+1 28 j
+1 47 h
+1 93 j
+2 x
+1 x
+1 x
+1 x
+1 148 h
+2 17 j
+1 85 j
+1 47 h
+1 16 h
+2 109 j
+1 46 h
+E
+B
+715 850 m
+1 46 h
+2 x
+1 46 j
+1 74 h
+1 19 h
+1 16 h
+2 35 j
+1 28 j
+E
+B
+730 924 m
+1 28 j
+1 x
+1 x
+1 x
+2 85 h
+1 57 j
+1 74 j
+1 x
+1 93 h
+E
+B
+744 850 m
+1 93 h
+2 93 j
+1 46 h
+1 63 h
+1 109 j
+1 x
+2 93 h
+1 93 j
+1 131 h
+1 10 j
+E
+B
+759 943 m
+1 93 j
+1 74 h
+1 47 h
+1 x
+2 19 h
+1 66 j
+1 19 h
+1 16 h
+1 16 j
+2 47 h
+E
+B
+775 850 m
+2 74 h
+1 19 h
+1 16 h
+1 31 h
+2 140 j
+1 93 h
+1 47 j
+1 63 h
+1 109 j
+2 46 h
+E
+B
+790 896 m
+1 46 j
+1 121 h
+2 121 j
+1 178 h
+E
+B
+804 850 m
+2 131 h
+1 131 j
+1 93 h
+1 47 h
+1 140 j
+2 74 h
+1 74 j
+1 x
+E
+B
+818 850 m
+1 x
+1 46 h
+1 46 j
+2 121 h
+1 28 j
+1 47 j
+1 46 j
+1 109 h
+E
+B
+830 924 m
+1 74 j
+1 x
+E
+B
+835 924 m
+1 28 j
+1 x
+E
+B
+839 850 m
+2 x
+1 x
+1 74 h
+E
+B
+845 850 m
+2 74 h
+E
+B
+849 959 m
+1 x
+1 12 h
+2 47 j
+1 x
+1 74 j
+E
+B
+860 924 m
+1 x
+1 28 j
+2 x
+E
+B
+866 850 m
+1 131 h
+1 38 j
+E
+B
+871 896 m
+1 x
+E
+B
+874 850 m
+2 109 h
+1 109 j
+E
+B
+879 971 m
+1 27 h
+2 39 j
+1 35 j
+1 x
+1 74 j
+1 131 h
+E
+B
+889 896 m
+1 x
+1 x
+2 28 h
+1 19 h
+1 69 h
+1 6 j
+1 8 j
+2 55 j
+1 16 h
+1 78 h
+1 187 j
+1 109 h
+2 16 j
+1 16 h
+1 22 h
+1 17 h
+1 8 h
+2 17 h
+1 173 j
+1 131 h
+1 38 j
+1 55 h
+2 102 j
+1 x
+1 75 h
+1 75 j
+1 x
+2 x
+1 110 h
+1 82 j
+1 57 h
+2 57 j
+1 74 j
+1 121 h
+1 121 j
+1 x
+2 x
+1 x
+1 121 h
+1 35 h
+1 8 j
+2 55 j
+1 94 h
+1 94 j
+1 93 j
+1 183 h
+2 183 j
+1 46 h
+1 28 h
+1 88 h
+1 41 j
+2 27 h
+1 25 h
+1 25 j
+1 17 j
+1 10 j
+2 19 h
+1 19 j
+E
+B
+963 850 m
+1 109 h
+1 12 h
+1 12 j
+1 59 h
+2 37 j
+1 85 j
+1 47 h
+1 55 h
+1 8 h
+2 156 j
+1 46 h
+1 46 j
+1 74 h
+1 x
+2 47 h
+1 27 h
+1 27 j
+1 19 h
+1 19 j
+2 x
+1 10 h
+E
+B
+990 924 m
+1 x
+2 47 h
+1 12 j
+1 16 j
+1 47 h
+2 9 j
+1 x
+1 38 j
+1 16 h
+1 47 h
+2 63 j
+1 93 j
+E
+B
+1007 896 m
+1 47 h
+2 55 h
+1 17 j
+1 22 j
+1 31 h
+1 19 j
+2 28 j
+1 47 j
+1 28 h
+1 74 j
+1 74 h
+2 74 j
+1 131 h
+1 17 h
+1 102 j
+1 46 j
+2 x
+1 x
+1 109 h
+1 63 j
+2 28 h
+1 19 h
+1 93 j
+1 140 h
+1 55 h
+2 74 j
+1 28 j
+1 47 j
+1 75 h
+1 x
+2 75 j
+1 63 h
+1 109 j
+1 121 h
+1 47 j
+2 74 j
+1 148 h
+1 17 j
+1 38 j
+1 19 j
+2 57 h
+E
+B
+1059 896 m
+1 47 h
+1 93 j
+2 x
+1 109 h
+E
+B
+1066 959 m
+2 x
+1 69 h
+1 47 j
+1 10 j
+1 28 j
+2 93 j
+1 109 h
+1 109 j
+E
+B
+1078 850 m
+2 x
+1 93 h
+1 38 h
+1 38 j
+1 38 h
+2 85 j
+1 63 h
+1 16 j
+1 x
+1 93 j
+2 93 h
+1 19 j
+1 19 h
+1 38 h
+1 31 h
+2 53 j
+1 35 j
+1 19 h
+1 19 j
+2 x
+1 28 j
+1 x
+1 46 j
+1 109 h
+2 12 h
+1 75 j
+1 85 h
+1 22 j
+1 109 j
+2 74 h
+1 35 h
+1 35 j
+1 x
+1 x
+2 x
+1 x
+1 28 j
+1 63 h
+1 35 j
+2 x
+1 x
+1 74 j
+E
+B
+1131 850 m
+2 x
+E
+0.75 Sx
+1 Sd
+(US TYPHUS_MURINE) 909 1102 0.5 T
+0.5 Sx
+(months from 01/62) 909 779 0.5 T
+90 Sr
+90 Sh
+(log\(cases\)) 605 947 0.5 T
+0 Sr
+0 Sh
+684 842 m
+2 z
+804 842 m
+2 z
+925 842 m
+2 z
+1046 842 m
+2 z
+E
+684 842 m
+362 x
+E
+(0) 684 815 0.5 T
+(100) 804 815 0.5 T
+(200) 925 815 0.5 T
+(300) 1046 815 0.5 T
+90 Sr
+90 Sh
+667 850 m
+2 w
+667 883 m
+2 w
+667 917 m
+2 w
+667 951 m
+2 w
+667 985 m
+2 w
+667 1019 m
+2 w
+667 1053 m
+2 w
+E
+667 850 m
+203 y
+E
+(0.0) 640 850 0.5 T
+(1.0) 640 917 0.5 T
+(2.0) 640 985 0.5 T
+(3.0) 640 1053 0.5 T
+0 Sr
+0 Sh
+0 Sd
+484 211 667 842 c
+0.5 0.75 0.4 0.6 Sg
+B
+1279 939 m
+1 38 h
+1 1 j
+2 1 h
+1 10 j
+1 44 j
+1 28 h
+1 8 j
+2 37 j
+1 37 h
+1 4 h
+1 8 j
+1 18 h
+2 x
+1 35 h
+1 4 h
+1 29 j
+1 33 j
+2 31 h
+1 22 j
+1 x
+1 9 j
+2 19 j
+1 19 h
+1 26 h
+1 37 j
+1 6 h
+2 50 h
+1 25 j
+1 6 h
+1 5 h
+1 5 j
+2 5 h
+1 26 j
+1 33 j
+1 70 h
+1 13 h
+2 66 j
+1 53 h
+1 13 j
+1 3 j
+1 21 j
+2 28 h
+1 28 j
+1 4 h
+1 29 h
+1 66 j
+2 48 h
+1 15 j
+1 24 j
+1 14 h
+2 5 h
+1 9 h
+1 20 j
+1 29 j
+1 57 h
+2 22 j
+1 14 j
+1 x
+1 66 h
+1 47 j
+2 11 j
+1 8 j
+1 21 j
+1 16 j
+1 16 h
+2 29 h
+1 17 j
+1 56 j
+1 56 h
+1 x
+2 28 h
+1 56 j
+1 28 j
+1 73 h
+1 16 h
+2 26 h
+1 26 j
+1 33 j
+1 23 h
+2 23 j
+1 x
+1 12 j
+1 44 j
+1 101 h
+2 36 j
+1 24 h
+1 4 h
+1 4 h
+1 98 h
+2 122 j
+1 29 j
+1 63 h
+1 18 j
+1 16 j
+2 17 j
+1 x
+1 9 h
+1 19 h
+1 9 h
+2 14 h
+1 23 j
+1 28 j
+1 9 h
+1 48 h
+2 48 j
+1 39 h
+1 x
+1 60 j
+2 45 h
+1 4 h
+1 93 j
+1 56 h
+1 23 h
+2 x
+1 22 h
+1 3 h
+1 15 j
+1 45 j
+2 71 h
+1 87 j
+1 56 h
+1 13 h
+1 32 j
+2 24 h
+1 89 j
+1 56 h
+1 17 h
+1 16 h
+2 5 j
+1 5 j
+1 6 j
+1 49 h
+1 66 j
+2 28 h
+1 28 j
+1 17 h
+1 16 h
+1 10 j
+2 51 j
+1 16 h
+1 44 j
+1 28 h
+2 37 h
+1 48 h
+1 29 j
+1 33 h
+1 24 j
+2 11 h
+1 60 j
+1 49 h
+1 28 j
+1 14 h
+2 14 h
+1 37 j
+1 28 h
+1 11 j
+1 34 h
+2 37 h
+1 24 j
+1 47 j
+1 56 h
+1 19 j
+2 3 j
+1 28 j
+1 14 h
+1 9 j
+1 62 h
+2 31 j
+1 12 h
+1 23 j
+1 39 j
+2 8 h
+1 16 h
+1 16 j
+1 8 j
+1 21 j
+2 45 h
+1 10 j
+1 10 h
+1 54 h
+1 54 j
+2 21 h
+1 66 j
+1 35 h
+1 x
+1 6 j
+2 24 h
+1 x
+1 32 j
+1 21 j
+1 90 h
+2 90 j
+1 44 j
+1 110 h
+1 82 j
+1 16 h
+2 12 h
+1 9 h
+1 28 h
+1 49 j
+2 x
+E
+B
+1524 939 m
+1 31 h
+1 12 h
+2 1 j
+1 58 j
+1 24 h
+1 41 j
+1 x
+2 85 h
+1 62 j
+1 14 h
+E
+B
+1538 939 m
+2 10 j
+1 51 j
+1 89 h
+1 9 h
+1 42 j
+2 45 h
+1 40 j
+1 12 h
+1 22 j
+1 10 h
+2 24 j
+1 14 h
+1 65 h
+1 12 j
+2 22 j
+1 13 j
+1 4 j
+1 9 j
+1 45 h
+2 50 j
+1 x
+1 35 j
+1 80 h
+1 10 h
+2 5 j
+1 45 j
+1 9 h
+1 14 j
+1 14 h
+2 49 j
+1 x
+1 21 h
+1 14 h
+1 18 h
+2 32 j
+1 28 h
+1 49 j
+1 21 h
+1 x
+2 14 h
+E
+B
+1589 878 m
+1 45 h
+2 45 j
+1 x
+1 28 h
+1 56 j
+1 56 h
+2 x
+1 9 h
+1 36 h
+1 73 j
+1 98 h
+2 61 j
+1 24 h
+1 45 j
+1 44 j
+1 x
+E
+B
+1611 850 m
+1 56 h
+1 x
+1 76 h
+2 59 j
+1 17 j
+1 x
+1 12 j
+E
+B
+1622 878 m
+1 45 h
+1 73 j
+E
+B
+1627 929 m
+1 14 j
+E
+B
+1630 894 m
+1 44 j
+E
+B
+1634 878 m
+1 16 h
+1 35 h
+1 79 j
+2 65 h
+1 9 j
+1 12 j
+1 45 h
+1 x
+2 45 j
+1 16 j
+1 28 j
+1 28 h
+1 37 h
+2 37 j
+1 x
+E
+B
+1654 878 m
+1 28 j
+2 x
+E
+B
+1659 878 m
+1 x
+2 107 h
+E
+B
+1665 850 m
+1 28 h
+2 x
+1 45 h
+E
+B
+1672 850 m
+2 73 h
+1 29 j
+1 12 h
+1 56 j
+1 x
+E
+B
+1681 894 m
+1 40 h
+1 40 j
+1 12 h
+2 28 j
+1 28 h
+1 56 j
+1 x
+1 44 h
+2 16 j
+1 149 h
+1 112 j
+1 65 j
+2 56 h
+1 70 h
+1 98 j
+1 45 h
+1 74 h
+2 147 j
+E
+B
+1705 850 m
+1 x
+1 79 h
+2 79 j
+1 x
+E
+B
+1712 906 m
+1 56 j
+2 x
+1 89 h
+E
+B
+1718 906 m
+1 56 j
+2 107 h
+1 51 j
+1 56 j
+1 44 h
+1 44 j
+2 28 h
+E
+0.75 Sx
+1 Sd
+(US TRICHINOSIS) 1503 1102 0.5 T
+0.5 Sx
+(months from 01/62) 1503 779 0.5 T
+90 Sr
+90 Sh
+(log\(cases\)) 1199 947 0.5 T
+0 Sr
+0 Sh
+1278 842 m
+2 z
+1398 842 m
+2 z
+1519 842 m
+2 z
+1640 842 m
+2 z
+E
+1278 842 m
+362 x
+E
+(0) 1278 815 0.5 T
+(100) 1398 815 0.5 T
+(200) 1519 815 0.5 T
+(300) 1640 815 0.5 T
+90 Sr
+90 Sh
+1261 850 m
+2 w
+1261 890 m
+2 w
+1261 931 m
+2 w
+1261 972 m
+2 w
+1261 1013 m
+2 w
+E
+1261 850 m
+163 y
+E
+(0) 1234 850 0.5 T
+(1) 1234 890 0.5 T
+(2) 1234 931 0.5 T
+(3) 1234 972 0.5 T
+(4) 1234 1013 0.5 T
+0 Sr
+0 Sh
+0 Sd
+484 211 1261 842 c
+0.75 1 0.4 0.6 Sg
+B
+1873 906 m
+1 26 h
+1 9 h
+2 9 j
+1 30 h
+1 30 j
+1 24 h
+1 71 j
+2 35 j
+1 56 h
+1 50 h
+1 47 h
+1 54 j
+2 28 h
+1 36 j
+1 21 j
+1 57 h
+1 45 j
+2 82 j
+1 82 h
+1 17 h
+1 13 h
+2 15 h
+1 7 h
+1 35 j
+1 13 h
+1 30 j
+2 24 h
+1 11 h
+1 14 h
+1 x
+1 40 j
+2 56 j
+1 x
+1 64 h
+1 23 h
+1 23 j
+2 32 h
+1 4 j
+1 x
+1 45 j
+1 82 j
+2 x
+1 99 h
+1 17 j
+1 45 h
+1 45 j
+2 40 h
+1 52 j
+1 x
+1 47 h
+2 5 j
+1 x
+1 15 h
+1 10 j
+1 5 h
+2 16 j
+1 24 j
+1 26 j
+1 61 h
+1 117 j
+2 99 h
+1 29 j
+1 21 h
+1 35 j
+1 26 h
+2 17 h
+1 32 h
+1 19 j
+1 30 j
+1 40 h
+2 16 j
+1 15 j
+1 40 h
+1 49 j
+1 35 h
+2 10 h
+1 7 h
+1 22 j
+1 26 h
+2 32 j
+1 15 j
+1 36 h
+1 15 j
+1 42 j
+2 47 h
+1 5 h
+1 52 j
+1 21 h
+1 59 h
+2 38 j
+1 x
+1 42 j
+1 14 j
+1 56 h
+2 42 j
+1 21 h
+1 15 h
+1 6 h
+1 x
+2 10 h
+1 22 h
+1 10 j
+1 7 j
+1 15 j
+2 13 j
+1 23 h
+1 x
+1 9 h
+2 14 j
+1 14 h
+1 19 j
+1 x
+1 38 h
+2 12 j
+1 21 j
+1 35 j
+1 24 h
+1 15 j
+2 43 h
+1 43 j
+1 26 h
+1 11 j
+1 6 h
+2 x
+1 38 h
+1 16 j
+1 12 j
+1 16 j
+2 32 h
+1 26 j
+1 x
+1 42 j
+1 71 h
+2 x
+1 24 j
+1 18 j
+1 x
+1 48 h
+2 3 j
+1 38 j
+1 11 h
+1 24 h
+2 14 j
+1 28 j
+1 43 j
+1 91 h
+1 9 j
+2 39 j
+1 23 h
+1 23 j
+1 18 h
+1 35 j
+2 30 h
+1 x
+1 13 j
+1 42 h
+1 10 j
+2 22 h
+1 19 h
+1 81 j
+1 8 h
+1 13 h
+2 6 j
+1 71 j
+1 103 h
+1 11 j
+1 x
+2 x
+1 36 j
+1 40 h
+1 16 h
+2 30 j
+1 x
+1 14 h
+1 9 j
+1 40 j
+2 56 h
+1 47 j
+1 36 h
+1 15 j
+1 5 h
+2 18 j
+1 18 h
+1 14 h
+1 x
+1 10 h
+2 6 h
+1 25 j
+1 x
+1 87 j
+1 125 h
+2 90 j
+1 x
+1 61 h
+1 10 h
+1 7 j
+2 4 h
+1 24 h
+1 7 j
+1 24 j
+2 25 j
+1 21 h
+1 17 h
+1 6 j
+1 x
+2 16 j
+1 10 j
+1 43 h
+1 38 j
+1 33 h
+2 28 j
+1 31 h
+1 22 j
+1 x
+1 3 h
+2 7 h
+1 7 j
+1 12 j
+1 22 h
+1 10 j
+2 x
+1 4 h
+1 17 h
+1 11 h
+1 9 h
+2 31 j
+1 11 h
+1 33 j
+1 42 h
+2 33 j
+1 19 h
+1 5 h
+1 3 h
+1 30 h
+2 41 j
+1 25 j
+1 42 h
+1 42 j
+1 48 h
+2 58 j
+1 32 h
+1 3 h
+1 3 j
+1 16 h
+2 33 j
+1 37 h
+1 26 j
+1 9 h
+1 25 j
+2 16 h
+1 40 h
+1 12 j
+1 28 j
+1 6 h
+2 9 h
+1 15 j
+1 6 h
+1 3 j
+2 3 h
+1 3 h
+1 30 j
+1 38 h
+1 17 h
+2 25 j
+1 11 h
+1 14 j
+1 13 j
+1 19 h
+2 3 j
+1 9 j
+1 7 j
+1 37 h
+1 13 j
+2 11 j
+1 29 h
+1 23 j
+1 45 h
+1 8 j
+2 12 j
+1 13 j
+1 16 h
+1 40 j
+1 50 h
+2 28 j
+1 10 j
+1 16 h
+1 28 j
+2 32 h
+1 36 j
+1 38 h
+1 8 h
+1 27 j
+2 5 h
+1 15 h
+1 91 j
+1 56 h
+1 24 h
+2 28 j
+1 13 h
+1 13 j
+1 21 h
+1 17 j
+2 22 h
+1 19 j
+1 x
+1 3 j
+1 3 h
+2 x
+1 19 h
+1 54 j
+1 77 h
+1 101 j
+2 35 h
+1 53 h
+1 12 j
+1 41 j
+2 24 h
+1 35 j
+1 44 h
+1 94 j
+1 78 h
+2 28 h
+1 4 j
+1 59 j
+1 48 h
+1 30 j
+2 5 h
+1 9 h
+1 9 j
+1 22 h
+1 27 j
+2 10 h
+1 5 j
+1 22 h
+1 13 j
+1 40 j
+2 43 h
+1 12 j
+1 31 h
+1 3 j
+1 12 j
+2 4 j
+1 46 h
+1 27 j
+1 71 j
+2 59 h
+1 42 j
+1 32 h
+1 61 j
+1 57 h
+2 5 j
+1 x
+1 28 h
+1 28 j
+1 33 h
+2 85 j
+1 47 h
+1 24 h
+1 50 j
+1 50 h
+2 x
+1 3 j
+1 16 j
+1 5 h
+1 15 j
+2 35 h
+1 3 j
+1 62 j
+1 45 h
+1 36 j
+2 62 h
+E
+0.75 Sx
+1 Sd
+(US HANSEN_DISEASE) 2097 1102 0.5 T
+0.5 Sx
+(months from 01/62) 2097 779 0.5 T
+90 Sr
+90 Sh
+(log\(cases\)) 1793 947 0.5 T
+0 Sr
+0 Sh
+1872 842 m
+2 z
+1992 842 m
+2 z
+2113 842 m
+2 z
+2234 842 m
+2 z
+E
+1872 842 m
+362 x
+E
+(0) 1872 815 0.5 T
+(100) 1992 815 0.5 T
+(200) 2113 815 0.5 T
+(300) 2234 815 0.5 T
+90 Sr
+90 Sh
+1855 850 m
+2 w
+1855 901 m
+2 w
+1855 952 m
+2 w
+1855 1003 m
+2 w
+E
+1855 850 m
+153 y
+E
+(0) 1828 850 0.5 T
+(1) 1828 901 0.5 T
+(2) 1828 952 0.5 T
+(3) 1828 1003 0.5 T
+0 Sr
+0 Sh
+0 Sd
+484 211 1855 842 c
+0.123 0.937 0.242089 0.80538 So
+0 0.25 0.2 0.4 Sg
+B
+91 557 m
+1 47 j
+1 x
+2 35 h
+1 12 h
+1 81 h
+1 57 j
+1 36 j
+2 21 h
+1 x
+1 15 h
+1 36 j
+1 12 h
+2 30 h
+1 77 j
+1 21 h
+1 50 h
+1 x
+2 x
+1 21 h
+1 x
+1 x
+2 36 j
+1 35 j
+1 14 h
+1 14 j
+1 21 j
+2 36 j
+1 36 h
+1 113 h
+1 47 h
+1 30 j
+2 95 j
+1 21 h
+1 9 j
+1 85 h
+1 111 j
+2 26 h
+1 x
+1 83 j
+1 71 h
+1 14 j
+2 50 h
+1 21 h
+1 28 j
+1 19 h
+1 19 j
+2 52 h
+1 116 j
+1 47 h
+1 83 j
+2 57 h
+1 50 h
+1 x
+1 6 h
+1 13 j
+2 17 j
+1 36 h
+1 48 j
+1 48 h
+1 119 j
+2 71 h
+1 35 j
+1 47 h
+1 x
+1 x
+2 x
+1 x
+1 24 h
+1 24 j
+1 17 h
+2 39 h
+E
+B
+179 474 m
+1 x
+1 100 h
+2 29 j
+1 71 j
+1 119 h
+1 12 j
+2 50 j
+1 56 h
+1 6 h
+1 36 j
+1 x
+2 12 j
+1 14 j
+1 26 h
+1 x
+1 47 j
+2 35 h
+1 42 h
+1 19 h
+1 25 j
+1 29 h
+2 7 h
+1 86 j
+1 21 j
+1 36 j
+1 36 h
+E
+B
+213 557 m
+1 x
+1 30 h
+1 77 j
+2 56 h
+1 92 j
+1 113 h
+1 56 j
+2 21 j
+1 21 h
+1 21 j
+1 36 j
+1 157 h
+2 121 j
+1 56 h
+1 35 j
+1 21 j
+1 71 h
+2 x
+E
+B
+239 510 m
+2 x
+1 35 h
+1 x
+1 48 h
+1 83 j
+2 56 h
+1 35 j
+1 21 j
+1 21 h
+1 21 j
+2 47 h
+1 47 j
+1 x
+E
+B
+257 557 m
+2 40 h
+1 40 j
+1 12 j
+1 29 h
+2 43 j
+1 35 h
+1 9 j
+1 17 h
+1 8 j
+2 35 j
+1 x
+1 14 h
+1 14 j
+1 26 h
+2 x
+1 40 h
+1 31 j
+1 8 h
+1 43 j
+2 21 j
+1 35 h
+1 21 h
+1 9 j
+1 x
+2 40 h
+1 31 j
+1 8 h
+1 7 h
+1 25 h
+2 25 j
+1 36 j
+1 14 j
+1 43 h
+2 8 j
+1 x
+1 21 j
+1 x
+1 36 h
+2 50 j
+1 26 h
+1 49 h
+1 61 j
+1 14 j
+2 14 h
+1 14 j
+1 50 h
+1 24 j
+1 24 h
+2 x
+1 71 j
+1 35 h
+1 48 h
+1 x
+2 48 j
+1 35 j
+1 36 j
+1 107 h
+1 36 j
+2 36 h
+1 45 h
+1 13 j
+1 16 j
+2 10 j
+1 113 j
+1 172 h
+1 89 j
+1 26 j
+2 14 h
+1 21 h
+1 56 j
+1 35 h
+1 57 h
+2 9 j
+1 4 h
+1 x
+1 13 h
+1 13 j
+2 40 j
+1 26 j
+1 26 h
+1 9 h
+1 9 j
+2 17 h
+1 23 h
+1 5 h
+1 5 j
+1 10 j
+2 42 j
+1 21 h
+1 8 h
+1 7 h
+2 7 j
+1 64 j
+1 36 j
+1 83 h
+1 9 h
+2 x
+1 31 h
+1 5 h
+1 15 j
+1 13 j
+2 8 j
+1 x
+1 56 j
+1 56 h
+1 x
+2 9 j
+1 9 h
+1 8 h
+1 43 h
+1 11 j
+2 19 j
+1 36 h
+1 66 j
+1 x
+1 47 j
+2 21 h
+1 x
+1 43 h
+1 7 h
+2 7 j
+1 8 j
+1 21 j
+1 21 h
+1 21 j
+2 71 j
+1 57 h
+1 14 h
+1 x
+1 35 j
+2 21 h
+1 x
+1 21 j
+1 47 h
+1 26 j
+2 35 h
+1 35 j
+1 35 h
+1 56 j
+1 21 h
+2 x
+1 14 h
+1 36 h
+1 50 j
+1 35 h
+2 92 j
+1 100 h
+1 x
+1 17 j
+2 26 j
+1 x
+1 14 h
+1 14 j
+1 21 j
+2 35 h
+1 14 j
+1 14 h
+1 12 h
+1 47 j
+2 35 h
+1 x
+1 71 j
+1 36 h
+1 35 h
+2 71 j
+1 x
+E
+B
+463 566 m
+1 40 h
+1 96 j
+1 47 h
+1 9 h
+2 35 j
+1 14 h
+1 71 j
+1 36 h
+2 21 h
+1 x
+1 21 j
+1 56 h
+1 44 h
+2 136 j
+1 113 h
+1 15 h
+1 15 j
+1 6 j
+2 36 j
+1 68 h
+1 56 j
+1 12 j
+1 x
+2 14 j
+1 50 h
+1 39 h
+1 89 j
+E
+B
+525 474 m
+2 57 h
+1 x
+1 x
+E
+B
+531 557 m
+2 47 j
+1 64 h
+1 100 j
+1 119 h
+1 12 j
+2 16 h
+E
+0.75 Sx
+1 Sd
+(US LEPTOSPIROSIS) 315 727 0.5 T
+0.5 Sx
+(months from 01/62) 315 404 0.5 T
+90 Sr
+90 Sh
+(log\(cases\)) 11 572 0.5 T
+0 Sr
+0 Sh
+90 466 m
+2 z
+210 466 m
+2 z
+331 466 m
+2 z
+452 466 m
+2 z
+E
+90 466 m
+362 x
+E
+(0) 90 440 0.5 T
+(100) 210 440 0.5 T
+(200) 331 440 0.5 T
+(300) 452 440 0.5 T
+90 Sr
+90 Sh
+73 474 m
+2 w
+73 526 m
+2 w
+73 577 m
+2 w
+73 628 m
+2 w
+E
+73 474 m
+154 y
+E
+(0) 46 474 0.5 T
+(1) 46 526 0.5 T
+(2) 46 577 0.5 T
+(3) 46 628 0.5 T
+0 Sr
+0 Sh
+0 Sd
+484 212 73 466 c
+0.25 0.5 0.2 0.4 Sg
+B
+685 615 m
+1 28 j
+1 14 j
+2 24 h
+1 11 h
+1 33 h
+1 11 h
+1 18 h
+2 x
+1 14 j
+1 8 j
+1 25 j
+1 61 j
+2 4 h
+1 9 j
+1 22 h
+1 13 j
+2 50 h
+1 8 h
+1 27 h
+1 8 j
+1 15 j
+2 4 j
+1 29 j
+1 57 j
+1 36 j
+1 68 h
+2 32 j
+1 14 h
+1 14 h
+1 10 h
+1 3 h
+2 3 j
+1 x
+1 74 j
+1 60 h
+2 88 j
+1 28 h
+1 x
+E
+B
+733 538 m
+2 14 h
+1 27 h
+1 13 j
+1 37 j
+1 x
+2 55 j
+1 96 h
+1 96 j
+1 44 h
+1 20 h
+2 36 j
+1 44 h
+1 x
+1 65 h
+2 32 j
+1 13 j
+1 4 j
+1 5 j
+1 13 h
+2 68 j
+E
+B
+760 474 m
+1 x
+1 44 h
+2 16 j
+1 60 h
+1 10 j
+1 34 j
+1 x
+2 11 h
+1 x
+1 55 j
+1 64 h
+2 20 j
+1 44 j
+1 55 h
+1 17 h
+1 11 h
+2 55 j
+1 64 h
+1 9 j
+1 55 j
+1 x
+E
+B
+791 474 m
+2 55 h
+1 55 j
+1 64 h
+1 36 j
+2 16 h
+E
+B
+806 474 m
+1 44 h
+1 44 h
+2 60 j
+1 16 h
+1 20 h
+1 20 j
+1 x
+2 44 j
+1 28 h
+E
+B
+822 474 m
+1 44 h
+1 16 j
+1 x
+2 28 j
+E
+B
+831 502 m
+2 28 j
+E
+B
+835 474 m
+1 55 h
+E
+B
+841 538 m
+1 38 h
+1 74 j
+2 28 j
+E
+B
+848 474 m
+2 x
+1 x
+1 x
+E
+B
+881 474 m
+1 28 h
+E
+B
+886 474 m
+1 28 h
+E
+B
+889 502 m
+2 28 j
+1 x
+E
+B
+902 474 m
+1 x
+1 x
+E
+B
+906 474 m
+2 x
+E
+B
+910 502 m
+1 28 j
+1 44 h
+2 44 j
+1 x
+1 55 h
+E
+B
+926 502 m
+1 28 j
+1 28 h
+1 28 j
+2 28 h
+1 x
+E
+B
+935 502 m
+2 50 h
+1 6 j
+1 44 j
+1 16 h
+E
+B
+944 474 m
+1 28 h
+E
+B
+948 474 m
+1 x
+E
+B
+951 502 m
+1 28 j
+E
+B
+960 474 m
+1 x
+E
+B
+968 474 m
+1 28 h
+E
+B
+996 474 m
+1 28 h
+1 28 j
+E
+B
+1001 474 m
+1 44 h
+1 20 h
+1 64 j
+2 28 h
+E
+B
+1010 474 m
+2 x
+E
+B
+1020 474 m
+1 x
+E
+B
+1027 502 m
+2 28 j
+1 x
+E
+B
+1044 474 m
+2 44 h
+1 44 j
+E
+B
+1050 474 m
+2 28 h
+E
+B
+1054 502 m
+1 28 j
+E
+B
+1066 474 m
+1 28 h
+E
+B
+1070 474 m
+1 28 h
+E
+B
+1087 474 m
+1 x
+E
+B
+1102 474 m
+2 28 h
+E
+B
+1113 474 m
+2 x
+1 28 h
+1 28 j
+E
+0.75 Sx
+1 Sd
+(US POLIO_PARALYTIC) 909 727 0.5 T
+0.5 Sx
+(months from 01/62) 909 404 0.5 T
+90 Sr
+90 Sh
+(log\(cases\)) 605 572 0.5 T
+0 Sr
+0 Sh
+684 466 m
+2 z
+805 466 m
+2 z
+926 466 m
+2 z
+1047 466 m
+2 z
+E
+684 466 m
+363 x
+E
+(0) 684 440 0.5 T
+(100) 805 440 0.5 T
+(200) 926 440 0.5 T
+(300) 1047 440 0.5 T
+90 Sr
+90 Sh
+667 474 m
+2 w
+667 514 m
+2 w
+667 554 m
+2 w
+667 594 m
+2 w
+667 634 m
+2 w
+667 673 m
+2 w
+E
+667 474 m
+199 y
+E
+(0) 640 474 0.5 T
+(1) 640 514 0.5 T
+(2) 640 554 0.5 T
+(3) 640 594 0.5 T
+(4) 640 634 0.5 T
+(5) 640 673 0.5 T
+0 Sr
+0 Sh
+0 Sd
+484 212 667 466 c
+0.5 0.75 0.2 0.4 Sg
+B
+1279 562 m
+1 10 j
+1 x
+2 13 j
+1 23 h
+1 60 j
+1 50 h
+1 10 h
+2 32 j
+1 27 h
+1 27 j
+1 9 h
+1 38 h
+2 47 j
+1 28 j
+1 x
+1 16 h
+1 12 h
+2 73 h
+1 64 j
+1 x
+1 21 j
+2 12 h
+1 28 j
+1 55 h
+1 83 j
+1 56 h
+2 x
+1 56 j
+1 44 h
+1 34 h
+1 22 j
+2 x
+1 x
+1 12 j
+1 28 h
+1 44 j
+2 28 j
+1 28 h
+1 28 h
+1 28 j
+1 50 h
+2 5 h
+1 11 j
+1 16 j
+1 27 h
+1 x
+2 11 j
+1 16 j
+1 28 j
+1 28 h
+2 x
+E
+B
+1343 539 m
+1 x
+1 13 h
+2 22 j
+1 x
+1 12 j
+1 28 h
+1 16 j
+2 28 j
+1 37 h
+E
+B
+1356 518 m
+1 28 h
+2 28 j
+1 12 h
+1 x
+1 x
+1 28 j
+2 28 j
+1 28 h
+1 28 j
+1 78 h
+1 78 j
+2 28 h
+1 60 h
+1 23 j
+1 9 j
+2 56 j
+1 44 h
+E
+B
+1379 518 m
+1 28 h
+2 44 j
+1 16 h
+1 28 h
+1 28 j
+1 21 h
+2 9 j
+1 x
+1 56 j
+1 56 h
+1 32 h
+2 23 j
+1 65 j
+1 44 h
+1 16 j
+1 16 h
+2 16 j
+1 16 h
+1 21 h
+1 65 j
+E
+B
+1406 518 m
+1 44 j
+1 28 h
+1 28 h
+2 28 j
+E
+B
+1413 502 m
+1 16 h
+1 34 h
+E
+B
+1418 474 m
+1 56 h
+1 28 j
+1 x
+2 x
+1 78 h
+1 78 j
+1 37 h
+1 37 j
+2 16 h
+1 x
+1 44 h
+1 44 j
+1 44 j
+2 x
+1 65 h
+1 37 j
+1 28 j
+1 44 h
+E
+B
+1442 474 m
+1 56 h
+1 9 h
+E
+B
+1447 518 m
+1 12 h
+1 x
+1 28 j
+2 37 h
+1 21 j
+1 x
+1 16 j
+1 x
+2 28 h
+E
+B
+1460 640 m
+1 27 j
+1 5 h
+2 88 j
+1 9 h
+1 23 h
+1 60 j
+1 x
+2 37 h
+1 37 j
+1 16 h
+1 12 h
+1 9 h
+2 18 h
+1 27 j
+1 9 h
+1 37 j
+1 28 h
+2 9 h
+1 41 h
+1 78 j
+E
+B
+1487 502 m
+1 16 h
+1 28 h
+1 52 h
+1 59 j
+2 7 h
+E
+B
+1495 574 m
+1 28 j
+1 x
+2 11 h
+1 23 h
+1 62 j
+1 21 h
+1 31 h
+2 13 j
+1 39 j
+1 39 h
+1 5 j
+1 25 h
+2 47 j
+1 12 j
+1 74 h
+1 x
+1 53 j
+2 41 h
+1 14 j
+1 x
+1 11 h
+2 31 j
+1 16 h
+1 36 h
+1 32 j
+1 11 h
+2 13 h
+1 10 j
+1 x
+1 50 j
+1 36 h
+2 9 j
+1 5 j
+1 14 h
+1 36 j
+1 73 h
+2 51 j
+1 14 h
+1 36 j
+1 44 h
+1 9 h
+2 9 j
+1 8 j
+1 11 h
+1 3 h
+1 23 j
+2 5 j
+1 14 h
+1 9 j
+1 18 j
+2 13 h
+1 5 h
+1 26 h
+1 11 h
+1 11 j
+2 26 j
+1 18 j
+1 31 h
+1 24 j
+1 39 h
+2 11 j
+1 17 j
+1 9 h
+1 34 h
+1 17 j
+2 2 h
+1 7 h
+1 22 j
+1 18 j
+1 14 h
+2 x
+1 9 j
+1 11 j
+1 x
+1 37 h
+2 17 j
+1 4 j
+1 39 h
+1 24 j
+2 15 j
+1 x
+1 5 j
+1 13 h
+1 10 h
+2 14 j
+1 9 j
+1 9 h
+1 20 j
+1 x
+2 20 h
+1 14 h
+1 10 j
+1 18 j
+1 6 j
+2 28 j
+1 131 h
+1 75 j
+1 4 j
+1 8 j
+2 4 h
+1 x
+1 x
+1 9 j
+1 x
+2 11 j
+1 11 h
+1 26 h
+1 37 j
+2 7 j
+1 9 j
+1 32 h
+1 23 j
+1 44 h
+2 31 j
+1 31 h
+1 9 j
+1 8 j
+1 14 j
+2 78 j
+1 196 h
+1 118 j
+1 34 j
+1 39 h
+2 5 j
+1 28 h
+1 28 j
+1 28 h
+1 50 j
+2 9 h
+1 23 h
+1 60 j
+1 83 h
+1 55 j
+2 47 h
+1 31 j
+1 11 h
+1 5 j
+2 5 h
+1 13 h
+1 18 j
+1 14 h
+1 19 h
+2 39 j
+1 44 h
+1 38 j
+1 13 j
+1 23 h
+2 4 h
+1 4 j
+1 21 h
+1 53 j
+1 36 h
+2 9 j
+1 11 j
+1 28 j
+1 91 h
+1 32 j
+2 6 h
+1 x
+1 44 j
+1 9 j
+1 36 h
+2 36 j
+1 9 h
+1 27 h
+1 x
+2 64 j
+1 83 h
+1 83 j
+1 44 h
+1 37 h
+2 53 j
+1 55 h
+1 15 j
+1 68 j
+1 16 h
+2 28 h
+1 x
+1 28 h
+1 4 j
+1 18 j
+2 34 j
+1 16 j
+1 64 h
+1 14 h
+1 14 j
+2 64 j
+1 60 h
+1 16 j
+1 34 h
+1 62 j
+2 52 h
+E
+0.75 Sx
+1 Sd
+(US PSITTACOSIS) 1503 727 0.5 T
+0.5 Sx
+(months from 01/62) 1503 404 0.5 T
+90 Sr
+90 Sh
+(log\(cases\)) 1199 572 0.5 T
+0 Sr
+0 Sh
+1278 466 m
+2 z
+1398 466 m
+2 z
+1519 466 m
+2 z
+1640 466 m
+2 z
+E
+1278 466 m
+362 x
+E
+(0) 1278 440 0.5 T
+(100) 1398 440 0.5 T
+(200) 1519 440 0.5 T
+(300) 1640 440 0.5 T
+90 Sr
+90 Sh
+1261 474 m
+2 w
+1261 514 m
+2 w
+1261 554 m
+2 w
+1261 594 m
+2 w
+1261 634 m
+2 w
+1261 674 m
+2 w
+E
+1261 474 m
+200 y
+E
+(0) 1234 474 0.5 T
+(1) 1234 514 0.5 T
+(2) 1234 554 0.5 T
+(3) 1234 594 0.5 T
+(4) 1234 634 0.5 T
+(5) 1234 674 0.5 T
+0 Sr
+0 Sh
+0 Sd
+484 212 1261 466 c
+0.75 1 0.2 0.4 Sg
+B
+2124 474 m
+1 x
+E
+B
+2154 474 m
+1 x
+E
+B
+2303 474 m
+2 x
+1 x
+E
+0.75 Sx
+1 Sd
+(US RABIES_HUMAN) 2097 727 0.5 T
+0.5 Sx
+(months from 01/62) 2097 404 0.5 T
+90 Sr
+90 Sh
+(log\(cases\)) 1793 572 0.5 T
+0 Sr
+0 Sh
+1863 466 m
+2 z
+1987 466 m
+2 z
+2110 466 m
+2 z
+2234 466 m
+2 z
+E
+1863 466 m
+371 x
+E
+(0) 1863 440 0.5 T
+(100) 1987 440 0.5 T
+(200) 2110 440 0.5 T
+(300) 2234 440 0.5 T
+90 Sr
+90 Sh
+1855 474 m
+2 w
+1855 531 m
+2 w
+1855 587 m
+2 w
+1855 644 m
+2 w
+E
+1855 474 m
+170 y
+E
+(0.0) 1828 474 0.5 T
+(0.2) 1828 531 0.5 T
+(0.4) 1828 587 0.5 T
+(0.6) 1828 644 0.5 T
+0 Sr
+0 Sh
+0 Sd
+484 212 1855 466 c
+0 0.25 0 0.2 Sg
+B
+91 119 m
+1 20 j
+1 15 h
+2 4 h
+1 20 h
+1 11 h
+1 6 j
+1 6 h
+2 16 h
+1 4 j
+1 21 j
+1 10 h
+1 8 j
+2 3 j
+1 4 j
+1 31 h
+1 16 h
+1 15 j
+2 22 h
+1 5 h
+1 11 j
+1 17 h
+2 27 j
+1 7 h
+1 15 j
+1 3 j
+1 2 j
+2 17 h
+1 7 j
+1 7 h
+1 10 h
+1 4 h
+2 8 h
+1 2 j
+1 14 j
+1 4 j
+1 19 j
+2 10 j
+1 19 h
+1 7 j
+1 10 h
+1 21 h
+2 7 h
+1 11 j
+1 7 h
+1 1 j
+1 21 j
+2 7 h
+1 16 j
+1 14 j
+1 3 h
+2 7 h
+1 21 h
+1 5 j
+1 2 j
+1 23 h
+2 4 j
+1 10 j
+1 3 j
+1 18 h
+1 39 j
+2 43 h
+1 38 j
+1 3 h
+1 8 h
+1 7 j
+2 18 h
+1 1 h
+1 38 h
+1 31 j
+1 22 j
+2 5 h
+1 27 j
+1 6 j
+1 13 h
+1 12 j
+2 29 h
+1 5 j
+1 20 h
+1 6 h
+2 8 j
+1 5 h
+1 15 h
+1 37 j
+1 3 j
+2 11 j
+1 5 h
+1 7 h
+1 7 h
+1 8 h
+2 12 h
+1 6 h
+1 10 j
+1 11 h
+1 1 h
+2 12 j
+1 19 j
+1 12 j
+1 14 h
+1 9 j
+2 8 h
+1 35 h
+1 3 h
+1 11 h
+1 5 j
+2 9 h
+1 32 j
+1 22 h
+1 34 j
+2 10 j
+1 11 h
+1 8 j
+1 9 h
+1 5 h
+2 18 h
+1 11 h
+1 4 j
+1 1 j
+1 19 j
+2 20 h
+1 37 j
+1 5 j
+1 6 h
+1 9 h
+2 18 h
+1 8 j
+1 5 h
+1 15 h
+1 6 j
+2 7 j
+1 13 h
+1 27 j
+1 13 j
+1 17 j
+2 23 h
+1 13 j
+1 25 h
+1 13 h
+1 4 h
+2 14 h
+1 3 h
+1 x
+1 17 j
+2 10 h
+1 24 j
+1 14 j
+1 x
+1 6 j
+2 15 h
+1 4 h
+1 13 h
+1 6 h
+1 5 j
+2 2 h
+1 12 j
+1 2 j
+1 16 j
+1 18 j
+2 6 h
+1 10 h
+1 4 h
+1 14 h
+1 8 h
+2 18 h
+1 3 j
+1 x
+1 19 j
+1 3 h
+2 22 j
+1 11 j
+1 7 h
+1 3 j
+2 11 h
+1 15 h
+1 12 h
+1 11 h
+1 4 j
+2 11 j
+1 21 j
+1 15 h
+1 27 j
+1 x
+2 x
+1 5 h
+1 16 h
+1 13 h
+1 13 h
+2 29 h
+1 10 j
+1 12 j
+1 12 j
+1 5 j
+2 27 j
+1 x
+1 3 h
+1 4 j
+1 16 h
+2 14 h
+1 11 h
+1 17 h
+1 3 j
+2 4 j
+1 11 j
+1 1 h
+1 26 j
+1 20 j
+2 12 h
+1 2 h
+1 17 h
+1 14 h
+1 9 h
+2 17 h
+1 1 j
+1 5 j
+1 11 j
+1 11 j
+2 26 j
+1 8 j
+1 2 h
+1 10 h
+1 10 h
+2 12 h
+1 15 h
+1 15 h
+1 1 h
+1 5 h
+2 27 j
+1 6 j
+1 20 j
+1 1 h
+2 15 h
+1 3 j
+1 17 h
+1 5 h
+1 22 h
+2 2 j
+1 3 j
+1 2 j
+1 22 j
+1 2 h
+2 18 j
+1 14 j
+1 7 h
+1 3 h
+1 12 h
+2 16 h
+1 15 h
+1 9 h
+1 1 h
+1 5 j
+2 19 j
+1 x
+1 30 j
+1 10 j
+1 5 h
+2 11 h
+1 3 h
+1 35 h
+1 11 h
+2 13 h
+1 10 j
+1 8 j
+1 16 j
+1 8 j
+2 25 j
+1 x
+1 2 h
+1 3 j
+1 13 h
+2 25 h
+1 7 h
+1 6 h
+1 5 j
+1 12 h
+2 37 j
+1 10 j
+1 14 j
+1 15 j
+1 74 h
+2 10 j
+1 3 h
+1 1 h
+1 14 h
+1 5 h
+2 2 j
+1 4 j
+1 18 j
+1 15 j
+2 17 j
+1 21 j
+1 8 h
+1 10 h
+1 16 h
+2 20 h
+1 21 h
+1 8 h
+1 10 j
+1 2 j
+2 26 j
+1 2 j
+1 27 j
+1 13 h
+1 5 j
+2 5 h
+1 11 h
+1 16 h
+1 20 h
+1 4 h
+2 3 j
+1 5 j
+1 33 j
+1 13 h
+1 46 j
+2 3 h
+1 4 h
+1 18 h
+1 6 j
+2 20 h
+1 30 h
+1 10 h
+1 6 j
+1 5 j
+2 25 j
+1 6 h
+1 44 j
+1 7 j
+1 9 h
+2 10 h
+1 2 h
+1 23 h
+1 18 h
+1 10 h
+2 8 h
+1 15 j
+1 21 j
+1 10 h
+1 49 j
+2 7 h
+1 5 h
+1 11 j
+1 18 h
+1 24 h
+2 12 h
+1 14 h
+1 2 j
+1 x
+2 26 j
+1 4 h
+1 49 j
+1 2 h
+1 12 h
+2 10 j
+1 18 h
+1 30 h
+1 6 h
+1 17 h
+2 7 h
+1 21 j
+1 3 j
+1 18 j
+1 53 j
+2 24 h
+1 6 j
+1 7 j
+1 28 h
+1 4 j
+2 17 h
+1 25 h
+1 12 j
+1 10 h
+1 40 j
+2 23 h
+E
+0.75 Sx
+1 Sd
+(US SALMONELLOSIS) 315 351 0.5 T
+0.5 Sx
+(months from 01/62) 315 29 0.5 T
+90 Sr
+90 Sh
+(log\(cases\)) 11 197 0.5 T
+0 Sr
+0 Sh
+90 91 m
+2 z
+210 91 m
+2 z
+331 91 m
+2 z
+452 91 m
+2 z
+E
+90 91 m
+362 x
+E
+(0) 90 64 0.5 T
+(100) 210 64 0.5 T
+(200) 331 64 0.5 T
+(300) 452 64 0.5 T
+90 Sr
+90 Sh
+73 91 m
+2 w
+73 128 m
+2 w
+73 165 m
+2 w
+73 201 m
+2 w
+73 238 m
+2 w
+73 275 m
+2 w
+E
+73 91 m
+184 y
+E
+(6.0) 46 91 0.5 T
+(7.0) 46 165 0.5 T
+(8.0) 46 238 0.5 T
+0 Sr
+0 Sh
+0 Sd
+484 211 73 91 c
+0.25 0.5 0 0.2 Sg
+B
+685 141 m
+1 32 j
+1 39 h
+2 3 j
+1 4 h
+1 24 h
+1 4 j
+1 26 h
+2 3 h
+1 4 h
+1 37 j
+1 9 j
+1 12 j
+2 12 j
+1 17 j
+1 16 j
+1 23 h
+1 23 h
+2 26 h
+1 21 h
+1 12 h
+1 17 h
+2 22 j
+1 12 j
+1 12 j
+1 18 j
+1 12 j
+2 3 j
+1 2 h
+1 3 j
+1 50 h
+1 3 j
+2 4 h
+1 1 j
+1 33 j
+1 3 h
+1 37 j
+2 2 j
+1 29 h
+1 51 j
+1 21 h
+1 8 h
+2 29 h
+1 29 h
+1 17 j
+1 5 h
+1 13 j
+2 4 j
+1 31 j
+1 19 h
+1 20 j
+2 10 j
+1 11 j
+1 28 h
+1 12 h
+1 46 h
+2 2 h
+1 4 j
+1 10 j
+1 6 h
+1 34 j
+2 13 j
+1 21 h
+1 15 j
+1 5 j
+1 12 h
+2 21 h
+1 4 h
+1 7 h
+1 23 h
+1 16 j
+2 2 j
+1 45 j
+1 13 j
+1 x
+1 25 h
+2 14 h
+1 38 j
+1 26 h
+1 14 h
+2 9 j
+1 30 h
+1 14 j
+1 3 h
+1 39 j
+2 7 j
+1 7 j
+1 5 h
+1 12 h
+1 7 j
+2 18 h
+1 15 h
+1 12 h
+1 11 h
+1 22 j
+2 3 j
+1 27 j
+1 30 j
+1 16 h
+1 1 j
+2 14 h
+1 6 h
+1 18 h
+1 60 h
+1 11 j
+2 17 j
+1 8 j
+1 15 h
+1 40 j
+2 12 h
+1 1 j
+1 31 j
+1 19 h
+1 11 h
+2 15 h
+1 3 h
+1 8 h
+1 3 h
+1 2 j
+2 10 h
+1 42 j
+1 7 h
+1 22 h
+1 1 h
+2 14 h
+1 1 j
+1 13 j
+1 27 h
+1 4 j
+2 6 j
+1 10 h
+1 9 j
+1 30 j
+1 13 j
+2 27 h
+1 13 j
+1 23 h
+1 6 h
+1 12 h
+2 8 h
+1 3 h
+1 1 h
+1 1 j
+2 x
+1 30 j
+1 10 j
+1 16 h
+1 18 j
+2 24 h
+1 x
+1 7 h
+1 19 h
+1 16 j
+2 3 h
+1 18 j
+1 18 j
+1 7 j
+1 27 j
+2 9 h
+1 12 h
+1 5 j
+1 4 h
+1 2 h
+2 25 h
+1 3 j
+1 4 h
+1 23 j
+1 7 j
+2 29 j
+1 22 j
+1 25 h
+1 10 j
+2 2 h
+1 12 h
+1 16 h
+1 4 h
+1 14 h
+2 10 j
+1 16 j
+1 24 h
+1 59 j
+1 2 j
+2 19 h
+1 20 j
+1 7 h
+1 22 h
+1 25 h
+2 43 h
+1 2 j
+1 x
+1 9 j
+1 11 j
+2 32 j
+1 17 j
+1 16 h
+1 1 j
+1 16 h
+2 8 h
+1 13 h
+1 22 h
+1 4 j
+2 7 j
+1 1 h
+1 13 h
+1 40 j
+1 20 j
+2 15 h
+1 19 j
+1 26 h
+1 x
+1 6 h
+2 18 h
+1 7 h
+1 2 j
+1 3 j
+1 7 j
+2 39 j
+1 5 h
+1 9 j
+1 11 h
+1 5 j
+2 9 h
+1 25 h
+1 9 h
+1 3 h
+1 18 h
+2 31 j
+1 9 j
+1 41 j
+1 6 j
+2 15 h
+1 28 h
+1 4 j
+1 10 h
+1 11 h
+2 26 h
+1 4 h
+1 8 j
+1 30 j
+1 2 j
+2 36 j
+1 8 j
+1 10 h
+1 27 j
+1 9 h
+2 23 h
+1 25 h
+1 35 h
+1 6 h
+1 12 j
+2 17 j
+1 11 j
+1 27 j
+1 17 j
+1 2 j
+2 4 j
+1 4 h
+1 10 h
+1 24 h
+2 44 h
+1 16 h
+1 5 j
+1 5 j
+1 18 j
+2 45 j
+1 6 j
+1 11 j
+1 12 j
+1 8 h
+2 23 h
+1 14 h
+1 33 h
+1 x
+1 10 h
+2 33 j
+1 13 j
+1 27 j
+1 21 j
+1 1 j
+2 5 h
+1 10 h
+1 25 h
+1 27 h
+1 20 h
+2 4 h
+1 1 j
+1 35 j
+1 18 j
+2 11 j
+1 25 j
+1 4 h
+1 1 h
+1 4 j
+2 16 h
+1 55 h
+1 6 h
+1 31 h
+1 21 j
+2 36 j
+1 2 j
+1 31 j
+1 12 h
+1 x
+2 30 h
+1 21 j
+1 24 h
+1 32 h
+1 19 h
+2 3 j
+1 4 j
+1 19 j
+1 10 h
+1 56 j
+2 2 j
+1 3 h
+1 15 h
+1 3 j
+2 53 h
+1 12 h
+1 26 h
+1 6 h
+1 9 j
+2 27 j
+1 24 h
+1 68 j
+1 12 j
+1 15 h
+2 2 j
+1 7 h
+1 1 j
+1 16 h
+1 10 h
+2 5 h
+1 13 j
+1 4 j
+1 7 h
+1 65 j
+2 13 h
+1 17 h
+1 17 j
+1 13 h
+1 48 h
+2 14 j
+1 27 h
+1 4 h
+1 15 j
+2 10 j
+1 19 h
+1 78 j
+1 9 j
+1 23 h
+2 10 j
+1 18 h
+1 18 h
+1 4 h
+1 46 h
+2 10 j
+1 31 j
+1 1 h
+1 14 j
+1 62 j
+2 33 h
+1 12 j
+1 5 j
+1 57 h
+1 28 j
+2 22 h
+1 27 h
+1 10 j
+1 18 h
+1 21 j
+2 23 h
+E
+0.75 Sx
+1 Sd
+(US SHIGELLOSIS) 909 351 0.5 T
+0.5 Sx
+(months from 01/62) 909 29 0.5 T
+90 Sr
+90 Sh
+(log\(cases\)) 605 197 0.5 T
+0 Sr
+0 Sh
+684 91 m
+2 z
+804 91 m
+2 z
+925 91 m
+2 z
+1046 91 m
+2 z
+E
+684 91 m
+362 x
+E
+(0) 684 64 0.5 T
+(100) 804 64 0.5 T
+(200) 925 64 0.5 T
+(300) 1046 64 0.5 T
+90 Sr
+90 Sh
+667 125 m
+2 w
+667 172 m
+2 w
+667 219 m
+2 w
+667 265 m
+2 w
+E
+667 125 m
+140 y
+E
+(6.5) 640 125 0.5 T
+(7.5) 640 219 0.5 T
+0 Sr
+0 Sh
+0 Sd
+484 211 667 91 c
+0.5 0.75 0 0.2 Sg
+B
+1279 173 m
+1 13 j
+1 35 h
+2 1 h
+1 2 j
+1 7 j
+1 7 j
+1 17 h
+2 26 j
+1 36 h
+1 17 j
+1 37 j
+1 14 h
+2 12 h
+1 x
+1 12 j
+1 1 j
+1 39 h
+2 33 j
+1 10 h
+1 4 h
+1 9 h
+2 12 j
+1 18 j
+1 2 j
+1 26 h
+1 28 h
+2 14 j
+1 14 h
+1 55 j
+1 31 h
+1 x
+2 5 h
+1 9 j
+1 15 j
+1 1 j
+1 7 j
+2 9 j
+1 21 h
+1 14 j
+1 18 h
+1 15 j
+2 23 h
+1 15 j
+1 5 h
+1 4 j
+1 16 j
+2 16 j
+1 7 h
+1 10 h
+1 3 j
+2 4 h
+1 16 h
+1 9 h
+1 3 j
+1 11 j
+2 25 j
+1 31 h
+1 39 j
+1 27 h
+1 28 j
+2 24 h
+1 12 h
+1 24 j
+1 18 j
+1 19 h
+2 1 j
+1 13 h
+1 14 j
+1 10 h
+1 3 h
+2 39 j
+1 15 h
+1 6 h
+1 24 h
+1 24 j
+2 6 j
+1 3 h
+1 11 j
+1 18 h
+2 15 j
+1 1 j
+1 44 h
+1 46 j
+1 12 h
+2 1 h
+1 57 h
+1 36 j
+1 31 j
+1 28 j
+2 47 h
+1 23 j
+1 21 h
+1 8 h
+1 22 j
+2 4 j
+1 25 j
+1 12 h
+1 42 h
+1 15 j
+2 20 h
+1 18 j
+1 10 j
+1 7 j
+1 1 h
+2 16 h
+1 8 j
+1 3 h
+1 4 j
+2 18 h
+1 10 j
+1 14 h
+1 7 j
+1 4 h
+2 1 h
+1 30 j
+1 12 h
+1 14 h
+1 22 j
+2 14 j
+1 1 h
+1 24 h
+1 11 j
+1 5 j
+2 12 h
+1 21 j
+1 1 h
+1 37 h
+1 22 j
+2 17 h
+1 8 j
+1 4 j
+1 18 j
+1 24 j
+2 41 h
+1 4 j
+1 9 j
+1 5 j
+1 10 j
+2 46 h
+1 6 h
+1 8 j
+1 17 j
+2 7 h
+1 16 j
+1 4 j
+1 1 j
+1 22 h
+2 20 h
+1 31 j
+1 68 h
+1 43 j
+1 12 h
+2 30 j
+1 14 h
+1 22 j
+1 12 j
+1 3 j
+2 32 h
+1 1 h
+1 14 h
+1 11 j
+1 x
+2 21 h
+1 32 j
+1 36 h
+1 10 j
+1 18 j
+2 7 j
+1 10 h
+1 29 h
+1 16 j
+2 24 h
+1 14 j
+1 4 j
+1 19 j
+1 18 h
+2 13 j
+1 4 j
+1 3 h
+1 36 j
+1 26 h
+2 17 h
+1 19 h
+1 24 j
+1 22 h
+1 12 j
+2 8 h
+1 6 j
+1 6 j
+1 x
+1 1 j
+2 7 j
+1 12 h
+1 x
+1 7 h
+1 13 j
+2 28 h
+1 4 j
+1 3 h
+1 9 j
+2 5 j
+1 7 h
+1 7 j
+1 10 h
+1 9 j
+2 6 h
+1 2 h
+1 3 j
+1 23 h
+1 4 j
+2 7 h
+1 20 h
+1 26 j
+1 11 j
+1 23 h
+2 36 j
+1 14 h
+1 37 h
+1 11 h
+1 18 j
+2 10 h
+1 28 h
+1 25 j
+1 8 j
+1 20 h
+2 30 j
+1 56 h
+1 64 j
+1 21 h
+2 1 h
+1 24 h
+1 20 j
+1 12 h
+1 6 h
+2 16 j
+1 34 h
+1 7 h
+1 17 j
+1 21 h
+2 51 j
+1 15 h
+1 28 h
+1 21 j
+1 14 h
+2 25 h
+1 42 j
+1 6 h
+1 5 h
+1 2 j
+2 20 j
+1 32 h
+1 46 j
+1 7 h
+1 43 h
+2 15 j
+1 10 j
+1 3 h
+1 19 j
+2 18 h
+1 15 j
+1 17 h
+1 7 h
+1 27 j
+2 31 j
+1 28 h
+1 4 h
+1 10 j
+1 33 h
+2 25 j
+1 3 h
+1 2 h
+1 1 h
+1 8 h
+2 28 j
+1 2 h
+1 21 h
+1 33 j
+1 11 h
+2 21 h
+1 2 h
+1 14 j
+1 8 h
+1 7 j
+2 6 j
+1 22 h
+1 29 j
+1 2 h
+2 2 h
+1 3 h
+1 5 j
+1 12 h
+1 4 j
+2 1 j
+1 15 h
+1 7 h
+1 35 j
+1 14 h
+2 26 j
+1 21 h
+1 45 j
+1 12 h
+1 5 h
+2 19 h
+1 1 h
+1 3 h
+1 12 h
+1 18 j
+2 9 h
+1 2 j
+1 16 j
+1 17 h
+1 46 j
+2 17 h
+1 23 j
+1 50 h
+1 14 j
+2 2 j
+1 6 h
+1 12 h
+1 9 j
+1 18 h
+2 26 j
+1 20 h
+1 32 j
+1 5 h
+1 4 h
+2 5 h
+1 8 h
+1 11 h
+1 11 j
+1 12 h
+2 8 j
+1 8 j
+1 20 h
+1 9 j
+1 29 j
+2 3 h
+1 25 h
+1 14 j
+1 8 j
+1 27 h
+2 5 j
+1 6 h
+1 2 h
+1 18 j
+2 18 j
+1 27 h
+1 50 j
+1 42 h
+1 4 h
+2 14 j
+1 6 j
+1 20 h
+1 22 j
+1 4 h
+2 24 h
+1 24 j
+1 3 h
+1 22 j
+1 5 j
+2 29 h
+1 1 h
+1 10 j
+1 3 h
+1 4 h
+2 9 j
+1 28 h
+1 36 j
+1 33 h
+1 38 j
+2 31 h
+E
+0.75 Sx
+1 Sd
+(US AMEBIASIS) 1503 351 0.5 T
+0.5 Sx
+(months from 01/62) 1503 29 0.5 T
+90 Sr
+90 Sh
+(log\(cases\)) 1199 197 0.5 T
+0 Sr
+0 Sh
+1278 91 m
+2 z
+1398 91 m
+2 z
+1519 91 m
+2 z
+1640 91 m
+2 z
+E
+1278 91 m
+362 x
+E
+(0) 1278 64 0.5 T
+(100) 1398 64 0.5 T
+(200) 1519 64 0.5 T
+(300) 1640 64 0.5 T
+90 Sr
+90 Sh
+1261 126 m
+2 w
+1261 170 m
+2 w
+1261 214 m
+2 w
+1261 258 m
+2 w
+1261 302 m
+2 w
+E
+1261 126 m
+176 y
+E
+(4.5) 1234 126 0.5 T
+(5.5) 1234 214 0.5 T
+(6.5) 1234 302 0.5 T
+0 Sr
+0 Sh
+0 Sd
+484 211 1261 91 c
+Z
+%%Trailer
+%%Pages: 1
+%%DocumentNeededResources: font Helvetica
+W
+%%EOF

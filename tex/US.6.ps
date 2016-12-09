@@ -1,0 +1,2863 @@
+%!PS-Adobe-3.0
+%%Title: (S-PLUS Graphics)
+%%Creator: S-PLUS
+%%For: (Audris Mockus)
+%%CreationDate: Wed May 31 16:33:09 1995
+%%BoundingBox: 20 11 592 781
+%%Pages: (atend)
+%%DocumentData: Clean7Bit
+%%DocumentNeededResources: (atend)
+%%EndComments
+%%BeginProlog
+150 dict begin gsave
+/bd {bind def} def
+/PVer 3100 def % version
+% drawing commands
+/I {Coord SetPage 1 setlinecap 1 setlinejoin
+    LineTypes {RastersPerPoint ScaleArray} forall
+    /Helvetica findfont
+    PointSize RastersPerPoint mul Cex mul scalefont setfont
+    /Colors GColors def
+} bd
+/IBu {} def
+/B {newpath} bd
+/C {currentpoint Penup {newpath} {stroke} ifelse moveto} bd
+/E {stroke} bd
+/F {closepath fill} bd
+/M {moveto} bd
+/L {lineto} bd
+/Pu {load /XEQ exch def /Penup true def} bd
+/Pd {/XEQ {} def /Penup false def} bd
+/Px {currentdict /XEQ known {XEQ} if} bd
+/h {Penup {rmoveto Px} {rlineto} ifelse} bd
+/j {neg Penup {rmoveto Px} {rlineto} ifelse} bd
+/k {exch neg exch Penup {rmoveto Px} {rlineto} ifelse} bd
+/l {neg exch neg exch Penup {rmoveto Px} {rlineto} ifelse} bd
+/m {moveto Penup {Px} if} bd
+/x {0 Penup {rmoveto Px} {rlineto} ifelse} bd
+/y {0 exch Penup {rmoveto Px} {rlineto} ifelse} bd
+/w {neg x} bd
+/z {neg y} bd
+/a {B M dup y exch x neg y closepath} bd
+/b {a fill} bd
+/c {a stroke} bd
+/A {PageBegin BackCol dup 0 gt {
+    gsave Sc Page aload pop
+    exch 4 -1 roll dup 5 1 roll sub 3 1 roll exch dup 4 1 roll sub 4 2 roll b
+    grestore} {pop} ifelse
+} bd
+/Ph {gsave Pch-x Pch-y rmoveto Show grestore} bd
+/Pc {Pch Ph} bd
+/T {/Adjust exch def gsave translate StringRot rotate 0 0 moveto
+    dup stringwidth pop neg Adjust mul 0 rmoveto
+    currentpoint translate TextShow grestore} bd
+/X {erasepage InPage {PageEnd} if} bd
+/Z {gsave showpage grestore PageEnd} bd
+/W {grestore end} bd
+% parameter setting commands
+/saveAt {Attr begin
+    /Atlinewidth currentlinewidth def
+    /Atfont currentfont def
+    /Atdash currentdash 2 array astore def
+    /AtSc CurSc def
+end} bd
+/restAt {Attr begin
+    Atlinewidth Atfont Atdash AtSc
+    end
+    Sc
+    aload pop setdash
+    setfont
+    setlinewidth
+} bd
+/St {1 sub LineTypes dup 3 1 roll length Rem floor get 0 setdash} bd
+/Sw {abs 2 div RastersPerPoint mul setlinewidth SetClip} bd
+/Sp {dup 42 eq {pop IBu} {Pch exch 0 exch put SetPchSize} ifelse}bd
+/Sx {dup Cex div /Ratio exch def
+     /Cex exch def
+     currentfont Ratio scalefont setfont
+     /Pch-x Pch-x Ratio mul def
+     /Pch-y Pch-y Ratio mul def
+     /Text-y Text-y Ratio mul def} bd
+/So {4 1 roll exch 4 -1 roll Plot astore pop SetClip} bd
+/Sg {4 1 roll exch 4 -1 roll Figure astore pop SetClip} bd
+/Sr {/StringRot exch def} bd
+/Sh {/CharRot exch def} bd
+/Sd {0 eq /ClipToPlot exch def SetClip} bd
+% other variable definitions
+/Iv {
+    /InPage false def
+    /Clip 4 array def
+    /Page 4 array def
+    /Figure [0 0 1 1] def
+    /Plot [0 0 1 1] def
+    /ClipToPlot true def
+    /Cex 1 def
+    /Outline false def
+    /Pch 1 string def
+    /Pch-x 0 def
+    /Pch-y 0 def
+    /Text-y 0 def
+    /LineTypes [ % in default units
+	[] [1 2] [4 4] [8 4] [13 3] [16 2 2 2] [8 2 2 2] [1 13] [6 5] [12 4]
+    ] def
+    /Attr 5 dict def
+    /CurSc 1 def
+    /Penup false def
+    /XEQ {} def
+} bd
+% other procedure definitions
+/Rem {2 copy div floor mul sub floor cvi} bd
+/RastersPerPoint {RastersPerInch 72 div} bd
+/ScaleArray {/Factor exch def /Array exch def
+    0 1 Array length 1 sub
+    {dup Array exch get Factor mul Array 3 1 roll put} for} bd
+/Coord {Region aload pop /uy exch def /ux exch def /ly exch def /lx exch def
+    uy ly sub ux lx sub Landscape {exch} if /Width exch def /Height exch def
+    lx ly translate Landscape {90 rotate 0 Height neg translate} if
+    1 RastersPerPoint div dup scale} bd
+/SetPchSize {gsave
+    newpath 0 0 moveto Pch false charpath flattenpath pathbbox
+    exch 3 1 roll
+    add 2 div neg /Pch-y exch def
+    add 2 div neg /Pch-x exch def
+    grestore} bd
+/TextShow {
+    CharRot StringRot sub dup 0 eq {pop SimpleShow} {FancyShow} ifelse
+} bd
+/SimpleShow {0 Text-y 2 div neg rmoveto Show} bd
+/FancyShow {
+    /RotDiff exch def
+    /Cos RotDiff cos abs def
+    /Sin RotDiff sin abs def
+    {
+	( ) dup 0 4 -1 roll put
+	dup stringwidth pop /CharWidth exch def
+	Cos 0 eq {
+	    Text-y Sin div
+	} {
+	    Sin 0 eq {
+		CharWidth Cos div
+	    } {
+		Text-y Sin div dup
+		CharWidth Cos div dup
+		4 1 roll lt {exch pop} {pop} ifelse
+	    } ifelse
+	} ifelse 2 div /CharDist exch def
+	CharDist 0 translate 0 0 moveto
+	gsave
+	    RotDiff rotate
+	    CharWidth 2 div neg Text-y 2 div neg rmoveto
+	    Outline {false charpath stroke} {show} ifelse
+	grestore
+	CharDist 0 translate 0 0 moveto
+    } forall
+} bd
+/Show {Outline {false charpath stroke} {show} ifelse} bd
+/BoxClip {/CLW currentlinewidth def
+    2 {CLW add 4 1 roll} repeat
+    2 {CLW sub 4 1 roll} repeat
+    % initclip
+    saveAt grestore gsave restAt
+    newpath 2 index exch 2 index exch dup 6 index exch
+    moveto 3 {lineto} repeat closepath clip newpath} bd
+/Subregion {7 dict begin /A exch def /Uy exch def /Ux exch def /Ly exch def /Lx exch def
+    Ux Lx sub A 0 get mul Lx add
+    Uy Ly sub A 1 get mul Ly add
+    Ux Lx sub A 2 get mul Lx add
+    Uy Ly sub A 3 get mul Ly add end} bd
+/SetFigure {Page aload pop Figure Subregion} bd
+/SetPlot {SetFigure Plot Subregion} bd
+/SetClip {ClipToPlot {SetPlot} {SetFigure} ifelse BoxClip} bd
+/SetPage {0 0 Width Height Page astore RastersPerPoint ScaleArray} bd
+/PageBegin {save /PageContext exch def /InPage true def gsave} bd
+/PageEnd {grestore PageContext restore /InPage false def} bd
+/SImage {
+    dup /Bits exch def 8 exch idiv /PerByte exch def
+    /Ht exch def /Wid exch def
+    1 Wid div 1 Ht div scale
+    /saveSc CurSc def /Colors IColors def
+    /curstr Wid PerByte add 1 sub PerByte idiv string def
+    /MaskByte 16#ff Bits 8 sub bitshift def
+    1 1 Ht {
+	currentfile curstr readhexstring pop pop
+	/CurPos 0 def
+	/Left PerByte def
+	1 1 Wid {
+	    Left PerByte eq {
+		/CurByte curstr CurPos get def
+		/MaskMove -8 Bits add def
+		/CurPos CurPos 1 add def
+	    } if
+	    CurByte MaskMove bitshift MaskByte and
+	    dup 0 gt {
+		Sc
+		exch dup 3 1 roll B M 1 z 1 w 1 y F
+	    } {pop pop} ifelse
+	    Left 1 sub dup /Left exch def 0 le
+	    {/Left PerByte def}
+	    {/MaskMove MaskMove Bits add def} ifelse
+	} for
+	pop
+    } for
+    /Colors GColors def saveSc Sc
+} bd
+/Ic {} bd
+/Sc {
+    dup /CurSc exch def
+    dup dup 1 lt exch 0 ge and
+    {1 exch sub setgray}  % explicit gray level [0,1)
+    {1 sub Colors dup 3 1 roll length Rem floor get
+     dup type /arraytype eq {aload pop setrgbcolor} {setgray} ifelse
+    } ifelse
+} bd
+/If {} bd
+/Sf {dup 0 lt /Outline exch def abs
+     1 sub Fonts dup 3 1 roll length Rem floor get
+     findfont PointSize Cex mul RastersPerPoint mul scalefont dup setfont
+     dup /FontMatrix get /Matrix exch def /FontBBox get aload pop
+     Matrix transform 4 2 roll Matrix transform
+     exch pop add /Text-y exch def pop SetPchSize} bd
+%%EndProlog
+%%BeginSetup
+% fixed controlling parameters
+/Landscape false def
+/Region [20.88 11.8008 591.12 780.199] def
+/RastersPerInch 300 def
+/PointSize 14 def
+/Fonts [
+	/Helvetica
+	/Courier
+	/Times-Roman
+	/Helvetica-Oblique
+	/Helvetica-Bold
+	/Helvetica-BoldOblique
+	/Courier-Oblique
+	/Courier-Bold
+	/Courier-BoldOblique
+	/Times-Italic
+	/Times-Bold
+	/Times-BoldItalic
+	/Symbol
+	/AvantGarde-Book
+	/AvantGarde-BookOblique
+	/AvantGarde-Demi
+	/AvantGarde-DemiOblique
+	/Bookman-Demi
+	/Bookman-DemiItalic
+	/Bookman-Light
+	/Bookman-LightItalic
+	/Helvetica-Narrow
+	/Helvetica-Narrow-Bold
+	/Helvetica-Narrow-BoldOblique
+	/Helvetica-Narrow-Oblique
+	/NewCenturySchlbk-Roman
+	/NewCenturySchlbk-Bold
+	/NewCenturySchlbk-Italic
+	/NewCenturySchlbk-BoldItalic
+	/Palatino-Roman
+	/Palatino-Bold
+	/Palatino-Italic
+	/Palatino-BoldItalic
+	/ZapfChancery-MediumItalic
+	/ZapfDingbats
+] def
+/GColors [
+	0
+	0.6
+	0.3
+	0.9
+	0.4
+	0.7
+	0.1
+	0.5
+	0.8
+	0.2
+] def
+/BackCol -1 def
+/IColors [
+	0.933333
+	0.866667
+	0.8
+	0.733333
+	0.666667
+	0.6
+	0.533333
+	0.466667
+	0.4
+	0.333333
+	0.266667
+	0.2
+	0.133333
+	0.0666667
+	0
+] def
+/Colors GColors def
+/IBu {Pch 0 8#267 put SetPchSize} def
+/Bu {Pc} def
+
+% all initialization action here
+Iv I
+currentdict /Ic known {Ic} if
+currentdict /If known {If} if
+
+%%EndSetup
+
+
+%%Page: 1 1
+%%PageOrientation: Portrait
+A
+1 St
+1 Sw
+1 Sc
+0 Sr
+42 Sp
+0.5 Sx
+0.120791 0.938131 0.167257 0.865539 So
+0 0.5 0.666667 1 Sg
+0 Sh
+0 Sd
+%%IncludeResource: font Helvetica
+1 Sf
+B
+179 2529 m
+3 59 j
+2 33 h
+3 66 h
+2 29 h
+3 13 h
+2 x
+2 31 h
+3 50 h
+2 x
+3 123 j
+2 16 h
+3 16 j
+2 16 h
+2 82 j
+3 108 h
+2 82 j
+3 56 h
+2 73 h
+3 89 j
+2 42 h
+2 11 h
+3 281 j
+2 257 h
+3 47 j
+2 22 j
+2 x
+3 x
+2 93 h
+3 71 j
+2 47 h
+3 x
+2 44 h
+2 220 j
+3 163 h
+2 56 j
+3 107 j
+2 48 h
+3 99 h
+2 66 j
+2 66 h
+3 63 h
+2 47 j
+3 26 h
+2 26 j
+3 47 h
+2 71 h
+2 x
+3 11 j
+2 60 j
+3 100 h
+2 18 j
+2 37 h
+3 31 h
+2 11 j
+3 11 h
+2 22 h
+3 52 h
+2 10 j
+2 3 h
+3 33 h
+2 59 h
+3 21 h
+2 46 j
+3 17 h
+2 6 j
+2 1 j
+3 24 h
+2 7 j
+3 27 h
+2 10 j
+3 7 j
+2 18 h
+2 7 j
+3 34 j
+2 3 h
+3 x
+2 1 j
+2 35 h
+3 x
+2 3 j
+3 34 h
+2 32 j
+3 33 j
+2 45 h
+2 10 j
+3 13 j
+2 37 h
+3 3 j
+2 25 j
+3 30 h
+2 9 j
+2 22 h
+3 16 h
+2 43 j
+3 51 h
+2 44 j
+3 7 h
+2 16 j
+2 8 j
+3 27 h
+2 4 j
+3 1 j
+2 16 j
+2 11 h
+3 x
+2 9 h
+3 10 h
+2 3 j
+3 12 j
+2 7 h
+2 55 j
+3 43 h
+2 9 j
+3 46 j
+2 19 j
+3 24 h
+2 45 h
+2 96 j
+3 7 j
+2 73 h
+3 110 j
+2 33 h
+3 67 j
+2 54 h
+2 85 j
+3 x
+2 8 j
+3 17 j
+2 4 j
+3 7 j
+2 31 j
+2 59 j
+3 8 h
+2 40 h
+3 40 j
+2 69 h
+2 9 j
+3 20 j
+2 40 j
+3 69 h
+2 13 h
+3 155 j
+2 57 h
+2 24 h
+3 14 h
+2 69 j
+3 x
+2 55 h
+3 34 j
+2 123 h
+2 4 j
+3 4 h
+2 35 h
+3 98 j
+2 26 h
+3 32 j
+2 17 h
+2 53 j
+3 23 h
+2 59 h
+3 8 h
+2 21 h
+2 29 h
+3 22 j
+2 24 j
+3 30 j
+2 54 h
+3 41 j
+2 41 j
+2 65 h
+3 24 j
+2 4 j
+3 90 h
+2 18 j
+3 5 j
+2 5 h
+2 27 j
+3 45 j
+2 28 h
+3 65 j
+2 23 h
+3 35 h
+2 17 h
+2 15 h
+3 33 h
+2 22 h
+3 3 h
+2 27 j
+2 39 j
+3 41 j
+2 20 h
+3 4 h
+2 13 h
+3 18 h
+2 18 j
+2 77 h
+3 2 j
+2 20 h
+3 2 h
+2 40 j
+3 24 j
+2 21 j
+2 19 h
+3 31 j
+2 x
+3 41 j
+2 53 h
+3 53 h
+2 21 h
+2 19 h
+3 12 h
+2 32 j
+3 27 h
+2 21 j
+2 37 h
+3 17 h
+2 6 j
+3 12 h
+2 13 h
+3 43 h
+2 x
+2 2 j
+3 1 j
+2 44 j
+3 8 h
+2 x
+3 2 j
+2 40 j
+2 23 j
+3 20 h
+2 14 h
+3 8 h
+2 7 j
+3 35 h
+2 35 j
+2 4 h
+3 32 j
+2 35 j
+3 22 h
+2 50 j
+2 14 h
+3 16 h
+2 9 j
+3 41 h
+2 31 h
+3 1 j
+2 27 j
+2 10 h
+3 31 j
+2 53 j
+3 21 h
+2 28 j
+3 22 h
+2 x
+2 8 h
+3 35 j
+2 42 h
+3 31 h
+2 7 j
+3 23 h
+2 60 j
+2 24 j
+3 14 h
+2 2 j
+3 5 j
+2 19 h
+3 10 h
+2 27 h
+2 13 h
+3 11 h
+2 6 j
+3 10 h
+2 5 h
+2 50 j
+3 3 h
+2 21 j
+3 14 j
+2 22 h
+3 2 j
+2 23 h
+2 18 h
+3 67 h
+2 59 j
+3 11 j
+2 6 h
+3 58 j
+2 32 h
+2 8 j
+3 71 j
+2 51 h
+3 42 h
+2 11 j
+3 38 h
+2 31 h
+2 x
+3 25 j
+2 6 h
+3 53 j
+2 4 j
+2 41 j
+3 5 h
+2 10 h
+3 22 h
+2 10 h
+3 26 j
+2 74 h
+2 4 j
+3 23 j
+2 32 j
+3 36 j
+2 91 h
+3 114 j
+2 40 h
+2 4 h
+3 4 j
+2 10 j
+3 54 h
+2 27 h
+3 8 h
+2 29 h
+2 46 j
+3 45 j
+2 55 h
+3 62 j
+2 49 h
+2 20 j
+3 15 h
+2 14 h
+3 8 j
+2 24 h
+3 x
+2 16 h
+2 31 j
+3 57 j
+2 38 h
+3 17 j
+2 x
+3 21 h
+2 62 j
+2 52 h
+3 37 h
+2 14 h
+3 14 j
+2 2 h
+3 43 j
+2 20 h
+2 3 h
+3 44 j
+2 18 h
+3 17 h
+2 21 j
+2 6 j
+3 36 h
+2 9 j
+3 72 h
+2 40 j
+3 29 j
+2 17 j
+2 x
+3 95 j
+2 49 h
+3 18 j
+2 44 h
+3 7 h
+2 7 j
+2 14 h
+3 56 h
+2 73 j
+3 47 h
+2 64 j
+3 91 h
+E
+0.75 Sx
+1 Sd
+(MALARIA) 629 3154 0.5 T
+0.5 Sx
+(months from 01/62) 629 2190 0.5 T
+90 Sr
+90 Sh
+(log\(cases\)) 21 2686 0.5 T
+0 Sr
+0 Sh
+177 2313 m
+15 z
+419 2313 m
+15 z
+662 2313 m
+15 z
+904 2313 m
+15 z
+E
+177 2313 m
+727 x
+E
+(0) 177 2260 0.5 T
+(100) 419 2260 0.5 T
+(200) 662 2260 0.5 T
+(300) 904 2260 0.5 T
+90 Sr
+90 Sh
+143 2341 m
+14 w
+143 2458 m
+14 w
+143 2575 m
+14 w
+143 2693 m
+14 w
+143 2810 m
+14 w
+143 2928 m
+14 w
+143 3045 m
+14 w
+E
+143 2341 m
+704 y
+E
+(0) 91 2341 0.5 T
+(1) 91 2458 0.5 T
+(2) 91 2575 0.5 T
+(3) 91 2693 0.5 T
+(4) 91 2810 0.5 T
+(5) 91 2928 0.5 T
+(6) 91 3045 0.5 T
+0 Sr
+0 Sh
+0 Sd
+971 745 143 2313 c
+0.5 1 0.666667 1 Sg
+B
+1367 2750 m
+3 10 h
+2 6 h
+3 71 j
+2 5 j
+3 36 j
+2 24 j
+2 12 j
+3 55 j
+2 122 h
+3 33 j
+2 93 h
+3 56 h
+2 1 j
+2 45 h
+3 54 j
+2 8 h
+3 118 j
+2 31 j
+3 69 j
+2 3 j
+2 124 h
+3 31 j
+2 84 h
+3 40 h
+2 10 h
+2 58 h
+3 30 h
+2 142 j
+3 58 j
+2 6 j
+3 116 j
+2 174 h
+2 5 h
+3 10 h
+2 84 h
+3 49 j
+2 81 h
+3 109 h
+2 83 j
+2 98 j
+3 52 j
+2 71 j
+3 128 j
+2 13 h
+3 131 h
+2 22 h
+2 145 h
+3 27 j
+2 111 h
+3 83 h
+2 81 j
+2 38 j
+3 131 j
+2 103 j
+3 28 j
+2 82 j
+3 124 h
+2 38 h
+2 34 h
+3 3 h
+2 14 h
+3 32 h
+2 24 j
+3 25 j
+2 142 j
+2 39 j
+3 77 j
+2 x
+3 94 h
+2 2 h
+3 125 h
+2 165 h
+2 24 h
+3 40 j
+2 101 j
+3 32 j
+2 19 j
+2 80 j
+3 51 j
+2 75 j
+3 95 h
+2 29 h
+3 83 h
+2 176 h
+2 11 j
+3 40 h
+2 3 j
+3 105 j
+2 119 j
+3 11 j
+2 137 j
+2 43 j
+3 118 h
+2 17 j
+3 201 h
+2 16 j
+3 9 h
+2 47 h
+2 36 j
+3 101 j
+2 14 j
+3 41 j
+2 81 j
+2 20 j
+3 34 h
+2 137 h
+3 54 h
+2 33 h
+3 34 j
+2 106 h
+2 36 j
+3 131 j
+2 84 j
+3 64 j
+2 93 j
+3 13 h
+2 104 h
+2 39 j
+3 87 h
+2 22 j
+3 2 h
+2 13 j
+3 18 j
+2 42 j
+2 25 j
+3 83 j
+2 33 j
+3 73 j
+2 145 h
+3 20 h
+2 107 h
+2 11 j
+3 34 h
+2 44 h
+3 36 j
+2 10 j
+2 34 j
+3 121 j
+2 78 j
+3 50 j
+2 139 h
+3 14 j
+2 51 h
+2 31 h
+3 35 h
+2 117 h
+3 30 j
+2 122 j
+3 65 j
+2 28 h
+2 116 j
+3 59 j
+2 163 h
+3 72 h
+2 63 j
+3 130 h
+2 28 h
+2 61 j
+3 11 h
+2 13 j
+3 52 j
+2 8 j
+2 67 j
+3 14 j
+2 46 h
+3 26 h
+2 6 h
+3 36 h
+2 78 h
+2 91 h
+3 107 j
+2 75 j
+3 29 h
+2 36 j
+3 104 j
+2 12 j
+2 62 h
+3 56 h
+2 110 h
+3 28 j
+2 4 h
+3 121 h
+2 80 j
+2 33 j
+3 123 j
+2 22 h
+3 92 j
+2 109 h
+2 36 j
+3 132 h
+2 34 h
+3 13 j
+2 129 h
+3 9 j
+2 9 j
+2 24 j
+3 95 j
+2 27 j
+3 40 j
+2 49 j
+3 81 h
+2 51 h
+2 95 h
+3 23 h
+2 38 h
+3 26 h
+2 100 j
+3 6 h
+2 20 j
+2 113 j
+3 18 j
+2 36 j
+3 46 h
+2 43 h
+2 67 h
+3 45 h
+2 12 h
+3 72 h
+2 70 j
+3 43 j
+2 52 j
+2 60 j
+3 51 j
+2 15 h
+3 104 h
+2 27 h
+3 68 h
+2 90 h
+2 75 h
+3 77 j
+2 25 j
+3 48 j
+2 86 j
+3 28 j
+2 50 j
+2 47 h
+3 48 h
+2 6 j
+3 95 h
+2 62 j
+2 6 h
+3 99 h
+2 16 j
+3 56 j
+2 41 j
+3 68 j
+2 68 j
+2 20 h
+3 61 h
+2 40 h
+3 18 h
+2 7 j
+3 25 h
+2 74 h
+2 26 j
+3 74 j
+2 20 j
+3 107 j
+2 58 j
+3 21 j
+2 129 h
+2 24 h
+3 29 h
+2 12 h
+3 98 h
+2 34 h
+3 76 j
+2 46 j
+2 38 j
+3 82 j
+2 68 j
+3 7 j
+2 97 h
+2 13 j
+3 101 h
+2 17 h
+3 50 h
+2 12 j
+3 66 j
+2 2 h
+2 102 j
+3 22 j
+2 133 j
+3 84 h
+2 99 h
+3 22 h
+2 71 h
+2 45 h
+3 24 j
+2 56 h
+3 57 j
+2 30 j
+3 119 j
+2 6 h
+2 69 j
+3 5 j
+2 83 h
+3 39 h
+2 102 h
+2 37 h
+3 8 j
+2 63 h
+3 73 j
+2 39 j
+3 57 j
+2 29 j
+2 64 j
+3 2 h
+2 73 h
+3 43 h
+2 85 h
+3 47 j
+2 43 h
+2 60 h
+3 9 j
+2 57 j
+3 103 j
+2 10 j
+3 102 j
+2 8 h
+2 69 h
+3 40 h
+2 84 h
+3 107 j
+2 134 h
+2 49 h
+3 5 j
+2 114 j
+3 75 j
+2 7 h
+3 70 j
+2 47 j
+2 39 h
+3 90 h
+2 66 h
+3 34 j
+2 37 h
+3 87 h
+2 164 j
+2 18 h
+3 16 h
+2 124 j
+3 38 j
+2 76 h
+3 69 j
+2 22 h
+2 171 h
+3 164 j
+2 115 h
+3 97 h
+2 107 j
+2 2 j
+3 43 h
+2 178 j
+3 36 h
+2 111 j
+3 3 j
+2 150 h
+2 124 h
+3 86 j
+2 104 h
+3 107 j
+2 6 h
+3 84 h
+2 153 j
+2 6 j
+3 8 h
+2 94 j
+3 90 h
+2 6 j
+3 171 h
+E
+0.75 Sx
+1 Sd
+(MENING_INF) 1817 3154 0.5 T
+0.5 Sx
+(months from 01/62) 1817 2190 0.5 T
+90 Sr
+90 Sh
+(log\(cases\)) 1209 2686 0.5 T
+0 Sr
+0 Sh
+1365 2313 m
+15 z
+1607 2313 m
+15 z
+1850 2313 m
+15 z
+2092 2313 m
+15 z
+E
+1365 2313 m
+727 x
+E
+(0) 1365 2260 0.5 T
+(100) 1607 2260 0.5 T
+(200) 1850 2260 0.5 T
+(300) 2092 2260 0.5 T
+90 Sr
+90 Sh
+1331 2349 m
+14 w
+1331 2496 m
+14 w
+1331 2643 m
+14 w
+1331 2790 m
+14 w
+1331 2937 m
+14 w
+E
+1331 2349 m
+588 y
+E
+(4.0) 1279 2349 0.5 T
+(4.5) 1279 2496 0.5 T
+(5.0) 1279 2643 0.5 T
+(5.5) 1279 2790 0.5 T
+(6.0) 1279 2937 0.5 T
+0 Sr
+0 Sh
+0 Sd
+971 745 1331 2313 c
+0.120791 0.938131 0.167257 0.865539 So
+0 0.5 0.333333 0.666667 Sg
+B
+179 1862 m
+3 15 h
+2 32 h
+3 40 j
+2 56 h
+3 10 h
+2 x
+2 28 h
+3 10 j
+2 51 j
+3 14 j
+2 2 j
+3 31 h
+2 9 j
+2 14 j
+3 13 j
+2 51 h
+3 32 j
+2 41 h
+3 16 j
+2 6 h
+2 28 j
+3 16 j
+2 65 j
+3 28 h
+2 15 j
+2 26 h
+3 31 h
+2 12 h
+3 46 j
+2 31 h
+3 26 j
+2 19 j
+2 35 j
+3 15 j
+2 11 j
+3 13 j
+2 29 j
+3 9 h
+2 68 j
+2 66 h
+3 22 j
+2 2 h
+3 33 h
+2 5 h
+3 62 j
+2 4 h
+2 42 j
+3 38 h
+2 9 j
+3 1 h
+2 29 h
+2 1 h
+3 x
+2 73 h
+3 32 h
+2 17 j
+3 49 j
+2 12 j
+2 18 h
+3 31 h
+2 35 h
+3 17 j
+2 20 h
+3 22 j
+2 51 j
+2 43 h
+3 45 h
+2 65 j
+3 57 j
+2 26 h
+3 44 j
+2 15 h
+2 40 j
+3 1 h
+2 6 j
+3 1 h
+2 47 j
+2 62 h
+3 12 j
+2 31 j
+3 14 j
+2 53 j
+3 44 j
+2 69 h
+2 101 j
+3 52 h
+2 4 j
+3 47 h
+2 85 j
+3 51 h
+2 28 h
+2 46 h
+3 11 j
+2 20 j
+3 25 j
+2 35 h
+3 47 j
+2 10 j
+2 59 h
+3 14 h
+2 25 j
+3 70 h
+2 28 h
+2 1 j
+3 68 j
+2 39 j
+3 31 j
+2 38 h
+3 77 j
+2 44 h
+2 8 j
+3 31 h
+2 17 j
+3 24 h
+2 32 h
+3 29 j
+2 49 j
+2 119 j
+3 87 h
+2 65 j
+3 33 h
+2 35 h
+3 36 h
+2 105 h
+2 95 j
+3 61 h
+2 29 h
+3 49 j
+2 21 j
+3 4 j
+2 46 j
+2 35 j
+3 56 j
+2 25 j
+3 10 h
+2 6 h
+2 8 j
+3 5 h
+2 40 h
+3 32 h
+2 12 j
+3 33 j
+2 10 h
+2 5 h
+3 10 j
+2 35 j
+3 21 h
+2 9 j
+3 44 h
+2 95 h
+2 15 h
+3 59 j
+2 45 j
+3 10 j
+2 6 h
+3 33 j
+2 9 j
+2 89 j
+3 43 h
+2 1 h
+3 51 h
+2 26 h
+2 94 h
+3 11 j
+2 125 j
+3 38 j
+2 58 h
+3 28 j
+2 23 j
+2 93 j
+3 54 j
+2 48 h
+3 41 h
+2 31 h
+3 58 h
+2 54 j
+2 40 j
+3 42 j
+2 6 j
+3 9 h
+2 49 j
+3 58 h
+2 21 j
+2 85 h
+3 29 h
+2 70 h
+3 74 h
+2 97 h
+2 67 j
+3 49 h
+2 11 j
+3 97 j
+2 9 h
+3 69 j
+2 28 j
+2 2 j
+3 19 h
+2 77 h
+3 6 j
+2 6 h
+3 80 j
+2 39 h
+2 37 j
+3 3 h
+2 67 j
+3 21 h
+2 23 j
+3 28 j
+2 68 h
+2 16 h
+3 41 h
+2 44 j
+3 10 j
+2 20 j
+2 207 h
+3 244 j
+2 60 h
+3 81 j
+2 29 h
+3 36 h
+2 12 h
+2 139 h
+3 1 h
+2 36 j
+3 49 j
+2 67 j
+3 47 h
+2 162 j
+2 115 h
+3 53 j
+2 31 h
+3 2 h
+2 16 j
+3 22 h
+2 89 h
+2 44 j
+3 11 j
+2 95 j
+3 75 h
+2 109 j
+2 81 h
+3 4 j
+2 37 h
+3 21 j
+2 29 h
+3 90 h
+2 8 h
+2 6 h
+3 48 h
+2 54 j
+3 19 h
+2 125 j
+3 65 h
+2 25 h
+2 52 j
+3 6 h
+2 53 h
+3 75 h
+2 28 h
+3 43 j
+2 44 j
+2 44 j
+3 78 h
+2 103 j
+3 46 h
+2 41 h
+3 18 j
+2 27 j
+2 36 j
+3 7 j
+2 89 h
+3 121 h
+2 197 j
+2 64 j
+3 23 h
+2 11 h
+3 x
+2 95 h
+3 65 j
+2 13 h
+2 74 h
+3 102 h
+2 67 h
+3 18 j
+2 64 j
+3 62 j
+2 10 h
+2 75 j
+3 29 h
+2 18 j
+3 99 h
+2 94 j
+3 14 h
+2 45 h
+2 78 h
+3 38 j
+2 224 h
+3 297 j
+2 22 j
+2 81 j
+3 9 h
+2 25 h
+3 54 j
+2 28 h
+3 46 h
+2 68 h
+2 85 h
+3 77 j
+2 10 j
+3 69 j
+2 174 h
+3 283 j
+2 122 h
+2 85 h
+3 42 j
+2 102 j
+3 37 h
+2 85 h
+3 56 h
+2 12 j
+2 16 h
+3 40 j
+2 113 h
+3 205 j
+2 55 j
+2 28 h
+3 1 h
+2 151 h
+3 79 j
+2 120 h
+3 42 h
+2 29 j
+2 61 j
+3 42 h
+2 39 h
+E
+B
+1052 1387 m
+2 80 h
+3 54 j
+2 45 h
+3 92 h
+2 3 j
+2 88 h
+3 76 h
+2 7 h
+3 x
+2 32 j
+3 146 h
+E
+0.75 Sx
+1 Sd
+(PERTUSSIS) 629 2087 0.5 T
+0.5 Sx
+(months from 01/62) 629 1123 0.5 T
+90 Sr
+90 Sh
+(log\(cases\)) 21 1618 0.5 T
+0 Sr
+0 Sh
+177 1246 m
+15 z
+419 1246 m
+15 z
+662 1246 m
+15 z
+904 1246 m
+15 z
+E
+177 1246 m
+727 x
+E
+(0) 177 1193 0.5 T
+(100) 419 1193 0.5 T
+(200) 662 1193 0.5 T
+(300) 904 1193 0.5 T
+90 Sr
+90 Sh
+143 1305 m
+14 w
+143 1490 m
+14 w
+143 1675 m
+14 w
+143 1859 m
+14 w
+E
+143 1305 m
+554 y
+E
+(4) 91 1305 0.5 T
+(5) 91 1490 0.5 T
+(6) 91 1675 0.5 T
+(7) 91 1859 0.5 T
+0 Sr
+0 Sh
+0 Sd
+971 745 143 1246 c
+0.5 1 0.333333 0.666667 Sg
+B
+1367 1345 m
+3 72 j
+2 55 h
+3 13 h
+2 71 h
+3 39 h
+2 22 j
+2 22 h
+3 57 h
+2 16 j
+3 72 j
+2 34 h
+3 30 j
+2 8 j
+2 15 j
+3 110 h
+2 56 h
+3 51 j
+2 77 h
+3 15 h
+2 39 j
+2 60 h
+3 93 j
+2 22 h
+3 52 j
+2 11 j
+2 4 j
+3 57 h
+2 25 j
+3 25 h
+2 37 h
+3 13 h
+2 28 h
+2 6 j
+3 50 j
+2 13 j
+3 69 j
+2 33 j
+3 67 h
+2 25 j
+2 35 h
+3 73 h
+2 24 h
+3 39 j
+2 25 h
+3 2 j
+2 73 j
+2 22 h
+3 54 j
+2 52 j
+3 12 h
+2 26 h
+2 74 h
+3 20 j
+2 5 j
+3 80 h
+2 14 j
+3 35 j
+2 11 j
+2 64 h
+3 138 j
+2 151 h
+3 132 j
+2 8 h
+3 30 h
+2 24 j
+2 61 h
+3 3 h
+2 136 h
+3 109 j
+2 79 j
+3 20 h
+2 98 j
+2 21 j
+3 46 h
+2 40 j
+3 101 h
+2 19 j
+2 72 h
+3 21 h
+2 26 j
+3 15 h
+2 52 h
+3 130 j
+2 9 j
+2 39 j
+3 17 h
+2 24 h
+3 25 h
+2 29 h
+3 42 h
+2 23 h
+2 37 j
+3 39 h
+2 2 h
+3 42 j
+2 67 j
+3 40 j
+2 47 h
+2 31 j
+3 28 h
+2 126 h
+3 8 h
+2 38 h
+2 16 j
+3 30 h
+2 110 j
+3 75 h
+2 120 j
+3 33 j
+2 38 h
+2 30 j
+3 32 h
+2 20 h
+3 63 h
+2 40 h
+3 16 j
+2 3 j
+2 68 j
+3 71 h
+2 132 j
+3 16 j
+2 21 h
+3 32 h
+2 65 h
+2 30 j
+3 17 h
+2 52 h
+3 19 j
+2 24 j
+3 45 h
+2 97 j
+2 44 j
+3 59 j
+2 78 h
+3 44 j
+2 90 h
+2 45 h
+3 13 h
+2 51 h
+3 11 h
+2 3 j
+3 60 j
+2 36 h
+2 85 j
+3 50 j
+2 1 h
+3 20 j
+2 51 h
+3 14 h
+2 46 h
+2 23 h
+3 19 j
+2 7 h
+3 43 j
+2 6 j
+3 58 j
+2 61 j
+2 22 h
+3 33 h
+2 16 h
+3 48 h
+2 30 h
+2 63 h
+3 12 j
+2 x
+3 67 j
+2 12 h
+3 77 j
+2 41 j
+2 24 h
+3 11 j
+2 42 h
+3 52 h
+2 43 h
+3 37 h
+2 15 j
+2 36 j
+3 77 j
+2 56 h
+3 96 j
+2 1 j
+3 2 h
+2 18 h
+2 54 h
+3 47 h
+2 47 h
+3 101 h
+2 35 j
+2 42 j
+3 44 j
+2 18 j
+3 95 j
+2 x
+3 9 h
+2 11 j
+2 54 h
+3 52 h
+2 39 h
+3 58 h
+2 11 j
+3 15 j
+2 38 j
+2 4 h
+3 90 j
+2 73 j
+3 45 h
+2 6 h
+3 60 h
+2 50 h
+2 32 h
+3 59 h
+2 4 j
+3 17 j
+2 39 j
+2 38 j
+3 93 j
+2 28 j
+3 6 h
+2 35 h
+3 37 h
+2 40 h
+2 56 h
+3 51 h
+2 4 h
+3 19 h
+2 98 j
+3 19 j
+2 70 j
+2 2 h
+3 52 h
+2 10 j
+3 60 h
+2 18 h
+3 77 h
+2 6 j
+2 12 j
+3 4 j
+2 78 j
+3 5 h
+2 64 j
+2 48 j
+3 25 h
+2 9 h
+3 44 h
+2 56 h
+3 51 h
+2 35 h
+2 2 h
+3 16 j
+2 68 j
+3 x
+2 108 j
+3 34 j
+2 17 h
+2 40 h
+3 10 h
+2 125 h
+3 37 h
+2 46 h
+3 33 j
+2 31 j
+2 56 j
+3 26 j
+2 89 j
+3 2 j
+2 7 h
+3 9 j
+2 47 h
+2 86 h
+3 26 h
+2 22 h
+3 19 j
+2 41 h
+2 130 j
+3 34 j
+2 50 j
+3 53 j
+2 260 h
+3 33 j
+2 9 h
+2 2 h
+3 50 h
+2 19 h
+3 7 j
+2 14 j
+3 64 j
+2 53 j
+2 60 j
+3 73 j
+2 27 h
+3 34 h
+2 59 h
+3 71 h
+2 73 h
+2 28 h
+3 34 j
+2 7 j
+3 92 j
+2 10 j
+2 93 j
+3 47 h
+2 20 j
+3 18 h
+2 40 h
+3 56 h
+2 70 h
+2 14 h
+3 11 j
+2 18 j
+3 116 j
+2 46 h
+3 162 j
+2 13 h
+2 11 h
+3 64 h
+2 22 j
+3 74 h
+2 105 h
+3 33 h
+2 20 j
+2 17 j
+3 88 j
+2 21 h
+3 157 j
+2 24 j
+2 33 h
+3 34 h
+2 6 h
+3 82 h
+2 63 h
+3 35 h
+2 29 h
+2 51 j
+3 75 j
+2 34 h
+3 173 j
+2 27 h
+3 16 h
+2 40 j
+2 64 h
+3 85 h
+2 41 h
+3 52 h
+2 7 j
+3 1 h
+2 95 j
+2 15 h
+3 173 j
+2 9 h
+3 40 h
+2 32 j
+2 63 h
+3 103 h
+2 23 h
+3 61 h
+2 21 h
+3 70 j
+2 13 j
+2 62 j
+3 189 j
+2 87 h
+3 21 j
+2 27 j
+3 101 h
+2 16 j
+2 59 h
+3 91 h
+2 44 j
+3 34 h
+2 140 j
+3 83 h
+E
+0.75 Sx
+1 Sd
+(SALMONELLOSIS) 1817 2087 0.5 T
+0.5 Sx
+(months from 01/62) 1817 1123 0.5 T
+90 Sr
+90 Sh
+(log\(cases\)) 1209 1618 0.5 T
+0 Sr
+0 Sh
+1365 1246 m
+15 z
+1607 1246 m
+15 z
+1850 1246 m
+15 z
+2092 1246 m
+15 z
+E
+1365 1246 m
+727 x
+E
+(0) 1365 1193 0.5 T
+(100) 1607 1193 0.5 T
+(200) 1850 1193 0.5 T
+(300) 2092 1193 0.5 T
+90 Sr
+90 Sh
+1331 1247 m
+14 w
+1331 1377 m
+14 w
+1331 1506 m
+14 w
+1331 1635 m
+14 w
+1331 1765 m
+14 w
+1331 1894 m
+14 w
+E
+1331 1247 m
+647 y
+E
+(6.0) 1279 1247 0.5 T
+(6.5) 1279 1377 0.5 T
+(7.0) 1279 1506 0.5 T
+(7.5) 1279 1635 0.5 T
+(8.0) 1279 1765 0.5 T
+(8.5) 1279 1894 0.5 T
+0 Sr
+0 Sh
+0 Sd
+971 745 1331 1246 c
+0 0.5 0 0.333333 Sg
+B
+179 355 m
+3 112 j
+2 137 h
+3 12 j
+2 16 h
+3 84 h
+2 13 j
+2 89 h
+3 12 h
+2 14 h
+3 132 j
+2 29 j
+3 45 j
+2 41 j
+2 59 j
+3 58 j
+2 83 h
+3 79 h
+2 91 h
+3 78 h
+2 39 h
+2 60 h
+3 78 j
+2 42 j
+3 42 j
+2 61 j
+2 43 j
+3 11 j
+2 6 h
+3 11 j
+2 178 h
+3 11 j
+2 14 h
+2 3 j
+3 115 j
+2 8 h
+3 129 j
+2 6 j
+3 99 h
+2 177 j
+2 74 h
+3 25 h
+2 105 h
+3 100 h
+2 58 j
+3 15 h
+2 43 j
+2 14 j
+3 111 j
+2 67 h
+3 70 j
+2 36 j
+2 38 j
+3 99 h
+2 41 h
+3 165 h
+2 6 h
+3 15 j
+2 35 j
+2 21 h
+3 119 j
+2 48 j
+3 74 h
+2 50 j
+3 19 j
+2 44 h
+2 72 h
+3 16 h
+2 24 h
+3 79 h
+2 55 j
+3 6 j
+2 161 j
+2 45 j
+3 x
+2 88 h
+3 48 h
+2 132 j
+2 92 h
+3 48 h
+2 30 j
+3 105 h
+2 51 j
+3 12 h
+2 137 j
+2 24 j
+3 26 j
+2 19 h
+3 41 h
+2 24 j
+3 63 h
+2 52 h
+2 43 h
+3 40 h
+2 78 j
+3 12 j
+2 94 j
+3 105 j
+2 55 h
+2 4 j
+3 50 h
+2 23 h
+3 63 h
+2 209 h
+2 38 j
+3 58 j
+2 30 j
+3 53 h
+2 142 j
+3 45 h
+2 5 j
+2 111 j
+3 69 h
+2 40 h
+3 51 h
+2 11 h
+3 28 h
+2 11 h
+2 9 j
+3 37 h
+2 147 j
+3 25 h
+2 77 h
+3 3 h
+2 48 h
+2 2 j
+3 45 j
+2 94 h
+3 13 j
+2 22 j
+3 33 h
+2 29 j
+2 108 j
+3 45 j
+2 97 h
+3 47 j
+2 80 h
+2 21 h
+3 42 h
+2 29 h
+3 12 h
+2 2 h
+3 4 j
+2 1 j
+2 104 j
+3 34 j
+2 54 h
+3 63 j
+2 86 h
+3 1 h
+2 23 h
+2 66 h
+3 54 j
+2 10 h
+3 63 j
+2 64 j
+3 24 j
+2 96 j
+2 32 h
+3 42 h
+2 20 j
+3 18 h
+2 4 h
+2 89 h
+3 9 j
+2 14 h
+3 81 j
+2 27 j
+3 100 j
+2 79 j
+2 88 h
+3 35 j
+2 6 h
+3 42 h
+2 58 h
+3 14 h
+2 49 h
+2 36 j
+3 55 j
+2 85 h
+3 208 j
+2 6 j
+3 66 h
+2 70 j
+2 23 h
+3 78 h
+2 87 h
+3 154 h
+2 8 j
+2 1 j
+3 33 j
+2 35 j
+3 114 j
+2 60 j
+3 56 h
+2 5 j
+2 57 h
+3 27 h
+2 47 h
+3 77 h
+2 12 j
+3 24 j
+2 2 h
+2 45 h
+3 141 j
+2 69 j
+3 53 h
+2 68 j
+3 92 h
+2 2 j
+2 23 h
+3 65 h
+2 24 h
+3 9 j
+2 9 j
+2 26 j
+3 137 j
+2 19 h
+3 34 j
+2 40 h
+3 19 j
+2 34 h
+2 88 h
+3 30 h
+2 10 h
+3 65 h
+2 110 j
+3 31 j
+2 143 j
+2 24 j
+3 54 h
+2 98 h
+3 12 j
+2 33 h
+3 40 h
+2 90 h
+2 14 h
+3 26 j
+2 108 j
+3 7 j
+2 126 j
+2 27 j
+3 35 h
+2 94 j
+3 29 h
+2 82 h
+3 87 h
+2 126 h
+2 20 h
+3 44 j
+2 60 j
+3 36 j
+2 96 j
+3 61 j
+2 5 j
+2 15 j
+3 13 h
+2 35 h
+3 84 h
+2 157 h
+3 56 h
+2 18 j
+2 16 j
+3 64 j
+2 160 j
+3 19 j
+2 39 j
+3 45 j
+2 29 h
+2 83 h
+3 48 h
+2 116 h
+3 2 h
+2 34 h
+2 118 j
+3 45 j
+2 94 j
+3 74 j
+2 4 j
+3 18 h
+2 33 h
+2 91 h
+3 95 h
+2 69 h
+3 13 h
+2 1 j
+3 124 j
+2 63 j
+2 41 j
+3 86 j
+2 15 h
+3 2 h
+2 14 j
+3 56 h
+2 193 h
+2 22 h
+3 111 h
+2 76 j
+3 126 j
+2 8 j
+2 107 j
+3 40 h
+2 1 h
+3 105 h
+2 74 j
+3 84 h
+2 112 h
+2 69 h
+3 12 j
+2 14 j
+3 67 j
+2 37 h
+3 198 j
+2 8 j
+2 12 h
+3 53 h
+2 11 j
+3 187 h
+2 43 h
+3 90 h
+2 20 h
+2 29 j
+3 95 j
+2 83 h
+3 239 j
+2 43 j
+2 53 h
+3 8 j
+2 27 h
+3 3 j
+2 56 h
+3 33 h
+2 18 h
+2 45 j
+3 14 j
+2 24 h
+3 227 j
+2 45 h
+3 58 h
+2 58 j
+2 44 h
+3 169 h
+2 47 j
+3 94 h
+2 16 h
+3 55 j
+2 33 j
+2 66 h
+3 276 j
+2 32 j
+3 83 h
+2 37 j
+2 64 h
+3 64 h
+2 12 h
+3 162 h
+2 35 j
+3 107 j
+2 1 h
+2 46 j
+3 221 j
+2 118 h
+3 44 j
+2 16 j
+3 199 h
+2 99 j
+2 79 h
+3 94 h
+2 36 j
+3 66 h
+2 76 j
+3 82 h
+E
+0.75 Sx
+1 Sd
+(SHIGELLOSIS) 629 1020 0.5 T
+0.5 Sx
+(months from 01/62) 629 56 0.5 T
+90 Sr
+90 Sh
+(log\(cases\)) 21 551 0.5 T
+0 Sr
+0 Sh
+177 179 m
+15 z
+419 179 m
+15 z
+662 179 m
+15 z
+904 179 m
+15 z
+E
+177 179 m
+727 x
+E
+(0) 177 126 0.5 T
+(100) 419 126 0.5 T
+(200) 662 126 0.5 T
+(300) 904 126 0.5 T
+90 Sr
+90 Sh
+143 300 m
+14 w
+143 464 m
+14 w
+143 629 m
+14 w
+143 794 m
+14 w
+E
+143 300 m
+494 y
+E
+(6.5) 91 300 0.5 T
+(7.0) 91 464 0.5 T
+(7.5) 91 629 0.5 T
+(8.0) 91 794 0.5 T
+0 Sr
+0 Sh
+0 Sd
+971 745 143 179 c
+0.5 1 0 0.333333 Sg
+B
+1367 468 m
+3 45 j
+2 122 h
+3 3 h
+2 5 j
+3 25 j
+2 24 j
+2 58 h
+3 90 j
+2 127 h
+3 60 j
+2 130 j
+3 49 h
+2 42 h
+2 2 j
+3 40 j
+2 5 j
+3 137 h
+2 116 j
+3 37 h
+2 12 h
+2 32 h
+3 42 j
+2 64 j
+3 7 j
+2 92 h
+2 98 h
+3 49 j
+2 50 h
+3 193 j
+2 107 h
+3 3 h
+2 17 h
+2 32 j
+3 55 j
+2 2 j
+3 25 j
+2 32 j
+3 75 h
+2 49 j
+2 62 h
+3 54 j
+2 84 h
+3 53 j
+2 16 h
+3 14 j
+2 57 j
+2 57 j
+3 27 h
+2 34 h
+3 9 j
+2 12 h
+2 56 h
+3 34 h
+2 12 j
+3 40 j
+2 85 j
+3 107 h
+2 135 j
+2 92 h
+3 98 j
+2 85 h
+3 44 h
+2 85 j
+3 66 j
+2 69 h
+2 3 j
+3 46 h
+2 51 j
+3 35 h
+2 11 h
+3 137 j
+2 52 h
+2 23 h
+3 84 h
+2 84 j
+3 23 j
+2 12 h
+2 40 j
+3 64 h
+2 51 j
+3 4 j
+2 152 h
+3 161 j
+2 42 h
+2 6 h
+3 200 h
+2 126 j
+3 109 j
+2 99 j
+3 166 h
+2 83 j
+2 73 h
+3 29 h
+2 77 j
+3 13 j
+2 91 j
+3 44 h
+2 147 h
+2 50 j
+3 67 h
+2 62 j
+3 36 j
+2 25 j
+2 6 h
+3 55 h
+2 27 j
+3 8 h
+2 11 j
+3 61 h
+2 33 j
+2 49 h
+3 26 j
+2 14 h
+3 3 h
+2 105 j
+3 43 h
+2 47 h
+2 74 j
+3 51 j
+2 3 h
+3 86 h
+2 38 j
+3 20 j
+2 44 h
+2 75 j
+3 3 h
+2 130 h
+3 76 j
+2 58 h
+3 26 j
+2 14 j
+2 64 j
+3 86 j
+2 144 h
+3 12 j
+2 32 j
+2 18 j
+3 34 j
+2 160 h
+3 20 h
+2 28 j
+3 59 j
+2 26 h
+2 57 j
+3 14 j
+2 3 j
+3 79 h
+2 67 h
+3 107 j
+2 238 h
+2 151 j
+3 43 h
+2 107 j
+3 50 h
+2 76 j
+3 43 j
+2 11 j
+2 113 h
+3 2 h
+2 52 h
+3 39 j
+2 x
+2 71 h
+3 110 j
+2 127 h
+3 35 j
+2 63 j
+3 26 j
+2 36 h
+2 103 h
+3 58 j
+2 83 h
+3 49 j
+2 14 j
+3 68 j
+2 64 h
+2 45 j
+3 14 j
+2 12 h
+3 128 j
+2 91 h
+3 62 h
+2 65 h
+2 83 j
+3 78 h
+2 44 j
+3 30 h
+2 22 j
+2 22 j
+3 2 h
+2 4 j
+3 25 j
+2 41 h
+3 x
+2 24 h
+2 45 j
+3 100 h
+2 16 j
+3 13 h
+2 34 j
+3 18 j
+2 25 h
+2 23 j
+3 35 h
+2 33 j
+3 21 h
+2 7 h
+3 8 j
+2 79 h
+2 12 j
+3 23 h
+2 72 h
+3 92 j
+2 39 j
+2 82 h
+3 128 j
+2 48 h
+3 131 h
+2 39 h
+3 65 j
+2 37 h
+2 96 h
+3 84 j
+2 30 j
+3 69 h
+2 104 j
+3 195 h
+2 224 j
+2 76 h
+3 2 h
+2 85 h
+3 69 j
+2 42 h
+3 21 h
+2 57 j
+2 121 h
+3 24 h
+2 61 j
+3 74 h
+2 179 j
+2 53 h
+3 98 h
+2 76 j
+3 52 h
+2 85 h
+3 148 j
+2 23 h
+2 19 h
+3 9 j
+2 68 j
+3 113 h
+2 163 j
+3 25 h
+2 149 h
+2 52 j
+3 36 j
+2 12 h
+3 67 j
+2 63 h
+3 54 j
+2 61 h
+2 24 h
+3 96 j
+2 109 j
+3 101 h
+2 13 h
+3 37 j
+2 118 h
+2 89 j
+3 13 h
+2 4 h
+3 5 h
+2 29 h
+2 98 j
+3 5 h
+2 75 h
+3 117 j
+2 38 h
+3 73 h
+2 8 h
+2 48 j
+3 27 h
+2 25 j
+3 20 j
+2 77 h
+3 102 j
+2 7 h
+2 8 h
+3 9 h
+2 16 j
+3 43 h
+2 14 j
+3 3 j
+2 52 h
+2 23 h
+3 122 j
+2 49 h
+3 92 j
+2 73 h
+2 156 j
+3 39 h
+2 21 h
+3 66 h
+2 3 h
+3 10 h
+2 42 h
+2 62 j
+3 33 h
+2 10 j
+3 56 j
+2 60 h
+3 162 j
+2 60 h
+2 80 j
+3 175 h
+2 47 j
+3 7 j
+2 19 h
+3 43 h
+2 31 j
+2 62 h
+3 90 j
+2 69 h
+3 114 j
+2 18 h
+2 14 h
+3 18 h
+2 30 h
+3 38 h
+2 40 j
+3 44 h
+2 28 j
+2 28 j
+3 70 h
+2 32 j
+3 101 j
+2 9 h
+3 86 h
+2 48 j
+2 29 j
+3 97 h
+2 16 j
+3 18 h
+2 10 h
+3 66 j
+2 61 j
+2 93 h
+3 175 j
+2 148 h
+3 12 h
+2 49 j
+2 21 j
+3 72 h
+2 77 j
+3 12 h
+2 87 h
+3 87 j
+2 11 h
+2 78 j
+3 16 j
+2 101 h
+3 6 h
+2 37 j
+3 9 h
+2 15 h
+2 31 j
+3 98 h
+2 127 j
+3 119 h
+2 137 j
+3 109 h
+E
+0.75 Sx
+1 Sd
+(AMEBIASIS) 1817 1020 0.5 T
+0.5 Sx
+(months from 01/62) 1817 56 0.5 T
+90 Sr
+90 Sh
+(log\(cases\)) 1209 551 0.5 T
+0 Sr
+0 Sh
+1365 178 m
+14 z
+1607 178 m
+14 z
+1850 178 m
+14 z
+2092 178 m
+14 z
+E
+1365 178 m
+727 x
+E
+(0) 1365 126 0.5 T
+(100) 1607 126 0.5 T
+(200) 1850 126 0.5 T
+(300) 2092 126 0.5 T
+90 Sr
+90 Sh
+1331 302 m
+14 w
+1331 457 m
+14 w
+1331 612 m
+14 w
+1331 767 m
+14 w
+1331 921 m
+14 w
+E
+1331 302 m
+619 y
+E
+(4.5) 1279 302 0.5 T
+(5.0) 1279 457 0.5 T
+(5.5) 1279 612 0.5 T
+(6.0) 1279 767 0.5 T
+(6.5) 1279 921 0.5 T
+0 Sr
+0 Sh
+0 Sd
+971 746 1331 178 c
+Z
+%%Trailer
+%%Pages: 1
+%%DocumentNeededResources: font Helvetica
+W
+%%EOF
